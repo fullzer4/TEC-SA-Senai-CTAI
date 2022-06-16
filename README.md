@@ -5,7 +5,4 @@
   <br/>
   <br/>
   a adicionar
-  <br/>
-  <br/>
-  Participantes @AlexisReales, @Arthur668, @Anselmo5, @BrunoRW e eu (@fullzer4)
 </div>
