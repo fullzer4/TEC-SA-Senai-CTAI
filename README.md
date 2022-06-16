@@ -4,5 +4,5 @@
   projeto feito em grupo na escola S (Sesi/Senai).
   <br/>
   <br/>
-  a adicionar
+  npm run dev para rodar o projeto
 </div>
