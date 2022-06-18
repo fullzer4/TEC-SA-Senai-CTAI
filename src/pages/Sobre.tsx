@@ -1,7 +1,7 @@
-export default function Linguagens() {
+export default function Sobre() {
     return(
       <div>
-        <h1>Linguagens</h1>
+        <h1>sobre</h1>
       </div>
     )
   }
