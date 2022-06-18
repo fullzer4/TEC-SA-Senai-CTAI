@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route} from "react-router-dom"
 import Home from "../pages/Home"
 import Calculadora from "../pages/Calculadora"
 import Linguagens from "../pages/Linguagens"
-import Projeto from
+import Projeto from 
 
 export default function Rota() {
   return(
