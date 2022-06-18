@@ -1,21 +1,25 @@
-Home
-    Bem vindo
-    Como funciona
 
-Projeto
-    Explicar SA
 
-Sobre
-    Membros 
-        Anselmo Henrique
-        Gabriel Pelizzaro
-        Bruno Wotzke
-        Alexis Reales
-        Arthur Rocha
-    Divisão dos membros
+PAGES
+    Home
+        Bem vindo
+        Como funciona
 
-Calculadora
-    Calculo
+    Projeto
+        Explicar SA
 
-Linguagens
-    Frameworks
+    Sobre
+        Membros 
+            Anselmo Henrique
+            Gabriel Pelizzaro
+            Bruno Wotzke
+            Alexis Reales
+            Arthur Rocha
+        Divisão dos membros
+
+    Calculadora
+        Calculo
+
+    Linguagens
+        Frameworks
+

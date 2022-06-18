@@ -1,7 +1,11 @@
+import CalculoC from "../components/calculo/calculoC"
+import Header from "../components/header/header"
 export default function Calculadora() {
+
     return(
-      <div>
-        <h1>calculadora</h1>
-      </div>
+        <div>
+            <Header/>
+            <CalculoC/>
+        </div>
     )
   }

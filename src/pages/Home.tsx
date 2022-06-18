@@ -1,7 +1,11 @@
+import Header from "../components/header/header"
+import Welcome from "../components/welcome/welcome"
+
 export default function Home() {
     return(
-      <div>
-        <h1>foi</h1>
+      <div id="container">
+        <Header/>
+        <Welcome/>
       </div>
     )
   }

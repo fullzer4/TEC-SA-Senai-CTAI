@@ -1,0 +1,35 @@
+/* HEADER  */
+header{
+    width: 100%;
+    max-width: 1000px;
+    position: fixed;
+    top: 10px;
+    display: flex;
+    justify-content: space-between;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50px;
+    padding: 10px;
+    z-index: 1000;
+}
+.def-h{
+    margin: 5px;
+    display: flex;
+}
+.logo-img{
+    width: 25px;
+}
+.logo{
+    font-size: 17px!important;
+    font-weight: bolder;
+}
+.bt-def-h{
+    padding: 5px 10px;
+    margin: 0 10px;
+    color: #6f6f6f;
+    text-transform: uppercase;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
