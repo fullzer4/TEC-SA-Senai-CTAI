@@ -1,4 +1,5 @@
 import logo from "../../images/logo.png";
+import "./welcome.css"
 
 export default function Welcome(){
     return(
