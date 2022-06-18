@@ -1,0 +1,16 @@
+Home
+    Bem vindo
+    Como funciona
+
+Projeto
+    Explicar SA
+
+Sobre
+    Membros 
+    Divisão dos membros
+
+Calculadora
+    Calculo
+
+Linguagens
+    Frameworks
