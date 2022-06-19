@@ -2,7 +2,9 @@
 
 projeto feito em grupo na escola S (Sesi/Senai).
 
-npm install vite
+### `npm install`
+
+Para instalar as dependências
 
 ### `npm run dev`
 
