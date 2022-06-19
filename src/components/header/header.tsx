@@ -1,6 +1,7 @@
 import "./header.css";
 import logo from "../../images/logo.png"
 import { Link } from "react-router-dom";
+import AOS from "aos"
 
 export default function Header(){
     return(
