@@ -1,7 +1,9 @@
+import Header from "../components/header/header"
+
 export default function Projeto() {
     return(
-      <div>
-        <h1>Projeto</h1>
-      </div>
+        <div>
+            <Header/>
+        </div>
     )
   }

@@ -1,7 +1,9 @@
+import Header from "../components/header/header"
+
 export default function Linguagens() {
     return(
-      <div>
-        <h1>Linguagens</h1>
-      </div>
+        <div>
+            <Header/>
+        </div>
     )
   }

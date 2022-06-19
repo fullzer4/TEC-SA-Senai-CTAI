@@ -1,7 +1,9 @@
+import Header from "../components/header/header"
+
 export default function Sobre() {
     return(
-      <div>
-        <h1>sobre</h1>
-      </div>
+        <div>
+            <Header/>
+        </div>
     )
   }

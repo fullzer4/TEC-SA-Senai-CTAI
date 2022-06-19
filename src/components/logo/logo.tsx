@@ -1,10 +1,4 @@
-import AOS from "aos";
-
 export default function Logo(){
-    AOS.init({
-        delay: 100,
-        duration: 550
-    })
     return(
         <svg className="all-logo" data-aos="fade-left" width="225" height="225" viewBox="0 0 225 225" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path className="triangle-bot" d="M112.5 225L209.928 56.25L15.0721 56.25L112.5 225Z" fill="#F0D0FF"/>

@@ -2,14 +2,8 @@ import back from "../../images/back1.png";
 import Logo from "../logo/logo";
 import "../logo/logo.css"
 import "./welcome.css"
-import AOS from "aos"
-
 
 export default function Welcome(){
-  AOS.init({
-    delay: 100,
-    duration: 550
-  })
   return(
     <div className="cont-out">
       <div className="welcome-out">
