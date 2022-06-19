@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "aos": "^3.0.0-beta.6",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.3.0"

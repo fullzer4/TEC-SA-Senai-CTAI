@@ -1,6 +1,6 @@
 export default function Logo(){
     return(
-        <svg width="225" height="225" viewBox="0 0 225 225" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="all-logo" width="225" height="225" viewBox="0 0 225 225" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path className="triangle-bot" d="M112.5 225L209.928 56.25L15.0721 56.25L112.5 225Z" fill="#F0D0FF"/>
             <circle className="circle-top" cx="63" cy="29" r="15" fill="#DD96FF"/>
             <circle className="circle-bot" cx="163" cy="194" r="15" fill="#DD96FF"/>
