@@ -1,6 +1,9 @@
-import logo from "../../images/logo2.png";
 import back from "../../images/back1.png";
+import Logo from "../logo/logo";
+import "../logo/logo.css"
 import "./welcome.css"
+
+
 
 export default function Welcome(){
     return(
@@ -8,11 +11,11 @@ export default function Welcome(){
           <div className="welcome-out">
             <div className="welcome-in">
               <h1 className="title-welcome">Bem vindo(a)</h1>
-              <p className="text-welcome">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad iusto eligendi inventore, architecto dicta ut error impedit.</p>
+              <p className="text-welcome">Calculadora para trabalho SA entre materias diciplinares, técnico e natureza.</p>
               <button className="button-welcome">Comece a usar</button>
             </div>
             <div className="welcome-image">
-              <img className="img-ini" src={logo} alt=""/>
+              <Logo/>
             </div>
           </div>
           <div className="triangle-down"></div>

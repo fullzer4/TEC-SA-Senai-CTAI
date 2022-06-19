@@ -18,7 +18,11 @@ PAGES
         Divisão dos membros
 
     Calculadora
-        Calculo
+        tipos de calculo:
+            variação e energia interna
+            energia transferida na forma de calor
+            trabalho realizado
+            rendimento
 
     Linguagens
         Frameworks
