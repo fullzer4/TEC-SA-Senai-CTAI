@@ -1,9 +1,8 @@
 import { BrowserRouter, Routes, Route} from "react-router-dom"
-import Home from "../pages/Home"
-import Calculadora from "../pages/Calculadora"
-import Linguagens from "../pages/Linguagens"
-import Projeto from "../pages/Projeto"
-import Sobre from "../pages/Sobre"
+import Home from "../pages/home/Home"
+import Calculadora from "../pages/calculadora/Calculadora"
+import Linguagens from "../pages/linguagens/Linguagens"
+import Projeto from "../pages/projetos/Projeto"
 
 export default function Rota() {
   return(
@@ -11,9 +10,8 @@ export default function Rota() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/calculator" element={<Calculadora/>}/>
-        <Route path="/projects" element={<Linguagens/>}/>
-        <Route path="/about" element={<Projeto/>}/>
-        <Route path="/languages" element={<Sobre/>}/>
+        <Route path="/projects" element={<Projeto/>}/>
+        <Route path="/languages" element={<Linguagens/>}/>
       </Routes>
     </BrowserRouter>
   )

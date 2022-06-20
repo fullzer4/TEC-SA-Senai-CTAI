@@ -1,0 +1,25 @@
+.presentation-out{
+    width: 100%;
+}
+.title{
+    font-size: 20px;
+    color: #8a8a8a;
+    font-weight: bolder;
+    text-align: center;
+    margin: 30px 0;
+}
+.text{
+    color: #8a8a8a;
+    font-size: 18px;
+    text-align: center;
+    margin: 10px auto;
+    max-width: 600px;
+    line-height: 1.6;
+}
+.svg-icon-out{
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px auto;
+}
