@@ -5,6 +5,7 @@
     justify-content: center;
     width: 100%;
     min-height: 60vh;
+    position: relative;
     background: #e4eff6;
 }
 
