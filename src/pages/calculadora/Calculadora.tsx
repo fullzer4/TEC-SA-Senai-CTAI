@@ -1,11 +1,11 @@
-import CalculoC from "../../components/calculo/calculoC"
+import CalculoIntro from "../../components/calculointro/calculoIntro"
 import Header from "../../components/header/header"
 export default function Calculadora() {
 
     return(
-        <div>
+        <div id="container">
             <Header/>
-            <CalculoC/>
+            <CalculoIntro/>
         </div>
     )
   }

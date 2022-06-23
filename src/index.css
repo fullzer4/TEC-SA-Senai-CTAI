@@ -13,3 +13,13 @@ html, body, #root{
     font-family: sans-serif;
     scroll-behavior: smooth;
 }
+
+#container{
+    position: relative;
+    margin: auto;
+    width: 100%;
+    max-width: 1980px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
