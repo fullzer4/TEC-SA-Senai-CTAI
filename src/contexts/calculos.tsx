@@ -13,6 +13,8 @@ type CalculosContextType ={ //tipo
     openCalc: boolean;
     calcEsc: string;
     pc1Esc: string;
+    pc2Esc: string;
+    pcResult: string;
 }
 
 const CalculosinitialValue ={  //definir o que ele ira receber
@@ -24,6 +26,8 @@ const CalculosinitialValue ={  //definir o que ele ira receber
     openCalc: false, 
     calcEsc: (""),
     pc1Esc: (""),
+    pc2Esc: (""),
+    pcResult: (""),
 }
 
 export const CalculosContext = createContext<CalculosContextType>(CalculosinitialValue)
@@ -34,6 +38,8 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     const [openCalc, setOpenCalc] = useState(CalculosinitialValue.openCalc)
     const [calcEsc, setCalcEsc] = useState(CalculosinitialValue.calcEsc)
     const [pc1Esc, setPc1Esc] = useState(CalculosinitialValue.pc1Esc)
+    const [pc2Esc, setPc2Esc] = useState(CalculosinitialValue.pc2Esc)
+    const [pcResult, setPcResult] = useState(CalculosinitialValue.pcResult)
 
     function verClickCalc1(){
         if(!openCalc){
@@ -41,12 +47,16 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             setClassSC("show-calculo")
             setCalcEsc("calculo1")
             setPc1Esc("variavel 1 do calculo1")
+            setPc2Esc("variavel 2 do calculo1")
+            setPcResult("resultado do calculo1")
             return true;
         } else {
             setOpenCalc(false)
             setCalcEsc("")
             setClassSC("show-calculo desativado")
             setPc1Esc("")
+            setPc2Esc("")
+            setPcResult("")
             return false;
         }         
     }
@@ -57,12 +67,16 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             setClassSC("show-calculo")
             setCalcEsc("calculo2")
             setPc1Esc("variavel 1 do calculo2")
+            setPc2Esc("variavel 2 do calculo2")
+            setPcResult("resultado do calculo2")
             return true;
         } else {
             setOpenCalc(false)
             setCalcEsc("")
             setClassSC("show-calculo desativado")
             setPc1Esc("")
+            setPc2Esc("")
+            setPcResult("")
             return false;
         }         
     }
@@ -76,7 +90,9 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             verClickCalc2,
             openCalc,
             calcEsc,
-            pc1Esc
+            pc1Esc,
+            pc2Esc,
+            pcResult
             }}> 
             {children}
         </CalculosContext.Provider>
