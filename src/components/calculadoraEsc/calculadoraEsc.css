@@ -28,3 +28,7 @@
     background-color: black;
     z-index: 0;
 }
+
+.desativado{
+    display: none;
+}
