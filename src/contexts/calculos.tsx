@@ -17,7 +17,7 @@ const CalculosinitialValue ={  //definir o que ele ira receber
     setIsOpenModal: () => {},
     classSC: ("show-calculo desativado"),
     verClickCalc: () => {},
-    openCalc: false,
+    openCalc: false, 
 }
 
 export const CalculosContext = createContext<CalculosContextType>(CalculosinitialValue)
@@ -45,7 +45,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             setIsOpenModal,
             classSC,
             verClickCalc,
-            openCalc
+            openCalc,
             }}> 
             {children}
         </CalculosContext.Provider>
