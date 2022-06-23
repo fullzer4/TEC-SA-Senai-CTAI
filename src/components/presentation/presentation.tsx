@@ -6,10 +6,10 @@ export default function WelcomeBottom(){
     return(
         <div data-aos="fade-in" className="presentation-out">
             <h1 className="title">Nosso grupo</h1>
-            <p className="text" >Nosso grupo é formado por 5 participantes, estamos desenvolvendo um projeto para uma SA entre as seguintes áreas diciplinares: Técnico e Natureza.</p>
-            <div className="svg-icon-out">
+            <p className="text" >Nosso grupo é formado por <a href="#participantes" className="link-a">5 participantes</a>, estamos desenvolvendo um projeto para uma SA entre as seguintes áreas diciplinares: Técnico e Natureza.</p>
+            <div className="svg-icon-out"> 
                 <Nat/>
-                <Tec/>
+                <Tec/> 
             </div>
         </div>
     )

@@ -23,3 +23,7 @@
     justify-content: space-evenly;
     margin: 20px auto;
 }
+.link-a{
+    color: #c15dff;
+    border-bottom: 2px dotted;
+}

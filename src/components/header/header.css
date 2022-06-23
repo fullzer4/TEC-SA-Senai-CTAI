@@ -10,7 +10,7 @@ header{
     transform: translateX(-50%)!important;
     border-radius: 50px;
     padding: 5px 10px;
-    z-index: 1000;
+    z-index: 100;
     background: #fff;
 }
 .def-h{
