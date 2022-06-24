@@ -11,10 +11,16 @@ type CalculosContextType ={ //tipo
     verClickCalc1: () => void;
     verClickCalc2: () => void;
     openCalc: boolean;
+    termo1: () => void;
     calcEsc: string;
     pc1Esc: string;
     pc2Esc: string;
     pcResult: string;
+    val1Esc: string;
+    setVal1Esc: (newState: string) => void;
+    val2Esc: string;
+    setVal2Esc: (newState: string) => void;
+    result: string;
 }
 
 const CalculosinitialValue ={  //definir o que ele ira receber
@@ -24,10 +30,16 @@ const CalculosinitialValue ={  //definir o que ele ira receber
     verClickCalc1: () => {},
     verClickCalc2: () => {},
     openCalc: false, 
+    termo1: () => {},
     calcEsc: (""),
     pc1Esc: (""),
     pc2Esc: (""),
     pcResult: (""),
+    val1Esc: (""),
+    setVal1Esc: () => {},
+    val2Esc: (""),
+    setVal2Esc: () => {},
+    result: (""),
 }
 
 export const CalculosContext = createContext<CalculosContextType>(CalculosinitialValue)
@@ -38,12 +50,21 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     const [openCalc, setOpenCalc] = useState(CalculosinitialValue.openCalc)
     const [calcEsc, setCalcEsc] = useState(CalculosinitialValue.calcEsc)
     const [pc1Esc, setPc1Esc] = useState(CalculosinitialValue.pc1Esc)
+    const [val1Esc, setVal1Esc] = useState(CalculosinitialValue.val1Esc)
+    const [val2Esc, setVal2Esc] = useState(CalculosinitialValue.val2Esc)
     const [pc2Esc, setPc2Esc] = useState(CalculosinitialValue.pc2Esc)
     const [pcResult, setPcResult] = useState(CalculosinitialValue.pcResult)
+    const [result, setResult] = useState(CalculosinitialValue.result)
+
+    function termo1(){
+        setResult("aa")
+        console.log(result);
+    }
 
     function verClickCalc1(){
         if(!openCalc){
             setOpenCalc(true)
+            setVal1Esc("")
             setClassSC("show-calculo")
             setCalcEsc("calculo1")
             setPc1Esc("variavel 1 do calculo1")
@@ -57,6 +78,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             setPc1Esc("")
             setPc2Esc("")
             setPcResult("")
+            setVal1Esc("")
             return false;
         }         
     }
@@ -92,7 +114,13 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             calcEsc,
             pc1Esc,
             pc2Esc,
-            pcResult
+            pcResult,
+            val1Esc,
+            setVal1Esc,
+            val2Esc,
+            setVal2Esc,
+            termo1,
+            result
             }}> 
             {children}
         </CalculosContext.Provider>
