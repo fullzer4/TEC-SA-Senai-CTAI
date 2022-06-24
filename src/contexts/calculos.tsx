@@ -83,6 +83,8 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             setPc2Esc("")
             setPcResult("")
             setVal1Esc("")
+            setVal2Esc("")
+            setResult("")
             return false;
         }         
     }
@@ -103,6 +105,9 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             setPc1Esc("")
             setPc2Esc("")
             setPcResult("")
+            setVal1Esc("")
+            setVal2Esc("")
+            setResult("")
             return false;
         }         
     }
