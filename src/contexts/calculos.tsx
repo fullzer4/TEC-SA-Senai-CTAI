@@ -57,7 +57,11 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     const [result, setResult] = useState(CalculosinitialValue.result)
 
     function termo1(){
-        setResult("aa")
+        var var1 = parseInt(val1Esc)
+        var var2 = parseInt(val2Esc)
+        var resultadoBack = (var1 - var2)
+        console.log(resultadoBack);
+        setResult(String(resultadoBack))
         console.log(result);
     }
 
