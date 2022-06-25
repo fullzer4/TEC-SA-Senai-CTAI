@@ -80,7 +80,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                 return
             }
             if(resultadoTam > 0){
-                var2 = (resultadoBack + var1)
+                var2 = (var1 - resultadoBack)
                 setVal2Esc(String(var2))
                 return
             }
