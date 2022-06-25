@@ -21,6 +21,7 @@ A build Tool que usamos foi o ViteJs, para criar o projeto só rodar o comando:
 - React, ver: 18.0.0
 - React-dom, ver: 18.0.0
 - React-router-dom, ver: ^6.3.0
+- React-toastify, ver: ^9.0.5
 - AOS, ver: ^3.0.0-beta.6
 - Typescript, ver: ^4.6.3
 - Vite, ver: ^2.9.12
