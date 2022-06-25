@@ -27,3 +27,5 @@ PAGES
 
 URL: https://prod.liveshare.vsengsaas.visualstudio.com/join?D170EC078C2055C95622C70EC94EEC59338A
 https://situacaodeaprendizagem2021.netlify.app/calculadora.html
+
+finalizar calculos de energia
