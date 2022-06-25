@@ -27,17 +27,3 @@ PAGES
 
 URL: https://prod.liveshare.vsengsaas.visualstudio.com/join?D170EC078C2055C95622C70EC94EEC59338A
 https://situacaodeaprendizagem2021.netlify.app/calculadora.html
-
-Calculos:
-A realizar:
-    - 1lei:
-        Q - x = ΔU
-        x - T = ΔU
-    - 2lei:
-        Q + x = ΔU
-        x + T = ΔU
-        Q + T = x
-
-Feitos:
-    - 1lei:
-        Q - T = x 

@@ -65,27 +65,64 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
 
         if(var1Tam > 0){
             if(var2Tam > 0){
+                if(resultadoTam > 0){
+                    console.log("todos os campos preenchidos");
+                    return
+                }
                 resultadoBack = (var1 - var2)
                 setResult(String(resultadoBack))
+                return
             }
             if(resultadoTam > 0){
-                console.log("foi");
+                var2 = (resultadoBack + var1)
+                setVal2Esc(String(var2))
+                return
             }
-        }else{
-            console.log("impossivel de realizar o calculo");
-        }
-
-        if(var2Tam > 0){
+        }if(var2Tam > 0){
             if(resultadoTam > 0){
-                console.log("foi2");
+                var1 = (resultadoBack + var2)
+                setVal1Esc(String(var1))
+                return
             }
         }else{
-            console.log("impossivel de realizar o calculo");
+            console.log("verifique se os campos tao certos e preenchidos");
+            return
         }
     }
 
     function lei2(){
-        console.log("foi");
+        var var1Tam = val1Esc.length
+        var var2Tam = val2Esc.length
+        var resultadoTam = result.length
+        var var1 = parseInt(val1Esc)
+        var var2 = parseInt(val2Esc)
+        var resultadoBack = parseInt(result)
+
+        if(var1Tam > 0){
+            if(var2Tam > 0){
+                if(resultadoTam > 0){
+                    console.log("todos os campos preenchidos");
+                    return
+                }
+                resultadoBack = (var1 + var2)
+                setResult(String(resultadoBack))
+                return
+            }
+            if(resultadoTam > 0){
+                var2 = (resultadoBack - var1)
+                setVal2Esc(String(var2))
+                return
+            }
+        }if(var2Tam > 0){
+            if(resultadoTam > 0){
+                var1 = (resultadoBack - var2)
+                setVal1Esc(String(var1))
+                return
+            }
+        }else{
+            console.log("verifique se os campos tao certos e preenchidos");
+            return
+        }
     }
 
     function verificarLei(){

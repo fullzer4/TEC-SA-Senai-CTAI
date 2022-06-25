@@ -31,7 +31,7 @@ export default function CalculadoraEsc() {
           </div>
           <div className="calculadora-box c-3d">
             <h2 className="title-calc">2 Lei Termodinamica</h2>
-            <h3 className="text-calc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci consequuntur eos cum numquam, cupiditate veritatis.</h3>
+            <h3 className="text-calc">Q + T = ΔU<p/> ΔU = Variação de energia interna <p/> Q = Calor trocado <p/> T = Trabalho realizado <p/>Todas as medidas dessa calculadora estão em jaule(J) <p/></h3>
             <button className="button-calc" onClick={verClickCalc2}>Abrir</button>
           </div>
         </div>
