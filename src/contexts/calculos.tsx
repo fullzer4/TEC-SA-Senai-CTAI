@@ -23,6 +23,7 @@ type CalculosContextType ={ //tipo
     setResult: (newState: string) => void;
     verificarLei: () => void;
     verClickSair: () => void;
+    limpar: () => void;
 }
 
 const CalculosinitialValue ={  //definir o que ele ira receber
@@ -43,6 +44,7 @@ const CalculosinitialValue ={  //definir o que ele ira receber
     setResult: () => {},
     verificarLei: () => {},
     verClickSair: () => {},
+    limpar: () => {},
 }
 
 export const CalculosContext = createContext<CalculosContextType>(CalculosinitialValue)
@@ -273,6 +275,13 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         }
     }
 
+    function limpar(){
+        setVal1Esc("")
+        setVal2Esc("")
+        setResult("")
+        return
+    }
+
     return(
         <CalculosContext.Provider value={{
             classSC,
@@ -291,7 +300,8 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             result,
             verificarLei,
             setResult,
-            verClickSair
+            verClickSair,
+            limpar
             }}> 
             {children}
         </CalculosContext.Provider>
