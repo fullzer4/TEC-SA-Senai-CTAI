@@ -22,6 +22,7 @@ type CalculosContextType ={ //tipo
     result: string;
     setResult: (newState: string) => void;
     verificarLei: () => void;
+    verClickSair: () => void;
 }
 
 const CalculosinitialValue ={  //definir o que ele ira receber
@@ -41,6 +42,7 @@ const CalculosinitialValue ={  //definir o que ele ira receber
     result: (""),
     setResult: () => {},
     verificarLei: () => {},
+    verClickSair: () => {},
 }
 
 export const CalculosContext = createContext<CalculosContextType>(CalculosinitialValue)
@@ -89,7 +91,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                 return
             }
         }else{
-            console.log("verifique se os campos tao certos e preenchidos");
+            toast.error("verifique se os campos estão corretos e preenchidos")
             return
         }
     }
@@ -124,7 +126,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                 return
             }
         }else{
-            console.log("verifique se os campos tao certos e preenchidos");
+            toast.error("verifique se os campos estão corretos e preenchidos")
             return
         }
     }
@@ -148,7 +150,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                 return
             }
             if(resultadoTam > 0){
-                var2 = (resultadoBack * var1)
+                var2 = (var1 / resultadoBack)
                 setVal2Esc(String(var2))
                 return
             }
@@ -167,14 +169,18 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     function verificarLei(){
         if (selectLei1 === true){
             lei1()
+            return
         }
         if (selectLei2 === true){
             lei2()
+            return
         }
         if (selectEE === true){
             EE()
+            return
         }else{
             console.log("error backend");
+            return
         }
     }
 
@@ -200,15 +206,16 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             setVal2Esc("")
             setResult("")
             setSelectLei1(false)
-            return false;
+            return;
         }         
     }
 
     function verClickCalc2(){
         if(!openCalc){
             setOpenCalc(true)
+            setVal1Esc("")
             setClassSC("show-calculo")
-            setCalcEsc("2 Lei Termodinamica")
+            setCalcEsc("1 Lei Termodinamica")
             setPc1Esc("Q (jaule)")
             setPc2Esc("T (jaule)")
             setPcResult("ΔU (jaule)")
@@ -216,6 +223,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             return true;
         } else {
             setOpenCalc(false)
+            setSelectLei2(false)
             setCalcEsc("")
             setClassSC("show-calculo desativado")
             setPc1Esc("")
@@ -224,7 +232,6 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             setVal1Esc("")
             setVal2Esc("")
             setResult("")
-            setSelectLei2(false)
             return false;
         }         
     }
@@ -254,6 +261,18 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         }         
     }
 
+    function verClickSair(){
+        if(selectLei1 === true){
+            verClickCalc1()
+        }
+        if(selectLei2 === true){
+            verClickCalc2()
+        }
+        if(selectEE === true){
+            verClickCalc3()
+        }
+    }
+
     return(
         <CalculosContext.Provider value={{
             classSC,
@@ -271,7 +290,8 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             setVal2Esc,
             result,
             verificarLei,
-            setResult
+            setResult,
+            verClickSair
             }}> 
             {children}
         </CalculosContext.Provider>
