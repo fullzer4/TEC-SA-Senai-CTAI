@@ -59,6 +59,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     const [pc2Esc, setPc2Esc] = useState(CalculosinitialValue.pc2Esc)
     const [pcResult, setPcResult] = useState(CalculosinitialValue.pcResult)
     const [result, setResult] = useState(CalculosinitialValue.result)
+    const [historico, setHistorico] = useState([])
     const [selectLei1, setSelectLei1] = useState(false)
     const [selectLei2, setSelectLei2] = useState(false)
     const [selectEE, setSelectEE] = useState(false)
@@ -280,6 +281,10 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         setVal2Esc("")
         setResult("")
         return
+    }
+
+    function hist(){
+       //realizar funcao de historico
     }
 
     return(
