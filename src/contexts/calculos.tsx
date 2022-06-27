@@ -7,6 +7,7 @@ type CalculosContextProps = { //configurar as props
 
 type CalculosContextType ={ //tipo
     classSC: string;
+    classRC: string;
     verClickCalc1: () => void;
     verClickCalc2: () => void;
     verClickCalc3: () => void;
@@ -29,6 +30,7 @@ type CalculosContextType ={ //tipo
 
 const CalculosinitialValue ={  //definir o que ele ira receber
     classSC: ("show-calculo desativado"),
+    classRC: ("show-calculo-rendimento desativado"),
     verClickCalc1: () => {},
     verClickCalc2: () => {},
     verClickCalc3: () => {},
@@ -53,6 +55,7 @@ export const CalculosContext = createContext<CalculosContextType>(Calculosinitia
 
 export const CalculosProvider = ({ children }: CalculosContextProps) => {
     const [classSC, setClassSC] = useState(CalculosinitialValue.classSC)
+    const [classRC, setClassRC] = useState(CalculosinitialValue.classRC)
     const [openCalc, setOpenCalc] = useState(CalculosinitialValue.openCalc)
     const [calcEsc, setCalcEsc] = useState(CalculosinitialValue.calcEsc)
     const [pc1Esc, setPc1Esc] = useState(CalculosinitialValue.pc1Esc)
@@ -250,8 +253,8 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             return true;
         } else {
             setOpenCalc(false)
-            defClear()
             setSelectLei1(false)
+            defClear()
             return;
         }         
     }
@@ -295,7 +298,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     function verClickCalc4(){
         if(!openCalc){
             setOpenCalc(true)
-            setClassSC("show-calculo")
+            setClassRC("show-calculo-rendimento")
             setCalcEsc("Rendimento")
             setPc1Esc("T (jaule)")
             setPc2Esc("Q1 (jaule)")
@@ -305,6 +308,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         } else {
             setOpenCalc(false)
             setSelectRM(false)
+            setClassRC("show-calculo-rendimento desativado")
             defClear()
             return false;
         }         
@@ -336,6 +340,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     return(
         <CalculosContext.Provider value={{
             classSC,
+            classRC,
             verClickCalc1,
             verClickCalc2,
             verClickCalc3,

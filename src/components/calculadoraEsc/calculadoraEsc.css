@@ -66,6 +66,25 @@
     z-index: 1002;
 }
 
+.show-calculo-rendimento{
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: #00000061;
+    backdrop-filter: blur(3px);
+    z-index: 1001;
+    transform: translateY(0);
+    transition: .3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    z-index: 1002;
+}
+
 .desativado{
     /* transform: translateY(200vh); */
     z-index: -1;
