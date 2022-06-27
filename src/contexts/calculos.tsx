@@ -63,6 +63,12 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     const [selectLei1, setSelectLei1] = useState(false)
     const [selectLei2, setSelectLei2] = useState(false)
     const [selectEE, setSelectEE] = useState(false)
+    var historicos = []
+
+    function historico(...calculos: number[]) {
+        historicos = [...calculos]
+        console.log(historicos);
+    }
 
     function lei1(){
         var var1Tam = val1Esc.length
@@ -80,17 +86,20 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                 }
                 resultadoBack = (var1 - var2)
                 setResult(String(resultadoBack))
+                historico(resultadoBack)
                 return
             }
             if(resultadoTam > 0){
                 var2 = (var1 - resultadoBack)
                 setVal2Esc(String(var2))
+                historico(var2)
                 return
             }
         }if(var2Tam > 0){
             if(resultadoTam > 0){
                 var1 = (resultadoBack + var2)
                 setVal1Esc(String(var1))
+                historico(var1)
                 return
             }
         }else{
@@ -209,6 +218,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             setVal2Esc("")
             setResult("")
             setSelectLei1(false)
+            console.log();
             return;
         }         
     }
