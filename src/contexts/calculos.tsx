@@ -11,6 +11,7 @@ type CalculosContextType ={ //tipo
     verClickCalc2: () => void;
     verClickCalc3: () => void;
     verClickCalc4: () => void;
+    verClickCalc5: () => void;
     openCalc: boolean;
     calcEsc: string;
     pc1Esc: string;
@@ -36,6 +37,7 @@ const CalculosinitialValue ={  //definir o que ele ira receber
     verClickCalc2: () => {},
     verClickCalc3: () => {},
     verClickCalc4: () => {},
+    verClickCalc5: () => {},
     openCalc: false,
     calcEsc: (""),
     pc1Esc: (""),
@@ -73,6 +75,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     const [selectLei2, setSelectLei2] = useState(false)
     const [selectEE, setSelectEE] = useState(false)
     const [selectRM, setSelectRM] = useState(false)
+    const [selectTM, setSelectTM] = useState(false)
 
     function lei1(){
         var var1Tam = val1Esc.length
@@ -212,6 +215,41 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         }
     }
 
+    function TM(){
+        var var1Tam = val1Esc.length
+        var var2Tam = val2Esc.length
+        var resultadoTam = result.length
+        var var1 = parseInt(val1Esc)
+        var var2 = parseInt(val2Esc)
+        var resultadoBack = parseInt(result)
+
+        if(var1Tam > 0){
+            if(var2Tam > 0){
+                if(resultadoTam > 0){
+                    toast.error("todos os campos preenchidos")
+                    return
+                }
+                resultadoBack = (var1 - var2)
+                setResult(String(resultadoBack))
+                return
+            }
+            if(resultadoTam > 0){
+                var2 = (var1 - resultadoBack)
+                setVal2Esc(String(var2))
+                return
+            }
+        }if(var2Tam > 0){
+            if(resultadoTam > 0){
+                var1 = (resultadoBack + var2)
+                setVal1Esc(String(var1))
+                return
+            }
+        }else{
+            toast.error("verifique se os campos estão corretos e preenchidos")
+            return
+        }
+    }
+
     function verificarLei(){
         if (selectLei1 === true){
             lei1()
@@ -224,8 +262,13 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         if (selectEE === true){
             EE()
             return
-        }if (selectRM === true){
+        }
+        if (selectRM === true){
             RM()
+            return
+        }
+        if (selectTM === true){
+            TM()
             return
         }else{
             console.log("error backend");
@@ -302,7 +345,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         if(!openCalc){
             setOpenCalc(true)
             setClassSC("show-calculo")
-            setCalcEsc("Rendimento")
+            setCalcEsc("Rendimento Maquina Termica")
             setPc1Esc("Qa (jaule)")
             setPc2Esc("Qr (jaule)")
             setPcResult("N (jaule)")
@@ -311,6 +354,24 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         } else {
             setOpenCalc(false)
             setSelectRM(false)
+            defClear()
+            return false;
+        }         
+    }
+
+    function verClickCalc5(){
+        if(!openCalc){
+            setOpenCalc(true)
+            setClassSC("show-calculo")
+            setCalcEsc("Trabalho Maquina Termica")
+            setPc1Esc("Qa (jaule)")
+            setPc2Esc("Qr (jaule)")
+            setPcResult("N (jaule)")
+            setSelectTM(true)
+            return true;
+        } else {
+            setOpenCalc(false)
+            setSelectTM(false)
             defClear()
             return false;
         }         
@@ -329,6 +390,9 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         if(selectRM === true){
             verClickCalc4()
         }
+        if(selectTM === true){
+            verClickCalc5()
+        }
         return
     }
 
@@ -346,6 +410,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             verClickCalc2,
             verClickCalc3,
             verClickCalc4,
+            verClickCalc5,
             openCalc,
             calcEsc,
             pc1Esc,

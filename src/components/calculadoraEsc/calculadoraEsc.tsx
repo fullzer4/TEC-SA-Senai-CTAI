@@ -9,6 +9,7 @@ export default function CalculadoraEsc() {
     verClickCalc2,
     verClickCalc3, 
     verClickCalc4,
+    verClickCalc5,
     calcEsc, 
     pc1Esc, 
     pc2Esc, 
@@ -66,8 +67,62 @@ export default function CalculadoraEsc() {
 
           <div className="calculadora-box c-3d">
             <h2 className="title-calc">Rendimento Maquina Termica</h2>
-            <h3 className="text-calc">1 - Qa / Qr = N <p/> Calculos Possiveis:<p/> 1 - Qa / Qr = x<p/> 1 - Qa / x = N<p/> 1 - x / Qr = N<p/> Qa = calor na fonte de aquecimento <p/> Qr = calor na fonte de resfriamento <p/> N = rendimento <p/>Todas as medidas dessa calculadora estão em jaule(J) <p/></h3>
+            <h3 className="text-calc">1 - Qa / Qr = N <p/> Calculos Possiveis:<p/> 1 - Qa / Qr = x<p/> 1 - Qa / x = N<p/> 1 - x / Qr = N<p/> Qa = Calor na fonte de aquecimento <p/> Qr = Calor na fonte de resfriamento <p/> N = Rendimento <p/>Todas as medidas dessa calculadora estão em jaule(J) <p/></h3>
             <button className="button-calc" onClick={verClickCalc4}>Abrir</button>
+          </div>
+
+          <div className="calculadora-box c-3d">
+            <h2 className="title-calc">Trabalho Maquina Termica</h2>
+            <h3 className="text-calc">Qa - Qr = T <p/> Calculos Possiveis:<p/> Qa - Qr = x<p/> Qa - x = T<p/> x - Qr = T<p/> Qa = Calor na fonte de aquecimento <p/> Qr = Calor na fonte de resfriamento <p/> T = Trabalho <p/>Todas as medidas dessa calculadora estão em jaule(J) <p/></h3>
+            <button className="button-calc" onClick={verClickCalc5}>Abrir</button>
+          </div>
+
+          <div className="calculadora-box c-3d">
+            <h2 className="title-calc">Energia Interna Temperatura</h2>
+            <h3 className="text-calc">Qa - Qr = T <p/> Calculos Possiveis:<p/> Qa - Qr = x<p/> Qa - x = T<p/> x - Qr = T<p/> Qa = Calor na fonte de aquecimento <p/> Qr = Calor na fonte de resfriamento <p/> T = Trabalho <p/>Todas as medidas dessa calculadora estão em jaule(J) <p/></h3>
+            <button className="button-calc" onClick={verClickCalc5}>Abrir</button>
+          </div>
+
+          <div className="calculadora-box c-3d">
+            <h2 className="title-calc">Energia Interna Volume</h2>
+            <h3 className="text-calc">Qa - Qr = T <p/> Calculos Possiveis:<p/> Qa - Qr = x<p/> Qa - x = T<p/> x - Qr = T<p/> Qa = Calor na fonte de aquecimento <p/> Qr = Calor na fonte de resfriamento <p/> T = Trabalho <p/>Todas as medidas dessa calculadora estão em jaule(J) <p/></h3>
+            <button className="button-calc" onClick={verClickCalc5}>Abrir</button>
+          </div>
+
+          <div className="calculadora-box c-3d">
+            <h2 className="title-calc">Variação de Energia Interna</h2>
+            <h3 className="text-calc">Qa - Qr = T <p/> Calculos Possiveis:<p/> Qa - Qr = x<p/> Qa - x = T<p/> x - Qr = T<p/> Qa = Calor na fonte de aquecimento <p/> Qr = Calor na fonte de resfriamento <p/> T = Trabalho <p/>Todas as medidas dessa calculadora estão em jaule(J) <p/></h3>
+            <button className="button-calc" onClick={verClickCalc5}>Abrir</button>
+          </div>
+
+          <div className="calculadora-box c-3d">
+            <h2 className="title-calc">Trabalho de um Gás</h2>
+            <h3 className="text-calc">Qa - Qr = T <p/> Calculos Possiveis:<p/> Qa - Qr = x<p/> Qa - x = T<p/> x - Qr = T<p/> Qa = Calor na fonte de aquecimento <p/> Qr = Calor na fonte de resfriamento <p/> T = Trabalho <p/>Todas as medidas dessa calculadora estão em jaule(J) <p/></h3>
+            <button className="button-calc" onClick={verClickCalc5}>Abrir</button>
+          </div>
+
+          <div className="calculadora-box c-3d">
+            <h2 className="title-calc">Trabalho de um Gás Sob Pressão Constante</h2>
+            <h3 className="text-calc">Qa - Qr = T <p/> Calculos Possiveis:<p/> Qa - Qr = x<p/> Qa - x = T<p/> x - Qr = T<p/> Qa = Calor na fonte de aquecimento <p/> Qr = Calor na fonte de resfriamento <p/> T = Trabalho <p/>Todas as medidas dessa calculadora estão em jaule(J) <p/></h3>
+            <button className="button-calc" onClick={verClickCalc5}>Abrir</button>
+          </div>
+
+          <div className="calculadora-box c-3d">
+            <h2 className="title-calc">Trabalho de um Gás Sob Temperatura Constante</h2>
+            <h3 className="text-calc">Qa - Qr = T <p/> Calculos Possiveis:<p/> Qa - Qr = x<p/> Qa - x = T<p/> x - Qr = T<p/> Qa = Calor na fonte de aquecimento <p/> Qr = Calor na fonte de resfriamento <p/> T = Trabalho <p/>Todas as medidas dessa calculadora estão em jaule(J) <p/></h3>
+            <button className="button-calc" onClick={verClickCalc5}>Abrir</button>
+          </div>
+
+          <div className="calculadora-box c-3d">
+            <h2 className="title-calc">Trabalho no ciclo de Carnot</h2>
+            <h3 className="text-calc">Qa - Qr = T <p/> Calculos Possiveis:<p/> Qa - Qr = x<p/> Qa - x = T<p/> x - Qr = T<p/> Qa = Calor na fonte de aquecimento <p/> Qr = Calor na fonte de resfriamento <p/> T = Trabalho <p/>Todas as medidas dessa calculadora estão em jaule(J) <p/></h3>
+            <button className="button-calc" onClick={verClickCalc5}>Abrir</button>
+          </div>
+
+          <div className="calculadora-box c-3d">
+            <h2 className="title-calc">Rendimento de uma máquina de Carnot</h2>
+            <h3 className="text-calc">Qa - Qr = T <p/> Calculos Possiveis:<p/> Qa - Qr = x<p/> Qa - x = T<p/> x - Qr = T<p/> Qa = Calor na fonte de aquecimento <p/> Qr = Calor na fonte de resfriamento <p/> T = Trabalho <p/>Todas as medidas dessa calculadora estão em jaule(J) <p/></h3>
+            <button className="button-calc" onClick={verClickCalc5}>Abrir</button>
           </div>
 
         </div>
