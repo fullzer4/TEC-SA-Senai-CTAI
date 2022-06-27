@@ -28,4 +28,4 @@ PAGES
 URL: https://prod.liveshare.vsengsaas.visualstudio.com/join?223F4FFAAA185B9BDA3BC8DACC156199735B
 https://situacaodeaprendizagem2021.netlify.app/calculadora.html
 
-!!Mudar a logica de pegar os valores inversos
+!!fazer os inversos das novas formulas 4 pra frente

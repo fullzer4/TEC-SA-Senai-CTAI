@@ -7,7 +7,6 @@ type CalculosContextProps = { //configurar as props
 
 type CalculosContextType ={ //tipo
     classSC: string;
-    classRC: string;
     verClickCalc1: () => void;
     verClickCalc2: () => void;
     verClickCalc3: () => void;
@@ -33,7 +32,6 @@ type CalculosContextType ={ //tipo
 
 const CalculosinitialValue ={  //definir o que ele ira receber
     classSC: ("show-calculo desativado"),
-    classRC: ("show-calculo-rendimento desativado"),
     verClickCalc1: () => {},
     verClickCalc2: () => {},
     verClickCalc3: () => {},
@@ -61,7 +59,6 @@ export const CalculosContext = createContext<CalculosContextType>(Calculosinitia
 
 export const CalculosProvider = ({ children }: CalculosContextProps) => {
     const [classSC, setClassSC] = useState(CalculosinitialValue.classSC)
-    const [classRC, setClassRC] = useState(CalculosinitialValue.classRC)
     const [openCalc, setOpenCalc] = useState(CalculosinitialValue.openCalc)
     const [calcEsc, setCalcEsc] = useState(CalculosinitialValue.calcEsc)
     const [pc1Esc, setPc1Esc] = useState(CalculosinitialValue.pc1Esc)
@@ -196,19 +193,17 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                     toast.error("todos os campos preenchidos")
                     return
                 }
-                resultadoBack = (var1 / var2)
+                resultadoBack = ((var1 / var2 - 1) * 100)
                 setResult(String(resultadoBack))
                 return
             }
             if(resultadoTam > 0){
-                var2 = (var1 / resultadoBack)
-                setVal2Esc(String(var2))
+                toast.error("calculo nao possivel ainda") //fazer
                 return
             }
         }if(var2Tam > 0){
             if(resultadoTam > 0){
-                var1 = (resultadoBack * var2)
-                setVal1Esc(String(var1))
+                toast.error("calculo nao possivel ainda") //fazer
                 return
             }
         }else{
@@ -306,19 +301,16 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     function verClickCalc4(){
         if(!openCalc){
             setOpenCalc(true)
-            setClassRC("show-calculo-rendimento")
+            setClassSC("show-calculo")
             setCalcEsc("Rendimento")
-            setPc1Esc("T (jaule)")
-            setPc2Esc("Q1 (jaule)")
-            setPc3Esc("foi")
-            setPcResult("E (jaule)")
+            setPc1Esc("Qa (jaule)")
+            setPc2Esc("Qr (jaule)")
+            setPcResult("N (jaule)")
             setSelectRM(true)
             return true;
         } else {
             setOpenCalc(false)
             setSelectRM(false)
-            setClassRC("show-calculo-rendimento desativado")
-            setPc3Esc("")
             defClear()
             return false;
         }         
@@ -350,7 +342,6 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     return(
         <CalculosContext.Provider value={{
             classSC,
-            classRC,
             verClickCalc1,
             verClickCalc2,
             verClickCalc3,
