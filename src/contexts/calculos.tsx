@@ -10,6 +10,7 @@ type CalculosContextType ={ //tipo
     verClickCalc1: () => void;
     verClickCalc2: () => void;
     verClickCalc3: () => void;
+    verClickCalc4: () => void;
     openCalc: boolean;
     calcEsc: string;
     pc1Esc: string;
@@ -31,7 +32,8 @@ const CalculosinitialValue ={  //definir o que ele ira receber
     verClickCalc1: () => {},
     verClickCalc2: () => {},
     verClickCalc3: () => {},
-    openCalc: false, 
+    verClickCalc4: () => {},
+    openCalc: false,
     calcEsc: (""),
     pc1Esc: (""),
     pc2Esc: (""),
@@ -62,6 +64,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     const [selectLei1, setSelectLei1] = useState(false)
     const [selectLei2, setSelectLei2] = useState(false)
     const [selectEE, setSelectEE] = useState(false)
+    const [selectRM, setSelectRM] = useState(false)
 
     function lei1(){
         var var1Tam = val1Esc.length
@@ -168,6 +171,41 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         }
     }
 
+    function RM(){
+        var var1Tam = val1Esc.length
+        var var2Tam = val2Esc.length
+        var resultadoTam = result.length
+        var var1 = parseInt(val1Esc)
+        var var2 = parseInt(val2Esc)
+        var resultadoBack = parseInt(result)
+
+        if(var1Tam > 0){
+            if(var2Tam > 0){
+                if(resultadoTam > 0){
+                    toast.error("todos os campos preenchidos")
+                    return
+                }
+                resultadoBack = (var1 / var2)
+                setResult(String(resultadoBack))
+                return
+            }
+            if(resultadoTam > 0){
+                var2 = (var1 / resultadoBack)
+                setVal2Esc(String(var2))
+                return
+            }
+        }if(var2Tam > 0){
+            if(resultadoTam > 0){
+                var1 = (resultadoBack * var2)
+                setVal1Esc(String(var1))
+                return
+            }
+        }else{
+            toast.error("verifique se os campos estão corretos e preenchidos")
+            return
+        }
+    }
+
     function verificarLei(){
         if (selectLei1 === true){
             lei1()
@@ -180,16 +218,29 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         if (selectEE === true){
             EE()
             return
+        }if (selectRM === true){
+            RM()
+            return
         }else{
             console.log("error backend");
             return
         }
     }
 
+    function defClear(){
+        setCalcEsc("")
+        setClassSC("show-calculo desativado")
+        setPc1Esc("")
+        setPc2Esc("")
+        setPcResult("")
+        setVal1Esc("")
+        setVal2Esc("")
+        setResult("")
+    }
+
     function verClickCalc1(){
         if(!openCalc){
             setOpenCalc(true)
-            setVal1Esc("")
             setClassSC("show-calculo")
             setCalcEsc("1 Lei Termodinamica")
             setPc1Esc("Q (jaule)")
@@ -199,16 +250,8 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             return true;
         } else {
             setOpenCalc(false)
-            setCalcEsc("")
-            setClassSC("show-calculo desativado")
-            setPc1Esc("")
-            setPc2Esc("")
-            setPcResult("")
-            setVal1Esc("")
-            setVal2Esc("")
-            setResult("")
+            defClear()
             setSelectLei1(false)
-            console.log();
             return;
         }         
     }
@@ -216,9 +259,8 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     function verClickCalc2(){
         if(!openCalc){
             setOpenCalc(true)
-            setVal1Esc("")
             setClassSC("show-calculo")
-            setCalcEsc("1 Lei Termodinamica")
+            setCalcEsc("2 Lei Termodinamica")
             setPc1Esc("Q (jaule)")
             setPc2Esc("T (jaule)")
             setPcResult("ΔU (jaule)")
@@ -227,14 +269,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         } else {
             setOpenCalc(false)
             setSelectLei2(false)
-            setCalcEsc("")
-            setClassSC("show-calculo desativado")
-            setPc1Esc("")
-            setPc2Esc("")
-            setPcResult("")
-            setVal1Esc("")
-            setVal2Esc("")
-            setResult("")
+            defClear();
             return false;
         }         
     }
@@ -251,15 +286,26 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             return true;
         } else {
             setOpenCalc(false)
-            setCalcEsc("")
-            setClassSC("show-calculo desativado")
-            setPc1Esc("")
-            setPc2Esc("")
-            setPcResult("")
-            setVal1Esc("")
-            setVal2Esc("")
-            setResult("")
             setSelectEE(false)
+            defClear()
+            return false;
+        }         
+    }
+
+    function verClickCalc4(){
+        if(!openCalc){
+            setOpenCalc(true)
+            setClassSC("show-calculo")
+            setCalcEsc("Rendimento")
+            setPc1Esc("T (jaule)")
+            setPc2Esc("Q1 (jaule)")
+            setPcResult("E (jaule)")
+            setSelectRM(true)
+            return true;
+        } else {
+            setOpenCalc(false)
+            setSelectRM(false)
+            defClear()
             return false;
         }         
     }
@@ -274,6 +320,10 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         if(selectEE === true){
             verClickCalc3()
         }
+        if(selectRM === true){
+            verClickCalc4()
+        }
+        return
     }
 
     function limpar(){
@@ -289,6 +339,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             verClickCalc1,
             verClickCalc2,
             verClickCalc3,
+            verClickCalc4,
             openCalc,
             calcEsc,
             pc1Esc,
