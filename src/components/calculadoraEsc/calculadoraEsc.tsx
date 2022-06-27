@@ -40,6 +40,11 @@ export default function CalculadoraEsc() {
             <h3 className="text-calc">T / Q1 = E <p/> Calculos Possiveis:<p/> T / Q1 = x<p/> T / x = E<p/> x / Q1 = E<p/> E = Eficiencia energetica <p/> Q1 = Calor recebido <p/> T = Trabalho realizado <p/>Todas as medidas dessa calculadora estão em jaule(J) <p/></h3>
             <button className="button-calc" onClick={verClickCalc3}>Abrir</button>
           </div>
+          <div className="calculadora-box c-3d">
+            <h2 className="title-calc">Rendimento</h2>
+            <h3 className="text-calc">T / Q1 = E <p/> Calculos Possiveis:<p/> T / Q1 = x<p/> T / x = E<p/> x / Q1 = E<p/> E = Eficiencia energetica <p/> Q1 = Calor recebido <p/> T = Trabalho realizado <p/>Todas as medidas dessa calculadora estão em jaule(J) <p/></h3>
+            <button className="button-calc" onClick={verClickCalc3}>Abrir</button>
+          </div>
         </div>
       </div>
     )
