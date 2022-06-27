@@ -16,11 +16,14 @@ type CalculosContextType ={ //tipo
     calcEsc: string;
     pc1Esc: string;
     pc2Esc: string;
+    pc3Esc: string;
     pcResult: string;
     val1Esc: string;
     setVal1Esc: (newState: string) => void;
     val2Esc: string;
     setVal2Esc: (newState: string) => void;
+    val3Esc: string;
+    setVal3Esc: (newState: string) => void;
     result: string;
     setResult: (newState: string) => void;
     verificarLei: () => void;
@@ -39,11 +42,14 @@ const CalculosinitialValue ={  //definir o que ele ira receber
     calcEsc: (""),
     pc1Esc: (""),
     pc2Esc: (""),
+    pc3Esc: (""),
     pcResult: (""),
     val1Esc: (""),
     setVal1Esc: () => {},
     val2Esc: (""),
     setVal2Esc: () => {},
+    val3Esc: (""),
+    setVal3Esc: () => {},
     result: (""),
     setResult: () => {},
     verificarLei: () => {},
@@ -59,9 +65,11 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     const [openCalc, setOpenCalc] = useState(CalculosinitialValue.openCalc)
     const [calcEsc, setCalcEsc] = useState(CalculosinitialValue.calcEsc)
     const [pc1Esc, setPc1Esc] = useState(CalculosinitialValue.pc1Esc)
+    const [pc2Esc, setPc2Esc] = useState(CalculosinitialValue.pc2Esc)
+    const [pc3Esc, setPc3Esc] = useState(CalculosinitialValue.pc3Esc)
     const [val1Esc, setVal1Esc] = useState(CalculosinitialValue.val1Esc)
     const [val2Esc, setVal2Esc] = useState(CalculosinitialValue.val2Esc)
-    const [pc2Esc, setPc2Esc] = useState(CalculosinitialValue.pc2Esc)
+    const [val3Esc, setVal3Esc] = useState(CalculosinitialValue.val3Esc)
     const [pcResult, setPcResult] = useState(CalculosinitialValue.pcResult)
     const [result, setResult] = useState(CalculosinitialValue.result)
     const [selectLei1, setSelectLei1] = useState(false)
@@ -302,6 +310,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             setCalcEsc("Rendimento")
             setPc1Esc("T (jaule)")
             setPc2Esc("Q1 (jaule)")
+            setPc3Esc("foi")
             setPcResult("E (jaule)")
             setSelectRM(true)
             return true;
@@ -309,6 +318,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             setOpenCalc(false)
             setSelectRM(false)
             setClassRC("show-calculo-rendimento desativado")
+            setPc3Esc("")
             defClear()
             return false;
         }         
@@ -349,11 +359,14 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             calcEsc,
             pc1Esc,
             pc2Esc,
+            pc3Esc,
             pcResult,
             val1Esc,
             setVal1Esc,
             val2Esc,
             setVal2Esc,
+            val3Esc,
+            setVal3Esc,
             result,
             verificarLei,
             setResult,

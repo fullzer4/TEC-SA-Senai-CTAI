@@ -3,7 +3,7 @@ import { CalculosContext } from "../../contexts/calculos"
 import "./calculadoraEsc.css"
 
 export default function CalculadoraEsc() {
-  const { classSC, classRC, verClickCalc1, verClickCalc2, verClickCalc3, verClickCalc4, calcEsc, pc1Esc, pc2Esc, pcResult, val1Esc, setVal1Esc, val2Esc, setVal2Esc, result, verificarLei, setResult, verClickSair, limpar} = useContext(CalculosContext)
+  const { classSC, classRC, verClickCalc1, verClickCalc2, verClickCalc3, verClickCalc4, calcEsc, pc1Esc, pc2Esc, pc3Esc, pcResult, val1Esc, setVal1Esc, val2Esc, setVal2Esc, val3Esc, setVal3Esc, result, verificarLei, setResult, verClickSair, limpar} = useContext(CalculosContext)
 
     return(
       <div className="calculadora">
@@ -32,6 +32,7 @@ export default function CalculadoraEsc() {
               <div className="calculo-box-calculos">
                 <input type="number" value={val1Esc} placeholder={pc1Esc} onChange={(e)=> setVal1Esc(e.target.value)}/>
                 <input type="number" value={val2Esc} placeholder={pc2Esc} onChange={(e)=> setVal2Esc(e.target.value)}/>
+                <input type="number" value={val3Esc} placeholder={pc3Esc} onChange={(e)=> setVal3Esc(e.target.value)}/>
                 <input type="number" value={result} placeholder={pcResult} onChange={(e)=> setResult(e.target.value)}/>
               </div>
               <div className="calculo-box-calcular">
