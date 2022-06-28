@@ -11,7 +11,7 @@ type CalculosContextType ={ //tipo
     verClickCalc1: () => void;
     verClickCalc2: () => void;
     verClickCalc3: () => void;
-    verClickCalc4: () => void;
+    verClickCalc4: () => void; 
     verClickCalc5: () => void;
     verClickCalc6: () => void;
     verClickCalc7: () => void;
@@ -69,10 +69,12 @@ const CalculosinitialValue ={  //definir o que ele ira receber
     limpar: () => {},
 }
 
+var arr:any = [];
+
 export const CalculosContext = createContext<CalculosContextType>(CalculosinitialValue)
 
 export const CalculosProvider = ({ children }: CalculosContextProps) => {
-    const [classSC, setClassSC] = useState(CalculosinitialValue.classSC)
+    const [classSC, setClassSC] = useState(CalculosinitialValue.classSC) //classSc = valor Principal setClassSC = definir o valor principal
     const [classGST, setClassGST] = useState(CalculosinitialValue.classGST)
     const [openCalc, setOpenCalc] = useState(CalculosinitialValue.openCalc)
     const [calcEsc, setCalcEsc] = useState(CalculosinitialValue.calcEsc)
@@ -95,6 +97,13 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     const [selectVE, setSelectVE] = useState(false)
     const [selectTC, setSelectTC] = useState(false)
     const R = 8.31 //constante dos gases perfeitos
+    
+
+    function setArr(e:number){
+        arr.push(e)
+        console.log(arr);
+        
+    }
 
     function lei1(){
         var var1Tam = val1Esc.length
@@ -112,6 +121,8 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                 }
                 resultadoBack = (var1 - var2)
                 setResult(String(resultadoBack))
+                setArr(resultadoBack)
+                
                 return
             }
             if(resultadoTam > 0){
