@@ -94,6 +94,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     const [selectEI, setSelectEI] = useState(false)
     const [selectVE, setSelectVE] = useState(false)
     const [selectTC, setSelectTC] = useState(false)
+    const R = 8.31 //constante dos gases perfeitos
 
     function lei1(){
         var var1Tam = val1Esc.length
