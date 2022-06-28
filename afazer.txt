@@ -26,6 +26,5 @@ PAGES
         Frameworks
 
 URL: https://prod.liveshare.vsengsaas.visualstudio.com/join?223F4FFAAA185B9BDA3BC8DACC156199735B
-https://situacaodeaprendizagem2021.netlify.app/calculadora.html
 
-!!fazer os inversos das novas formulas 4 pra frente
+!!fazer Todos os calculos e inversos do Rendimento de maquina termica
