@@ -69,7 +69,7 @@ const CalculosinitialValue ={  //definir o que ele ira receber
     limpar: () => {},
 }
 
-var arr:any = [];
+var historico:any = [];
 
 export const CalculosContext = createContext<CalculosContextType>(CalculosinitialValue)
 
@@ -96,68 +96,87 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     const [selectEI, setSelectEI] = useState(false)
     const [selectVE, setSelectVE] = useState(false)
     const [selectTC, setSelectTC] = useState(false)
+    var var1Tam = val1Esc.length
+    var var2Tam = val2Esc.length
+    var var3Tam = val3Esc.length
+    var resultadoTam = result.length
+    var var1 = parseInt(val1Esc)
+    var var2 = parseInt(val2Esc)
+    var var3 = parseInt(val3Esc)
+    var resultadoBack = parseInt(result)
     const R = 8.31 //constante dos gases perfeitos
     
 
-    function setArr(e:number){
-        arr.push(e)
-        console.log(arr);
+    function setHistorico(e:number){
+        historico.push(e)
+        console.log(historico);
         
     }
 
-    function lei1(){
-        var var1Tam = val1Esc.length
-        var var2Tam = val2Esc.length
-        var resultadoTam = result.length
-        var var1 = parseInt(val1Esc)
-        var var2 = parseInt(val2Esc)
-        var resultadoBack = parseInt(result)
+    function msgToast(e:number){
+        if(e === 0){toast.error("todos os campos preenchidos")}
+        if(e === 1){toast.error("verifique se os campos estão corretos e preenchidos")}
+        if(e === 2){toast.error("calculo nao possivel ainda")}
+        return;
+    }
 
+    function newRes(e:number, res:number, tip:number){
+        if(tip === 1){
+            setVal1Esc(String(res))
+            setHistorico(e);
+        }
+        if(tip === 2){
+            setVal2Esc(String(res))
+            setHistorico(e);
+        }
+        if(tip === 3){
+            setResult(String(res))
+            setHistorico(e);
+        }
+        return;
+    }
+
+    function lei1(){
         if(var1Tam > 0){
             if(var2Tam > 0){
                 if(resultadoTam > 0){
-                    toast.error("todos os campos preenchidos")
+                    msgToast(0)
                     return
                 }
                 resultadoBack = (var1 - var2)
-                setResult(String(resultadoBack))
-                setArr(resultadoBack)
-                
+                var teste:any = [resultadoBack, var1, var2];
+                newRes(teste, resultadoBack, 3);
                 return
             }
             if(resultadoTam > 0){
                 var2 = (var1 - resultadoBack)
-                setVal2Esc(String(var2))
+                var teste:any = [resultadoBack, var1, var2];
+                newRes(teste, var2, 2);
                 return
             }
         }if(var2Tam > 0){
             if(resultadoTam > 0){
                 var1 = (resultadoBack + var2)
-                setVal1Esc(String(var1))
+                var teste:any = [resultadoBack, var1, var2];
+                newRes(teste, var1, 1);
                 return
             }
         }else{
-            toast.error("verifique se os campos estão corretos e preenchidos")
+            msgToast(1)
             return
         }
     }
 
     function lei2(){
-        var var1Tam = val1Esc.length
-        var var2Tam = val2Esc.length
-        var resultadoTam = result.length
-        var var1 = parseInt(val1Esc)
-        var var2 = parseInt(val2Esc)
-        var resultadoBack = parseInt(result)
-
         if(var1Tam > 0){
             if(var2Tam > 0){
                 if(resultadoTam > 0){
-                    toast.error("todos os campos preenchidos")
+                    msgToast(0)
                     return
                 }
                 resultadoBack = (var1 + var2)
-                setResult(String(resultadoBack))
+                var teste:any = [resultadoBack, var1, var2];
+                newRes(teste, resultadoBack, 3);
                 return
             }
             if(resultadoTam > 0){
@@ -172,27 +191,21 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                 return
             }
         }else{
-            toast.error("verifique se os campos estão corretos e preenchidos")
+            msgToast(1)
             return
         }
     }
 
     function EE(){
-        var var1Tam = val1Esc.length
-        var var2Tam = val2Esc.length
-        var resultadoTam = result.length
-        var var1 = parseInt(val1Esc)
-        var var2 = parseInt(val2Esc)
-        var resultadoBack = parseInt(result)
-
         if(var1Tam > 0){
             if(var2Tam > 0){
                 if(resultadoTam > 0){
-                    toast.error("todos os campos preenchidos")
+                    msgToast(0)
                     return
                 }
                 resultadoBack = (var1 / var2)
-                setResult(String(resultadoBack))
+                var teste:any = [resultadoBack, var1, var2];
+                newRes(teste, resultadoBack, 3);
                 return
             }
             if(resultadoTam > 0){
@@ -207,40 +220,34 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                 return
             }
         }else{
-            toast.error("verifique se os campos estão corretos e preenchidos")
+            msgToast(1)
             return
         }
     }
 
     function RM(){
-        var var1Tam = val1Esc.length
-        var var2Tam = val2Esc.length
-        var resultadoTam = result.length
-        var var1 = parseInt(val1Esc)
-        var var2 = parseInt(val2Esc)
-        var resultadoBack = parseInt(result)
-
         if(var1Tam > 0){
             if(var2Tam > 0){
                 if(resultadoTam > 0){
-                    toast.error("todos os campos preenchidos")
+                    msgToast(0)
                     return
                 }
                 resultadoBack = ((var1 / var2 - 1) * 100)
-                setResult(String(resultadoBack))
+                var teste:any = [resultadoBack, var1, var2];
+                newRes(teste, resultadoBack, 3);
                 return
             }
             if(resultadoTam > 0){
-                toast.error("calculo nao possivel ainda") //fazer
+                msgToast(2) //fazer
                 return
             }
         }if(var2Tam > 0){
             if(resultadoTam > 0){
-                toast.error("calculo nao possivel ainda") //fazer
+                msgToast(2) //fazer
                 return
             }
         }else{
-            toast.error("verifique se os campos estão corretos e preenchidos")
+            msgToast(1)
             return
         }
     }
@@ -248,21 +255,15 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     //^ finalizados pra cima ^
 
     function TM(){
-        var var1Tam = val1Esc.length
-        var var2Tam = val2Esc.length
-        var resultadoTam = result.length
-        var var1 = parseInt(val1Esc)
-        var var2 = parseInt(val2Esc)
-        var resultadoBack = parseInt(result)
-
         if(var1Tam > 0){
             if(var2Tam > 0){
                 if(resultadoTam > 0){
-                    toast.error("todos os campos preenchidos")
+                    msgToast(0)
                     return
                 }
                 resultadoBack = (var1 - var2)
-                setResult(String(resultadoBack))
+                var teste:any = [resultadoBack, var1, var2];
+                newRes(teste, resultadoBack, 3);
                 return
             }
             if(resultadoTam > 0){
@@ -277,27 +278,21 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                 return
             }
         }else{
-            toast.error("verifique se os campos estão corretos e preenchidos")
+            msgToast(1)
             return
         }
     }
 
     function EV(){
-        var var1Tam = val1Esc.length
-        var var2Tam = val2Esc.length
-        var resultadoTam = result.length
-        var var1 = parseInt(val1Esc)
-        var var2 = parseInt(val2Esc)
-        var resultadoBack = parseInt(result)
-
         if(var1Tam > 0){
             if(var2Tam > 0){
                 if(resultadoTam > 0){
-                    toast.error("todos os campos preenchidos")
+                    msgToast(0)
                     return
                 }
                 resultadoBack = (var1 - var2)
-                setResult(String(resultadoBack))
+                var teste:any = [resultadoBack, var1, var2];
+                newRes(teste, resultadoBack, 3);
                 return
             }
             if(resultadoTam > 0){
@@ -312,27 +307,21 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                 return
             }
         }else{
-            toast.error("verifique se os campos estão corretos e preenchidos")
+            msgToast(1)
             return
         }
     }
 
     function TG(){
-        var var1Tam = val1Esc.length
-        var var2Tam = val2Esc.length
-        var resultadoTam = result.length
-        var var1 = parseInt(val1Esc)
-        var var2 = parseInt(val2Esc)
-        var resultadoBack = parseInt(result)
-
         if(var1Tam > 0){
             if(var2Tam > 0){
                 if(resultadoTam > 0){
-                    toast.error("todos os campos preenchidos")
+                    msgToast(0)
                     return
                 }
                 resultadoBack = (var1 - var2)
-                setResult(String(resultadoBack))
+                var teste:any = [resultadoBack, var1, var2];
+                newRes(teste, resultadoBack, 3);
                 return
             }
             if(resultadoTam > 0){
@@ -347,62 +336,52 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                 return
             }
         }else{
-            toast.error("verifique se os campos estão corretos e preenchidos")
+            msgToast(1)
             return
         }
     }
 
     function EI(){
-        var var1Tam = val1Esc.length
-        var var2Tam = val2Esc.length
-        var resultadoTam = result.length
-        var var1 = parseInt(val1Esc)
-        var var2 = parseInt(val2Esc)
-        var resultadoBack = parseInt(result)
-
         if(var1Tam > 0){
             if(var2Tam > 0){
                 if(resultadoTam > 0){
-                    toast.error("todos os campos preenchidos")
+                    msgToast(0)
                     return
                 }
                 resultadoBack = (var1 - var2)
-                setResult(String(resultadoBack))
+                var teste:any = [resultadoBack, var1, var2];
+                newRes(teste, resultadoBack, 3);
                 return
             }
             if(resultadoTam > 0){
                 var2 = (var1 - resultadoBack)
-                setVal2Esc(String(var2))
+                var teste:any = [resultadoBack, var1, var2];
+                newRes(teste, var2, 2);
                 return
             }
         }if(var2Tam > 0){
             if(resultadoTam > 0){
                 var1 = (resultadoBack + var2)
-                setVal1Esc(String(var1))
+                var teste:any = [resultadoBack, var1, var2];
+                newRes(teste, var1, 1);
                 return
             }
         }else{
-            toast.error("verifique se os campos estão corretos e preenchidos")
+            msgToast(1)
             return
         }
     }
 
     function VE(){
-        var var1Tam = val1Esc.length
-        var var2Tam = val2Esc.length
-        var resultadoTam = result.length
-        var var1 = parseInt(val1Esc)
-        var var2 = parseInt(val2Esc)
-        var resultadoBack = parseInt(result)
-
         if(var1Tam > 0){
             if(var2Tam > 0){
                 if(resultadoTam > 0){
-                    toast.error("todos os campos preenchidos")
+                    msgToast(0)
                     return
                 }
                 resultadoBack = (var1 - var2)
-                setResult(String(resultadoBack))
+                var teste:any = [resultadoBack, var1, var2];
+                newRes(teste, resultadoBack, 3);
                 return
             }
             if(resultadoTam > 0){
@@ -417,27 +396,21 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                 return
             }
         }else{
-            toast.error("verifique se os campos estão corretos e preenchidos")
+            msgToast(1)
             return
         }
     }
 
     function TC(){
-        var var1Tam = val1Esc.length
-        var var2Tam = val2Esc.length
-        var resultadoTam = result.length
-        var var1 = parseInt(val1Esc)
-        var var2 = parseInt(val2Esc)
-        var resultadoBack = parseInt(result)
-
         if(var1Tam > 0){
             if(var2Tam > 0){
                 if(resultadoTam > 0){
-                    toast.error("todos os campos preenchidos")
+                    msgToast(0)
                     return
                 }
                 resultadoBack = (var1 - var2)
-                setResult(String(resultadoBack))
+                var teste:any = [resultadoBack, var1, var2];
+                newRes(teste, resultadoBack, 3);
                 return
             }
             if(resultadoTam > 0){
@@ -452,7 +425,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                 return
             }
         }else{
-            toast.error("verifique se os campos estão corretos e preenchidos")
+            msgToast(1)
             return
         }
     }

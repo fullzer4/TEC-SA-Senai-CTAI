@@ -1,30 +1,31 @@
 PAGES
+    Footer
     Home
-        Bem vindo
-        Como funciona
-
+        Presentation
+            #sobre
+            Linguagens
+            Arquitetura resumida
+            Participantes - github, linkedin, mailto
     Projeto
-        Explicar SA
-
-    Sobre
-        Membros 
-            Anselmo Henrique
-            Gabriel Pelizzaro
-            Bruno Wotzke
-            Alexis Reales
-            Arthur Rocha
-        Divisão dos membros
-
+        projetointro
+            introdução
+            apresentação
+        projetoinfo
+            video
+            imagens
+            processo de montagem
+            explicação
+            --partipação
     Calculadora
-        tipos de calculo:
-            variação e energia interna
-            energia transferida na forma de calor
-            trabalho realizado
-            rendimento
+        Finalizar formulas
+        histórico
+        informações
+        Refazer componente calculo intro
 
-    Linguagens
-        Frameworks
+FONTES
 
-URL: https://prod.liveshare.vsengsaas.visualstudio.com/join?223F4FFAAA185B9BDA3BC8DACC156199735B
+karla: https://fonts.google.com/specimen/Karla
+
+URL: 
 
 !!fazer Todos os calculos e inversos do Rendimento de maquina termica

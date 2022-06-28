@@ -14,7 +14,6 @@ export default function Header(){
             <div className="def-h right">
                 <Link to="/projects" className="bt-def-h">Projeto</Link>
                 <Link to="/calculator" className="bt-def-h">Calculadora</Link>
-                <Link to="/languages" className="bt-def-h">Linguagens</Link>
             </div>
         </header>
     )
