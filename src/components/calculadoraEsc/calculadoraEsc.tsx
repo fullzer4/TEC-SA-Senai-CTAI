@@ -90,14 +90,14 @@ export default function CalculadoraEsc() {
           </div>
 
           <div className="calculadora-box c-3d">
-            <h2 className="title-calc">Variação de Energia Interna</h2>
-            <h3 className="text-calc">3 / 2 nRΔT = ΔU <p/> Calculos Possiveis:<p/> 3 / 2 nRΔT = x<p/> 3 / 2 nRx = ΔU<p/> 3 / 2 nxΔT = ΔU<p/> 3 / 2 xRΔT = ΔU<p/>n = Numero de Mols do Gás<p/> R = Constante Universal dos Gases Perfeitos <p/> ΔT = Variação de Temperatura Absoluta <p/> ΔU = Variação de Energia Interna<p/>Todas as medidas dessa calculadora estão em jaule(J) <p/></h3>
+            <h2 className="title-calc">Energia Interna Temperatura</h2>
+            <h3 className="text-calc">3 / 2 nRT = U <p/> Calculos Possiveis:<p/> 3 / 2 nRT = x<p/> 3 / 2 nRx = U<p/> 3 / 2 nxT = U<p/>  3 / 2 xRT = U<p/>n = Numero de Mols do Gás <p/> R = Constante Universal dos Gases Perfeitos <p/> T = Temperatura Absoluta <p/>Todas as medidas dessa calculadora estão em jaule(J) <p/></h3>
             <button className="button-calc" onClick={verClickCalc5}>Abrir</button>
           </div>
 
           <div className="calculadora-box c-3d">
-            <h2 className="title-calc">Energia Interna Temperatura</h2>
-            <h3 className="text-calc">3 / 2 nRT = U <p/> Calculos Possiveis:<p/> 3 / 2 nRT = x<p/> 3 / 2 nRx = U<p/> 3 / 2 nxT = U<p/>  3 / 2 xRT = U<p/>n = Numero de Mols do Gás <p/> R = Constante Universal dos Gases Perfeitos <p/> T = Temperatura Absoluta <p/>Todas as medidas dessa calculadora estão em jaule(J) <p/></h3>
+            <h2 className="title-calc">Variação de Energia Interna</h2>
+            <h3 className="text-calc">3 / 2 nRΔT = ΔU <p/> Calculos Possiveis:<p/> 3 / 2 nRΔT = x<p/> 3 / 2 nRx = ΔU<p/> 3 / 2 nxΔT = ΔU<p/> 3 / 2 xRΔT = ΔU<p/>n = Numero de Mols do Gás<p/> R = Constante Universal dos Gases Perfeitos <p/> ΔT = Variação de Temperatura Absoluta <p/> ΔU = Variação de Energia Interna<p/>Todas as medidas dessa calculadora estão em jaule(J) <p/></h3>
             <button className="button-calc" onClick={verClickCalc5}>Abrir</button>
           </div>
       
