@@ -89,6 +89,11 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     const [selectEE, setSelectEE] = useState(false)
     const [selectRM, setSelectRM] = useState(false)
     const [selectTM, setSelectTM] = useState(false)
+    const [selectEV, setSelectEV] = useState(false)
+    const [selectTG, setSelectTG] = useState(false)
+    const [selectEI, setSelectEI] = useState(false)
+    const [selectVE, setSelectVE] = useState(false)
+    const [selectTC, setSelectTC] = useState(false)
 
     function lei1(){
         var var1Tam = val1Esc.length
@@ -228,6 +233,8 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         }
     }
 
+    //^ finalizados pra cima ^
+
     function TM(){
         var var1Tam = val1Esc.length
         var var2Tam = val2Esc.length
@@ -263,6 +270,183 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         }
     }
 
+    function EV(){
+        var var1Tam = val1Esc.length
+        var var2Tam = val2Esc.length
+        var resultadoTam = result.length
+        var var1 = parseInt(val1Esc)
+        var var2 = parseInt(val2Esc)
+        var resultadoBack = parseInt(result)
+
+        if(var1Tam > 0){
+            if(var2Tam > 0){
+                if(resultadoTam > 0){
+                    toast.error("todos os campos preenchidos")
+                    return
+                }
+                resultadoBack = (var1 - var2)
+                setResult(String(resultadoBack))
+                return
+            }
+            if(resultadoTam > 0){
+                var2 = (var1 - resultadoBack)
+                setVal2Esc(String(var2))
+                return
+            }
+        }if(var2Tam > 0){
+            if(resultadoTam > 0){
+                var1 = (resultadoBack + var2)
+                setVal1Esc(String(var1))
+                return
+            }
+        }else{
+            toast.error("verifique se os campos estão corretos e preenchidos")
+            return
+        }
+    }
+
+    function TG(){
+        var var1Tam = val1Esc.length
+        var var2Tam = val2Esc.length
+        var resultadoTam = result.length
+        var var1 = parseInt(val1Esc)
+        var var2 = parseInt(val2Esc)
+        var resultadoBack = parseInt(result)
+
+        if(var1Tam > 0){
+            if(var2Tam > 0){
+                if(resultadoTam > 0){
+                    toast.error("todos os campos preenchidos")
+                    return
+                }
+                resultadoBack = (var1 - var2)
+                setResult(String(resultadoBack))
+                return
+            }
+            if(resultadoTam > 0){
+                var2 = (var1 - resultadoBack)
+                setVal2Esc(String(var2))
+                return
+            }
+        }if(var2Tam > 0){
+            if(resultadoTam > 0){
+                var1 = (resultadoBack + var2)
+                setVal1Esc(String(var1))
+                return
+            }
+        }else{
+            toast.error("verifique se os campos estão corretos e preenchidos")
+            return
+        }
+    }
+
+    function EI(){
+        var var1Tam = val1Esc.length
+        var var2Tam = val2Esc.length
+        var resultadoTam = result.length
+        var var1 = parseInt(val1Esc)
+        var var2 = parseInt(val2Esc)
+        var resultadoBack = parseInt(result)
+
+        if(var1Tam > 0){
+            if(var2Tam > 0){
+                if(resultadoTam > 0){
+                    toast.error("todos os campos preenchidos")
+                    return
+                }
+                resultadoBack = (var1 - var2)
+                setResult(String(resultadoBack))
+                return
+            }
+            if(resultadoTam > 0){
+                var2 = (var1 - resultadoBack)
+                setVal2Esc(String(var2))
+                return
+            }
+        }if(var2Tam > 0){
+            if(resultadoTam > 0){
+                var1 = (resultadoBack + var2)
+                setVal1Esc(String(var1))
+                return
+            }
+        }else{
+            toast.error("verifique se os campos estão corretos e preenchidos")
+            return
+        }
+    }
+
+    function VE(){
+        var var1Tam = val1Esc.length
+        var var2Tam = val2Esc.length
+        var resultadoTam = result.length
+        var var1 = parseInt(val1Esc)
+        var var2 = parseInt(val2Esc)
+        var resultadoBack = parseInt(result)
+
+        if(var1Tam > 0){
+            if(var2Tam > 0){
+                if(resultadoTam > 0){
+                    toast.error("todos os campos preenchidos")
+                    return
+                }
+                resultadoBack = (var1 - var2)
+                setResult(String(resultadoBack))
+                return
+            }
+            if(resultadoTam > 0){
+                var2 = (var1 - resultadoBack)
+                setVal2Esc(String(var2))
+                return
+            }
+        }if(var2Tam > 0){
+            if(resultadoTam > 0){
+                var1 = (resultadoBack + var2)
+                setVal1Esc(String(var1))
+                return
+            }
+        }else{
+            toast.error("verifique se os campos estão corretos e preenchidos")
+            return
+        }
+    }
+
+    function TC(){
+        var var1Tam = val1Esc.length
+        var var2Tam = val2Esc.length
+        var resultadoTam = result.length
+        var var1 = parseInt(val1Esc)
+        var var2 = parseInt(val2Esc)
+        var resultadoBack = parseInt(result)
+
+        if(var1Tam > 0){
+            if(var2Tam > 0){
+                if(resultadoTam > 0){
+                    toast.error("todos os campos preenchidos")
+                    return
+                }
+                resultadoBack = (var1 - var2)
+                setResult(String(resultadoBack))
+                return
+            }
+            if(resultadoTam > 0){
+                var2 = (var1 - resultadoBack)
+                setVal2Esc(String(var2))
+                return
+            }
+        }if(var2Tam > 0){
+            if(resultadoTam > 0){
+                var1 = (resultadoBack + var2)
+                setVal1Esc(String(var1))
+                return
+            }
+        }else{
+            toast.error("verifique se os campos estão corretos e preenchidos")
+            return
+        }
+    }
+
+    // finalizados para baixo :)
+
     function verificarLei(){
         if (selectLei1 === true){
             lei1()
@@ -283,7 +467,34 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         if (selectTM === true){
             TM()
             return
-        }else{
+            
+        }
+        if (selectEV === true){
+            EV()
+            return
+            
+        }
+        if (selectTG === true){
+            TG()
+            return
+            
+        }
+        if (selectEI === true){
+            EI()
+            return
+            
+        }
+        if (selectVE === true){
+            VE()
+            return
+            
+        }
+        if (selectTC === true){
+            TC()
+            return
+            
+        }
+        else{
             console.log("error backend");
             return
         }
@@ -400,11 +611,11 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             setPc1Esc("V (jaule)")
             setPc2Esc("p (jaule)")
             setPcResult("U (jaule)")
-            setSelectTM(true)
+            setSelectEV(true)
             return true;
         } else {
             setOpenCalc(false)
-            setSelectTM(false)
+            setSelectEV(false)
             defClear()
             return false;
         }         
@@ -417,11 +628,11 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             setPc1Esc("p (jaule)")
             setPc2Esc("ΔV (jaule)")
             setPcResult("T (jaule)")
-            setSelectTM(true)
+            setSelectTG(true)
             return true;
         } else {
             setOpenCalc(false)
-            setSelectTM(false)
+            setSelectTG(false)
             defClear()
             return false;
         }         
@@ -434,11 +645,11 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             setPc1Esc("n (jaule)")
             setPc2Esc("R (jaule)")
             setPcResult("T (jaule)")
-            setSelectTM(true)
+            setSelectEI(true)
             return true;
         } else {
             setOpenCalc(false)
-            setSelectTM(false)
+            setSelectEI(false)
             defClear()
             return false;
         }         
@@ -451,29 +662,29 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             setPc1Esc("n (jaule)")
             setPc2Esc("ΔT (jaule)")
             setPcResult("ΔU (jaule)")
-            setSelectTM(true)
+            setSelectVE(true)
             return true;
         } else {
             setOpenCalc(false)
-            setSelectTM(false)
+            setSelectVE(false)
             defClear()
             return false;
         }         
     }
     function verClickCalc10(){
-        if(!openCalc){ // refazer um box de calculo especial
+        if(!openCalc){
             setOpenCalc(true)
             setClassGST("show-calculo-gas")
             setCalcEsc("Trabalho de um Gás Sob Temperatura Constante")
             setPc1Esc("n (jaule)")
             setPc2Esc("T (jaule)")
-            setPc3Esc("T (jaule)")
-            setPcResult("N (jaule)")
-            setSelectTM(true)
+            setPc3Esc("V1 (jaule)")
+            setPcResult("V2 (jaule)")
+            setSelectTC(true)
             return true;
         } else {
             setOpenCalc(false)
-            setSelectTM(false)
+            setSelectTC(false)
             defClear()
             return false;
         }         
@@ -494,6 +705,21 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         }
         if(selectTM === true){
             verClickCalc5()
+        }
+        if(selectEV === true){
+            verClickCalc6()
+        }
+        if(selectTG === true){
+            verClickCalc7()
+        }
+        if(selectEI === true){
+            verClickCalc8()
+        }
+        if(selectVE === true){
+            verClickCalc9()
+        }
+        if(selectTC === true){
+            verClickCalc10()
         }
         return
     }
