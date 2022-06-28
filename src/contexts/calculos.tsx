@@ -449,56 +449,17 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     // finalizados para baixo :)
 
     function verificarLei(){
-        if (selectLei1 === true){
-            lei1()
-            return
-        }
-        if (selectLei2 === true){
-            lei2()
-            return
-        }
-        if (selectEE === true){
-            EE()
-            return
-        }
-        if (selectRM === true){
-            RM()
-            return
-        }
-        if (selectTM === true){
-            TM()
-            return
-            
-        }
-        if (selectEV === true){
-            EV()
-            return
-            
-        }
-        if (selectTG === true){
-            TG()
-            return
-            
-        }
-        if (selectEI === true){
-            EI()
-            return
-            
-        }
-        if (selectVE === true){
-            VE()
-            return
-            
-        }
-        if (selectTC === true){
-            TC()
-            return
-            
-        }
-        else{
-            console.log("error backend");
-            return
-        }
+        if (selectLei1){lei1()}
+        if (selectLei2){lei2()}
+        if (selectEE){EE()}
+        if (selectRM){RM()}
+        if (selectTM){TM()}
+        if (selectEV){EV()}
+        if (selectTG){TG()}
+        if (selectEI){EI()}
+        if (selectVE){VE()}
+        if (selectTC){TC()}
+        return
     }
 
     function defClear(){
@@ -692,36 +653,16 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     }
 
     function verClickSair(){
-        if(selectLei1 === true){
-            verClickCalc1()
-        }
-        if(selectLei2 === true){
-            verClickCalc2()
-        }
-        if(selectEE === true){
-            verClickCalc3()
-        }
-        if(selectRM === true){
-            verClickCalc4()
-        }
-        if(selectTM === true){
-            verClickCalc5()
-        }
-        if(selectEV === true){
-            verClickCalc6()
-        }
-        if(selectTG === true){
-            verClickCalc7()
-        }
-        if(selectEI === true){
-            verClickCalc8()
-        }
-        if(selectVE === true){
-            verClickCalc9()
-        }
-        if(selectTC === true){
-            verClickCalc10()
-        }
+        if(selectLei1){verClickCalc1()}
+        if(selectLei2){verClickCalc2()}
+        if(selectEE){verClickCalc3()}
+        if(selectRM){verClickCalc4()}
+        if(selectTM){verClickCalc5()}
+        if(selectEV){verClickCalc6()}
+        if(selectTG){verClickCalc7()}
+        if(selectEI){verClickCalc8()}
+        if(selectVE){verClickCalc9()}
+        if(selectTC){verClickCalc10()}
         return
     }
 
