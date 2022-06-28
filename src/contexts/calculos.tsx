@@ -7,11 +7,17 @@ type CalculosContextProps = { //configurar as props
 
 type CalculosContextType ={ //tipo
     classSC: string;
+    classGST: string;
     verClickCalc1: () => void;
     verClickCalc2: () => void;
     verClickCalc3: () => void;
     verClickCalc4: () => void;
     verClickCalc5: () => void;
+    verClickCalc6: () => void;
+    verClickCalc7: () => void;
+    verClickCalc8: () => void;
+    verClickCalc9: () => void;
+    verClickCalc10: () => void;
     openCalc: boolean;
     calcEsc: string;
     pc1Esc: string;
@@ -33,11 +39,17 @@ type CalculosContextType ={ //tipo
 
 const CalculosinitialValue ={  //definir o que ele ira receber
     classSC: ("show-calculo desativado"),
+    classGST: ("show-calculo-gas desativado"),
     verClickCalc1: () => {},
     verClickCalc2: () => {},
     verClickCalc3: () => {},
     verClickCalc4: () => {},
     verClickCalc5: () => {},
+    verClickCalc6: () => {},
+    verClickCalc7: () => {},
+    verClickCalc8: () => {},
+    verClickCalc9: () => {},
+    verClickCalc10: () => {},
     openCalc: false,
     calcEsc: (""),
     pc1Esc: (""),
@@ -61,6 +73,7 @@ export const CalculosContext = createContext<CalculosContextType>(Calculosinitia
 
 export const CalculosProvider = ({ children }: CalculosContextProps) => {
     const [classSC, setClassSC] = useState(CalculosinitialValue.classSC)
+    const [classGST, setClassGST] = useState(CalculosinitialValue.classGST)
     const [openCalc, setOpenCalc] = useState(CalculosinitialValue.openCalc)
     const [calcEsc, setCalcEsc] = useState(CalculosinitialValue.calcEsc)
     const [pc1Esc, setPc1Esc] = useState(CalculosinitialValue.pc1Esc)
@@ -279,11 +292,14 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     function defClear(){
         setCalcEsc("")
         setClassSC("show-calculo desativado")
+        setClassGST("show-calculo-gas desativado")
         setPc1Esc("")
         setPc2Esc("")
+        setPc3Esc("")
         setPcResult("")
         setVal1Esc("")
         setVal2Esc("")
+        setVal3Esc("")
         setResult("")
     }
 
@@ -366,6 +382,92 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             setCalcEsc("Trabalho Maquina Termica")
             setPc1Esc("Qa (jaule)")
             setPc2Esc("Qr (jaule)")
+            setPcResult("T (jaule)")
+            setSelectTM(true)
+            return true;
+        } else {
+            setOpenCalc(false)
+            setSelectTM(false)
+            defClear()
+            return false;
+        }         
+    }
+    function verClickCalc6(){
+        if(!openCalc){
+            setOpenCalc(true)
+            setClassSC("show-calculo")
+            setCalcEsc("Energia Interna Volume")
+            setPc1Esc("V (jaule)")
+            setPc2Esc("p (jaule)")
+            setPcResult("U (jaule)")
+            setSelectTM(true)
+            return true;
+        } else {
+            setOpenCalc(false)
+            setSelectTM(false)
+            defClear()
+            return false;
+        }         
+    }
+    function verClickCalc7(){
+        if(!openCalc){
+            setOpenCalc(true)
+            setClassSC("show-calculo")
+            setCalcEsc("Trabalho de um Gás Sob Pressão Constante")
+            setPc1Esc("p (jaule)")
+            setPc2Esc("ΔV (jaule)")
+            setPcResult("T (jaule)")
+            setSelectTM(true)
+            return true;
+        } else {
+            setOpenCalc(false)
+            setSelectTM(false)
+            defClear()
+            return false;
+        }         
+    }
+    function verClickCalc8(){
+        if(!openCalc){
+            setOpenCalc(true)
+            setClassSC("show-calculo")
+            setCalcEsc("Energia Interna Temperatura")
+            setPc1Esc("n (jaule)")
+            setPc2Esc("R (jaule)")
+            setPcResult("T (jaule)")
+            setSelectTM(true)
+            return true;
+        } else {
+            setOpenCalc(false)
+            setSelectTM(false)
+            defClear()
+            return false;
+        }         
+    }
+    function verClickCalc9(){
+        if(!openCalc){
+            setOpenCalc(true)
+            setClassSC("show-calculo")
+            setCalcEsc("Variação de Energia Interna")
+            setPc1Esc("n (jaule)")
+            setPc2Esc("ΔT (jaule)")
+            setPcResult("ΔU (jaule)")
+            setSelectTM(true)
+            return true;
+        } else {
+            setOpenCalc(false)
+            setSelectTM(false)
+            defClear()
+            return false;
+        }         
+    }
+    function verClickCalc10(){
+        if(!openCalc){ // refazer um box de calculo especial
+            setOpenCalc(true)
+            setClassGST("show-calculo-gas")
+            setCalcEsc("Trabalho de um Gás Sob Temperatura Constante")
+            setPc1Esc("n (jaule)")
+            setPc2Esc("T (jaule)")
+            setPc3Esc("T (jaule)")
             setPcResult("N (jaule)")
             setSelectTM(true)
             return true;
@@ -406,11 +508,17 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     return(
         <CalculosContext.Provider value={{
             classSC,
+            classGST,
             verClickCalc1,
             verClickCalc2,
             verClickCalc3,
             verClickCalc4,
             verClickCalc5,
+            verClickCalc6,
+            verClickCalc7,
+            verClickCalc8,
+            verClickCalc9,
+            verClickCalc10,
             openCalc,
             calcEsc,
             pc1Esc,
