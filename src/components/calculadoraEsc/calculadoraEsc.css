@@ -15,10 +15,10 @@
 .calculadora-boxes{
     width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: row;    
     flex-wrap: wrap ;
+    align-items: normal;
 }
 .calculadora-box{
     width: calc(100%/3 - 40px);
@@ -27,6 +27,17 @@
     border-radius: 3px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+.calculadora-box:after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: #d184fd;
+    transform: translateX(-10px);
 }
 .title-calc{
     font-size: 17px;
@@ -67,7 +78,7 @@
     backdrop-filter: blur(3px);
     z-index: 1001;
     transform: translateY(0);
-    transition: .3s;
+    transition: .1s;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -85,6 +96,7 @@
     padding: 5px;
     border: none;
     margin: 10px 3px;
+    cursor: pointer;
 }
 .calculo-box-calcular{
     display: flex;

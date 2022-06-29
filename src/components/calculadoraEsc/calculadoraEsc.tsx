@@ -31,7 +31,8 @@ export default function CalculadoraEsc() {
     verificarLei, 
     setResult, 
     verClickSair, 
-    limpar} = useContext(CalculosContext)
+    limpar
+  } = useContext(CalculosContext)
 
     return(
       <div className="calculadora">

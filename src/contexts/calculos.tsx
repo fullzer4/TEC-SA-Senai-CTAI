@@ -113,12 +113,16 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         
     }
 
+    // TOAST MESSAGES
+
     function msgToast(e:number){
         if(e === 0){toast.error("todos os campos preenchidos")}
         if(e === 1){toast.error("verifique se os campos estão corretos e preenchidos")}
         if(e === 2){toast.error("calculo nao possivel ainda")}
         return;
     }
+
+    // GET RESULT & STORAGE
 
     function newRes(e:number, res:number, tip:number){
         if(tip === 1){
@@ -135,6 +139,25 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         }
         return;
     }
+
+    function changeTxt(i1:number, i2?:any, i3?:any, i4?:any, i5?:any, i6?:any){
+        if(i1 === 0){
+            setClassSC("show-calculo")
+        } else {
+            setClassGST("show-calculo-gas")
+        }
+        
+        setCalcEsc(i2)
+        setPc1Esc(i3)
+        setPc2Esc(i4)
+        setPcResult(i5)
+        // extras
+        setPc3Esc(i6)
+
+        setOpenCalc(true)
+    }
+
+    // CALC LEI 1
 
     function lei1(){
         if(var1Tam > 0){
@@ -166,6 +189,8 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             return
         }
     }
+    
+    // CALC LEI 2
 
     function lei2(){
         if(var1Tam > 0){
@@ -196,6 +221,8 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         }
     }
 
+    // CALC EFICIENCIA ENERGETICA
+
     function EE(){
         if(var1Tam > 0){
             if(var2Tam > 0){
@@ -224,6 +251,8 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             return
         }
     }
+
+    // CALC RENDIMENTO MAQUINA TERMICA
 
     function RM(){
         if(var1Tam > 0){
@@ -254,6 +283,8 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
 
     //^ finalizados pra cima ^
 
+    // TRABALHO MAQUINA TERMICA
+
     function TM(){
         if(var1Tam > 0){
             if(var2Tam > 0){
@@ -282,6 +313,8 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             return
         }
     }
+
+    // ENERGIA INTERNA VOLUME
 
     function EV(){
         if(var1Tam > 0){
@@ -312,6 +345,8 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         }
     }
 
+    // CALC GAS SOB PRESSAO CONSTANTE
+
     function TG(){
         if(var1Tam > 0){
             if(var2Tam > 0){
@@ -340,6 +375,8 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             return
         }
     }
+
+    // CALC ENERGIA INTERNA E TEMPERATURA
 
     function EI(){
         if(var1Tam > 0){
@@ -372,6 +409,8 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         }
     }
 
+    // CALC VARIACAO ENERGIA INTERNA
+
     function VE(){
         if(var1Tam > 0){
             if(var2Tam > 0){
@@ -400,6 +439,8 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             return
         }
     }
+
+    // CALC GAS SOB TEMPERATURA CONSTANTE
 
     function TC(){
         if(var1Tam > 0){
@@ -432,6 +473,8 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
 
     // finalizados para baixo :)
 
+    // VERIFICAR LEI ABERTA
+
     function verificarLei(){
         if (selectLei1){lei1()}
         if (selectLei2){lei2()}
@@ -446,6 +489,8 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         return
     }
 
+    // LIMPEZA PADRAO
+
     function defClear(){
         setCalcEsc("")
         setClassSC("show-calculo desativado")
@@ -458,198 +503,99 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         setVal2Esc("")
         setVal3Esc("")
         setResult("")
+
+        setSelectLei1(false)
+        setSelectLei2(false)
+        setSelectEE(false)
+        setSelectRM(false)
+        setSelectTM(false)
+        setSelectEV(false)
+        setSelectTG(false)
+        setSelectEI(false)
+        setSelectVE(false)
+        setSelectTC(false)
+
+        setOpenCalc(false)
     }
 
     function verClickCalc1(){
         if(!openCalc){
-            setOpenCalc(true)
-            setClassSC("show-calculo")
-            setCalcEsc("1 Lei Termodinamica")
-            setPc1Esc("Q (jaule)")
-            setPc2Esc("T (jaule)")
-            setPcResult("ΔU (jaule)")
+            changeTxt(0,"1 Lei Termodinamica","Q (jaule)","Q (jaule)","T (jaule)","ΔU (jaule)");
             setSelectLei1(true)
             return true;
-        } else {
-            setOpenCalc(false)
-            setSelectLei1(false)
-            defClear()
-            return;
-        }         
+        }      
     }
 
     function verClickCalc2(){
         if(!openCalc){
-            setOpenCalc(true)
-            setClassSC("show-calculo")
-            setCalcEsc("2 Lei Termodinamica")
-            setPc1Esc("Q (jaule)")
-            setPc2Esc("T (jaule)")
-            setPcResult("ΔU (jaule)")
+            changeTxt(0,"2 Lei Termodinamica","Q (jaule)","Q (jaule)","T (jaule)","ΔU (jaule)");
             setSelectLei2(true)
             return true;
-        } else {
-            setOpenCalc(false)
-            setSelectLei2(false)
-            defClear();
-            return false;
-        }         
+        } 
     }
 
     function verClickCalc3(){
         if(!openCalc){
-            setOpenCalc(true)
-            setClassSC("show-calculo")
-            setCalcEsc("Eficiencia Energetica")
-            setPc1Esc("T (jaule)")
-            setPc2Esc("Q1 (jaule)")
-            setPcResult("E (jaule)")
+            changeTxt(0,"Eficiencia Energetica","T (jaule)","Q1 (jaule)","E (jaule)");
             setSelectEE(true)
             return true;
-        } else {
-            setOpenCalc(false)
-            setSelectEE(false)
-            defClear()
-            return false;
-        }         
+        }   
     }
 
     function verClickCalc4(){
         if(!openCalc){
-            setOpenCalc(true)
-            setClassSC("show-calculo")
-            setCalcEsc("Rendimento Maquina Termica")
-            setPc1Esc("Qa (jaule)")
-            setPc2Esc("Qr (jaule)")
-            setPcResult("N (jaule)")
+            changeTxt(0,"Rendimento Maquina Termica","Qa (jaule)","Qr (jaule)","N (jaule)");
             setSelectRM(true)
             return true;
-        } else {
-            setOpenCalc(false)
-            setSelectRM(false)
-            defClear()
-            return false;
-        }         
+        }   
     }
 
     function verClickCalc5(){
         if(!openCalc){
-            setOpenCalc(true)
-            setClassSC("show-calculo")
-            setCalcEsc("Trabalho Maquina Termica")
-            setPc1Esc("Qa (jaule)")
-            setPc2Esc("Qr (jaule)")
-            setPcResult("T (jaule)")
+            changeTxt(0,"Trabalho Maquina Termica","Qa (jaule)","Qr (jaule)","T (jaule)");
             setSelectTM(true)
             return true;
-        } else {
-            setOpenCalc(false)
-            setSelectTM(false)
-            defClear()
-            return false;
         }         
     }
     function verClickCalc6(){
         if(!openCalc){
-            setOpenCalc(true)
-            setClassSC("show-calculo")
-            setCalcEsc("Energia Interna Volume")
-            setPc1Esc("V (jaule)")
-            setPc2Esc("p (jaule)")
-            setPcResult("U (jaule)")
+            changeTxt(0,"Energia Interna Volume","V (jaule)","p (jaule)","U (jaule)");
             setSelectEV(true)
             return true;
-        } else {
-            setOpenCalc(false)
-            setSelectEV(false)
-            defClear()
-            return false;
-        }         
+        }     
     }
     function verClickCalc7(){
         if(!openCalc){
-            setOpenCalc(true)
-            setClassSC("show-calculo")
-            setCalcEsc("Trabalho de um Gás Sob Pressão Constante")
-            setPc1Esc("p (jaule)")
-            setPc2Esc("ΔV (jaule)")
-            setPcResult("T (jaule)")
+            changeTxt(0,"Trabalho de um Gás Sob Pressão Constante","p (jaule)","ΔV (jaule)","T (jaule)");
             setSelectTG(true)
             return true;
-        } else {
-            setOpenCalc(false)
-            setSelectTG(false)
-            defClear()
-            return false;
-        }         
+        }       
     }
     function verClickCalc8(){
         if(!openCalc){
-            setOpenCalc(true)
-            setClassSC("show-calculo")
-            setCalcEsc("Energia Interna Temperatura")
-            setPc1Esc("n (jaule)")
-            setPc2Esc("R (jaule)")
-            setPcResult("T (jaule)")
+            changeTxt(0,"Energia Interna Temperatura","n (jaule)","R (jaule)","T (jaule)");
             setSelectEI(true)
             return true;
-        } else {
-            setOpenCalc(false)
-            setSelectEI(false)
-            defClear()
-            return false;
-        }         
+        }       
     }
     function verClickCalc9(){
         if(!openCalc){
-            setOpenCalc(true)
-            setClassSC("show-calculo")
-            setCalcEsc("Variação de Energia Interna")
-            setPc1Esc("n (jaule)")
-            setPc2Esc("ΔT (jaule)")
-            setPcResult("ΔU (jaule)")
+            changeTxt(0,"Variação de Energia Interna","n (jaule)","ΔT (jaule)","ΔU (jaule)");
             setSelectVE(true)
             return true;
-        } else {
-            setOpenCalc(false)
-            setSelectVE(false)
-            defClear()
-            return false;
-        }         
+        }   
     }
     function verClickCalc10(){
         if(!openCalc){
-            setOpenCalc(true)
-            setClassGST("show-calculo-gas")
-            setCalcEsc("Trabalho de um Gás Sob Temperatura Constante")
-            setPc1Esc("n (jaule)")
-            setPc2Esc("T (jaule)")
-            setPc3Esc("V1 (jaule)")
-            setPcResult("V2 (jaule)")
+            changeTxt(1,"Trabalho de um Gás Sob Temperatura Constante","n (jaule)","T (jaule)", "V2 (jaule)","V1 (jaule)");
             setSelectTC(true)
             return true;
-        } else {
-            setOpenCalc(false)
-            setSelectTC(false)
-            defClear()
-            return false;
-        }         
+        }      
     }
-
     function verClickSair(){
-        if(selectLei1){verClickCalc1()}
-        if(selectLei2){verClickCalc2()}
-        if(selectEE){verClickCalc3()}
-        if(selectRM){verClickCalc4()}
-        if(selectTM){verClickCalc5()}
-        if(selectEV){verClickCalc6()}
-        if(selectTG){verClickCalc7()}
-        if(selectEI){verClickCalc8()}
-        if(selectVE){verClickCalc9()}
-        if(selectTC){verClickCalc10()}
+        defClear();
         return
     }
-
     function limpar(){
         setVal1Esc("")
         setVal2Esc("")
