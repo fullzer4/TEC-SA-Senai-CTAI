@@ -18,10 +18,9 @@ export const GraficoContext = createContext<GraficoContextType>(GraficoinitialVa
 export const GraficoProvider = ({ children }: GraficoContextProps) => {
     const CalculosAll = []
 
-    function getDadosFB(){
-        firebase.firestore().collection("Calculos").onSnapshot((doc)=>{
+    async function getDadosFB(){
+        await firebase.firestore().collection("Calculos").onSnapshot((doc)=>{
             doc.forEach((item)=>{
-                CalculosAll.push(item)
                 console.log(item);
               })
         })
