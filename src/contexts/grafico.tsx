@@ -6,24 +6,38 @@ type GraficoContextProps = { //configurar as props
 }
 
 type GraficoContextType ={ //tipo
-    teste: boolean;
-    setTeste: (newState: boolean) => void;
+    getDadosFB: () => void;
 }
 
 const GraficoinitialValue ={  //definir o que ele ira receber
-    teste: false,
-    setTeste: () => {},
+    getDadosFB: () => {},
 }
 
 export const GraficoContext = createContext<GraficoContextType>(GraficoinitialValue)
 
 export const GraficoProvider = ({ children }: GraficoContextProps) => {
-    const [teste, setTeste] = useState(GraficoinitialValue.teste)
+    const CalculosAll = []
+
+    function getDadosFB(){
+        firebase.firestore().collection("Calculos").onSnapshot((doc)=>{
+            doc.forEach((item)=>{
+                CalculosAll.push(item)
+                console.log(item);
+              })
+        })
+    }
+
+    async function envDadosFB(calculo:number) {
+        if(calculo === 1){
+            await firebase.firestore().collection("Calculos").doc("Lei1").onSnapshot({
+
+            })
+        }
+    }
 
     return(
         <GraficoContext.Provider value={{
-            teste,
-            setTeste
+            getDadosFB
             }}> 
             {children}
         </GraficoContext.Provider>

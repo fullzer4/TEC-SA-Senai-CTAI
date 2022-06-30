@@ -1,5 +1,6 @@
-import { createContext, ReactNode, useState } from "react";
+import { createContext, ReactNode, useState, useContext } from "react";
 import { toast } from 'react-toastify';
+import { GraficoContext } from "./grafico";
 
 type CalculosContextProps = { //configurar as props
     children: ReactNode;
@@ -86,6 +87,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     const [val3Esc, setVal3Esc] = useState(CalculosinitialValue.val3Esc)
     const [pcResult, setPcResult] = useState(CalculosinitialValue.pcResult)
     const [result, setResult] = useState(CalculosinitialValue.result)
+    const {getDadosFB} = useContext(GraficoContext)
     const [selectLei1, setSelectLei1] = useState(false)
     const [selectLei2, setSelectLei2] = useState(false)
     const [selectEE, setSelectEE] = useState(false)

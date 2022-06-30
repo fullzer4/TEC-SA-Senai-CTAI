@@ -9,11 +9,11 @@ import { GraficoProvider } from './contexts/grafico';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
+    <CalculosProvider>
     <GraficoProvider>
-      <CalculosProvider>
-        <ToastContainer autoClose={2000}/>
-        <Rota />
-      </CalculosProvider>
+      <ToastContainer autoClose={2000}/>
+      <Rota />
     </GraficoProvider>
+    </CalculosProvider>
   </React.StrictMode>
 )
