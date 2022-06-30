@@ -1,5 +1,5 @@
 import { createContext, ReactNode, useState } from "react";
-import firebase from "../services/firebaseConnection"
+import firebase from "../services/databseConnection"
 
 type GraficoContextProps = { //configurar as props
     children: ReactNode;

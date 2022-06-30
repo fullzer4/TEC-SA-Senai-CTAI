@@ -29,3 +29,11 @@ karla: https://fonts.google.com/specimen/Karla
 URL: https://prod.liveshare.vsengsaas.visualstudio.com/join?9F0B022750DB7D4E95C725FF512BBF78FA8D
 
 !!fazer Todos os calculos e inversos do Rendimento de maquina termica
+
+se quiser da pra fazer no firebase com uma colecao dentro de um arquivo e do arquivo varias colecoes
+
+vamos ter que tentar simplificar o maximo nossos dados
+
+https://walkingtour.ga/TECSA/?link=nome
+
+enviar req para url acima nome do calc
