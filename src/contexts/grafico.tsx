@@ -6,7 +6,7 @@ type GraficoContextProps = { //configurar as props
 }
 
 type GraficoContextType ={ //tipo
-    getDadosFB: () => void;
+    getDadosFB: (newState: number) => void;
     envDadosFB: (newState: number) => void;
 }
 
@@ -19,12 +19,11 @@ export const GraficoContext = createContext<GraficoContextType>(GraficoinitialVa
 
 export const GraficoProvider = ({ children }: GraficoContextProps) => {
 
-    async function getDadosFB(){
-        await firebase.firestore().collection("Calculos").onSnapshot((doc)=>{
-            doc.forEach((item)=>{
-                console.log(item);
-              })
-        })
+    async function getDadosFB(esc: number){
+        if(esc === 1){
+            await firebase.firestore().collection("Calculos").doc("Registro").collection("1 Lei")
+            //pegar o length
+        }
     }
 
     async function envDadosFB(calculo:number) {

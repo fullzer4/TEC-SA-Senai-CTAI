@@ -1,4 +1,4 @@
-import React, {Component, useContext} from 'react';
+import {Component, useContext} from 'react';
 import { GraficoContext } from '../../contexts/grafico';
 
   
@@ -8,7 +8,8 @@ export default function Buceta(){
 
     return (
         <div>
-            <button onClick={() => envDadosFB(1)}>AAAAAAAA</button>
+            <h1></h1>
+            <button onClick={() => envDadosFB(10)}>AAAAAAAA</button>
         </div>
     );
 }
