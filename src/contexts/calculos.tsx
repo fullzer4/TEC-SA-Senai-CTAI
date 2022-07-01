@@ -1,6 +1,5 @@
 import { createContext, ReactNode, useState, useContext } from "react";
 import { toast } from 'react-toastify';
-import { GraficoContext } from "./grafico";
 
 type CalculosContextProps = { //configurar as props
     children: ReactNode;
@@ -87,7 +86,6 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     const [val3Esc, setVal3Esc] = useState(CalculosinitialValue.val3Esc)
     const [pcResult, setPcResult] = useState(CalculosinitialValue.pcResult)
     const [result, setResult] = useState(CalculosinitialValue.result)
-    const {getDadosFB} = useContext(GraficoContext)
     const [selectLei1, setSelectLei1] = useState(false)
     const [selectLei2, setSelectLei2] = useState(false)
     const [selectEE, setSelectEE] = useState(false)
@@ -127,6 +125,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     // GET RESULT & STORAGE
 
     function newRes(e:number, res:number, tip:number){
+        console.log(e);
         if(tip === 1){
             setVal1Esc(String(res))
             setHistorico(e);
@@ -169,7 +168,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                     return
                 }
                 resultadoBack = (var1 - var2)
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 1];
                 newRes(teste, resultadoBack, 3);
                 return
             }

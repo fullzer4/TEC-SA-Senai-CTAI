@@ -29,3 +29,5 @@ karla: https://fonts.google.com/specimen/Karla
 URL: https://prod.liveshare.vsengsaas.visualstudio.com/join?7618651EC1B89B401780B5CAE34FFF72307A
 
 !!fazer Todos os calculos e inversos do Rendimento de maquina termica
+
+106 mil 86 mil

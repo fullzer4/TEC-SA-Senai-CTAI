@@ -131,6 +131,38 @@ export const GraficoProvider = ({ children }: GraficoContextProps) => {
                 console.log(size10);
             });
         }
+        if(esc === 11){
+            await firebase.firestore().collection('Calculos').doc("Registro").collection("1 Lei").get().then(snap => {
+                setSize1(snap.size)
+            });
+            await firebase.firestore().collection('Calculos').doc("Registro").collection("2 Lei").get().then(snap => {
+                setSize2(snap.size)
+            });
+            await firebase.firestore().collection('Calculos').doc("Registro").collection("Efic energ").get().then(snap => {
+                setSize3(snap.size)
+            });
+            await firebase.firestore().collection('Calculos').doc("Registro").collection("Rend Maq").get().then(snap => {
+                setSize4(snap.size)
+            });
+            await firebase.firestore().collection('Calculos').doc("Registro").collection("Trab Maq").get().then(snap => {
+                setSize5(snap.size)
+            });
+            await firebase.firestore().collection('Calculos').doc("Registro").collection("Energ Int V").get().then(snap => {
+                setSize6(snap.size)
+            });
+            await firebase.firestore().collection('Calculos').doc("Registro").collection("Trab Gas P").get().then(snap => {
+                setSize7(snap.size)
+            });
+            await firebase.firestore().collection('Calculos').doc("Registro").collection("Energ Int T").get().then(snap => {
+                setSize8(snap.size)
+            });
+            await firebase.firestore().collection('Calculos').doc("Registro").collection("Varia Energ").get().then(snap => {
+                setSize9(snap.size)
+            });
+            await firebase.firestore().collection('Calculos').doc("Registro").collection("Trab Gas T").get().then(snap => {
+                setSize10(snap.size)
+            });
+        }
     }
 
     async function envDadosFB(calculo:number) {

@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import { CalculosContext } from "../../contexts/calculos"
+import { GraficoContext } from "../../contexts/grafico"
 import "./calculadoraEsc.css"
 
 export default function CalculadoraEsc() {
@@ -33,6 +34,41 @@ export default function CalculadoraEsc() {
     verClickSair, 
     limpar
   } = useContext(CalculosContext)
+  const {envDadosFB} = useContext(GraficoContext)
+
+    function Calcular(){
+      verificarLei()
+      if(calcEsc === "1 Lei Termodinamica"){
+        envDadosFB(1)
+      }
+      if(calcEsc === "2 Lei Termodinamica"){
+        envDadosFB(2)
+      }
+      if(calcEsc === "Eficiencia Energetica"){
+        envDadosFB(3)
+      }
+      if(calcEsc === "Rendimento Maquina Termica"){
+        envDadosFB(4)
+      }
+      if(calcEsc === "Trabalho Maquina Termica"){
+        envDadosFB(5)
+      }
+      if(calcEsc === "Energia Interna Volume"){
+        envDadosFB(6)
+      }
+      if(calcEsc === "Trabalho de um Gás Sob Pressão Constante"){
+        envDadosFB(7)
+      }
+      if(calcEsc === "Energia Interna Temperatura"){
+        envDadosFB(8)
+      }
+      if(calcEsc === "Variação de Energia Interna"){
+        envDadosFB(9)
+      }
+      if(calcEsc === "Trabalho de um Gás Sob Temperatura Constante"){
+        envDadosFB(10)
+      }
+    }
 
     return(
       <div className="calculadora">
@@ -48,7 +84,7 @@ export default function CalculadoraEsc() {
                 <input type="number" className="inpval" value={result} placeholder={pcResult} onChange={(e)=> setResult(e.target.value)}/>
               </div>
               <div className="calculo-box-calcular">
-                <button className="bt-c-l" onClick={verificarLei}>Calcular</button>
+                <button className="bt-c-l" onClick={Calcular}>Calcular</button>
                 <button className="bt-c-l" onClick={limpar}>Limpar</button>
               </div>
               <button className="button-calc" onClick={verClickSair}>sair</button>
@@ -67,7 +103,7 @@ export default function CalculadoraEsc() {
                 <input type="number" className="inpval" value={result} placeholder={pcResult} onChange={(e)=> setResult(e.target.value)}/>
               </div>
               <div className="calculo-box-calcular">
-                <button className="bt-c-l" onClick={verificarLei}>Calcular</button>
+                <button className="bt-c-l" onClick={Calcular}>Calcular</button>
                 <button className="bt-c-l" onClick={limpar}>Limpar</button>
               </div>
               <button className="button-calc" onClick={verClickSair}>sair</button>
