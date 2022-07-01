@@ -13,9 +13,9 @@ let firebaseConfig = {
 };
 
 if(!firebase.apps.length){
-  console.log(`foi ${firebase.apps.length}`);
+  console.log(`Conectando...  Status:${firebase.apps.length}`);
   firebase.initializeApp(firebaseConfig);
-  console.log(`foi ${firebase.apps.length}`);
+  console.log(`Conectado  Status:${firebase.apps.length}`);
 }
 
 export default firebase;
