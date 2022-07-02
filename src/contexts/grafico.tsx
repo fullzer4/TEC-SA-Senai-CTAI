@@ -27,11 +27,11 @@ export const GraficoProvider = ({ children }: GraficoContextProps) => {
             await firebase.firestore().collection('Calculos')
             .doc(leis[i])
             .get()
-            .then((snapshot)=>{
-                Contagem.push(JSON.parse(JSON.stringify(snapshot.data())))
+            .then(snapshot =>{
+                Contagem.push([leis[i], snapshot.data()])
             })
         }
-        console.log(getDadosFB)
+        // console.log(Contagem)
         return Contagem;
     }
 
