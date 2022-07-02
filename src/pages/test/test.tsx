@@ -6,48 +6,19 @@ import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 export default function Buceta(){
 
     const { envDadosFB, getDadosFB} = useContext(GraficoContext) 
-    console.log(getDadosFB());
+    let arr = getDadosFB();
+    console.log(arr)
     const data = [
-        {
-          name: 'Lei1',
-          //uv: size1
-        },
-        {
-          name: 'Lei2',
-          //uv: size2
-        },
-        {
-          name: 'Lei3',
-          //uv: size3
-        },
-        {
-          name: 'Lei4',
-          //uv: size4
-        },
-        {
-          name: 'Lei5',
-          //uv: size5
-        },
-        {
-          name: 'Lei6',
-          //uv: size6
-        },
-        {
-          name: 'Lei7',
-          //uv: size7
-        },
-        {
-          name: 'Lei8',
-          //uv: size8
-        },
-        {
-          name: 'Lei9',
-          //uv: size9
-        },
-        {
-          name: 'Lei10',
-          //uv: size10
-        },
+        {name: 'Lei1', vezes: 206 },
+        {name: 'Lei2', vezes: 303 },
+        {name: 'Lei3', vezes: 401 },
+        {name: 'Lei4', vezes: 602 },
+        {name: 'Lei5', vezes: 703 },
+        {name: 'Lei6', vezes: 203 },
+        {name: 'Lei7', vezes: 903 },
+        {name: 'Lei8', vezes: 603 },
+        {name: 'Lei9', vezes: 705 },
+        {name: 'Lei10', vezes: 807 },
       ];
     
 
@@ -68,7 +39,8 @@ export default function Buceta(){
                 }}
                 >
                     <XAxis/>
-                <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
+                    <Tooltip/>
+                <Area type="monotone" dataKey="vezes" stroke="#8884d8" fill="#8884d8" />
                 </AreaChart>
             </ResponsiveContainer>
           <button onClick={()=> getDadosFB()}>Dados</button>

@@ -18,7 +18,7 @@ const GraficoinitialValue ={  //definir o que ele ira receber
 export const GraficoContext = createContext<GraficoContextType>(GraficoinitialValue)
 
 export const GraficoProvider = ({ children }: GraficoContextProps) => {
-
+    
     async function getDadosFB(){
         var Contagem:any = []
         var leis: any = ["1 Lei", "2 Lei", "Efic Energ", "Rend Maq", "Trab Maq", "Energ Int V", "Trab Gas P", "Energ Int T", "Varia Int", "Trab Gas T"];
@@ -31,9 +31,8 @@ export const GraficoProvider = ({ children }: GraficoContextProps) => {
                 Contagem.push(JSON.parse(JSON.stringify(snapshot.data())))
             })
         }
-
+        console.log(getDadosFB)
         return Contagem;
-               
     }
 
     async function envDadosFB(calculo:number) {
