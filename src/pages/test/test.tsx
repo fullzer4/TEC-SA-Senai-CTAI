@@ -6,7 +6,7 @@ import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 export default function Buceta(){
 
     const { envDadosFB, getDadosFB} = useContext(GraficoContext) 
-
+    console.log(getDadosFB());
     const data = [
         {
           name: 'Lei1',

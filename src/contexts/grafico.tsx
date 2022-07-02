@@ -21,69 +21,19 @@ export const GraficoProvider = ({ children }: GraficoContextProps) => {
 
     async function getDadosFB(){
         var Contagem:any = []
-        await firebase.firestore().collection('Calculos')
-        .doc("1 Lei")
-        .get()
-        .then((snapshot)=>{
-            Contagem.push(JSON.parse(JSON.stringify(snapshot.data())))
-        })
-        await firebase.firestore().collection('Calculos')
-        .doc("2 Lei")
-        .get()
-        .then((snapshot)=>{
-            Contagem.push(JSON.parse(JSON.stringify(snapshot.data())))
-        })
-        await firebase.firestore().collection('Calculos')
-        .doc("Efic Energ")
-        .get()
-        .then((snapshot)=>{
-            Contagem.push(JSON.parse(JSON.stringify(snapshot.data())))
-        })
-        await firebase.firestore().collection('Calculos')
-        .doc("Rend Maq")
-        .get()
-        .then((snapshot)=>{
-            Contagem.push(JSON.parse(JSON.stringify(snapshot.data())))
-        })
-        await firebase.firestore().collection('Calculos')
-        .doc("Trab Maq")
-        .get()
-        .then((snapshot)=>{
-            Contagem.push(JSON.parse(JSON.stringify(snapshot.data())))
-        })
-        await firebase.firestore().collection('Calculos')
-        .doc("Energ Int V")
-        .get()
-        .then((snapshot)=>{
-            Contagem.push(JSON.parse(JSON.stringify(snapshot.data())))
-        })
-        await firebase.firestore().collection('Calculos')
-        .doc("Trab Gas P")
-        .get()
-        .then((snapshot)=>{
-            Contagem.push(JSON.parse(JSON.stringify(snapshot.data())))
-        })
-        await firebase.firestore().collection('Calculos')
-        .doc("Energ Int T")
-        .get()
-        .then((snapshot)=>{
-            Contagem.push(JSON.parse(JSON.stringify(snapshot.data())))
-        })
-        await firebase.firestore().collection('Calculos')
-        .doc("Varia Int")
-        .get()
-        .then((snapshot)=>{
-            Contagem.push(JSON.parse(JSON.stringify(snapshot.data())))
-        })
-        await firebase.firestore().collection('Calculos')
-        .doc("Trab Gas T")
-        .get()
-        .then((snapshot)=>{
-            Contagem.push(JSON.parse(JSON.stringify(snapshot.data())))
-        })
-        .then(()=>{
-            console.log(Contagem);
-        })
+        var leis: any = ["1 Lei", "2 Lei", "Efic Energ", "Rend Maq", "Trab Maq", "Energ Int V", "Trab Gas P", "Energ Int T", "Varia Int", "Trab Gas T"];
+
+        for(let i in leis){
+            await firebase.firestore().collection('Calculos')
+            .doc(leis[i])
+            .get()
+            .then((snapshot)=>{
+                Contagem.push(JSON.parse(JSON.stringify(snapshot.data())))
+            })
+        }
+
+        return Contagem;
+               
     }
 
     async function envDadosFB(calculo:number) {
