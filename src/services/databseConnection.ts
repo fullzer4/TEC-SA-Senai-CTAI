@@ -2,13 +2,13 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 
 let firebaseConfig = {
-  apiKey: "AIzaSyC40eYIM94QWyalRR1p08ZHT1-h6xPXA-Y",
-  authDomain: "testsa-7b6ce.firebaseapp.com",
-  projectId: "testsa-7b6ce",
-  storageBucket: "testsa-7b6ce.appspot.com",
-  messagingSenderId: "712203267320",
-  appId: "1:712203267320:web:f761f5a0bcd56967299f0d",
-  measurementId: "G-WHPLGN0G4L"
+  apiKey: "AIzaSyACr2yYDuhVBQbSEHx3mUb8PIMuDr6YDDw",
+  authDomain: "testsa2.firebaseapp.com",
+  projectId: "testsa2",
+  storageBucket: "testsa2.appspot.com",
+  messagingSenderId: "708420729541",
+  appId: "1:708420729541:web:e65682b9ce5a92a200ceac",
+  measurementId: "G-BT3Z6G4286"
 };
 
 if(!firebase.apps.length){
