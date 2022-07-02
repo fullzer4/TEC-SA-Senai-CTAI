@@ -9,6 +9,7 @@ export default function Buceta(){
     let arr = getDadosFB();
     console.log(arr)
     const data = [
+      // testes 
         {name: 'Lei1', vezes: 206 },
         {name: 'Lei2', vezes: 303 },
         {name: 'Lei3', vezes: 401 },
