@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useState, useContext } from "react";
+import { createContext, ReactNode, useState } from "react";
 import { toast } from 'react-toastify';
 
 type CalculosContextProps = { //configurar as props
