@@ -63,7 +63,7 @@ export default function Buceta(){
                 <Area type="monotone" dataKey="vezes" stroke="#8884d8" fill="#8884d8" />                
                 </AreaChart>
             </ResponsiveContainer>
-          {/* <button onClick={()=> getDadosFB()}>Dados</button> */}
+         <button onClick={()=> envDadosFB(1)}>Dados</button>
         </div> 
     );
 }
