@@ -18,27 +18,30 @@ export default function Buceta(){
 
     const { envDadosFB, getDadosFB} = useContext(GraficoContext) 
 
-
-    setTimeout(() => {      
+    var res: any = getDadosFB()
+    res.then(total => {          
+        console.log(total[0])
+    })    
+  //   setTimeout(() => {      
     
-      var res: any = getDadosFB()
+  //     var res: any = getDadosFB()
       
-      res.then(total => {
+  //     res.then(total => {
           
-          for(let i in total){
-            let dd = { name: total[i][0], vezes: total[i][1].Contagem };
-            if(counter < 10){
-              hst.push(dd)
-              counter++;
-            }
-          }       
-          setDataS(hst)   
-          let stt = loading + "a";
-          setLoading(stt)
-      })     
+  //         for(let i in total){
+  //           let dd = { name: total[i][0], vezes: total[i][1].Contagem };
+  //           if(counter < 10){
+  //             hst.push(dd)
+  //             counter++;
+  //           }
+  //         }       
+  //         setDataS(hst)   
+  //         let stt = loading + "a";
+  //         setLoading(stt)
+  //     })     
       
-      timeOut = 2000;
-  }, timeOut);
+  //     timeOut = 2000;
+  // }, timeOut);
     
     console.log(dataS)
     

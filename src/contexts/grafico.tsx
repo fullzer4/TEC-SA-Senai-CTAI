@@ -7,7 +7,8 @@ export const GraficoProvider = ({ children }: any) => {
     
     async function getDadosFB(){
         var Contagem:any = []
-        var leis: any = ["1 Lei", "2 Lei", "Efic Energ", "Rend Maq", "Trab Maq", "Energ Int V", "Trab Gas P", "Energ Int T", "Varia Int", "Trab Gas T"];
+        var leis: any = ['leis']
+        // var leis: any = ["1 Lei", "2 Lei", "Efic Energ", "Rend Maq", "Trab Maq", "Energ Int V", "Trab Gas P", "Energ Int T", "Varia Int", "Trab Gas T"];
 
         for(let i in leis){
             await firebase.firestore().collection('Calculos')
@@ -17,7 +18,6 @@ export const GraficoProvider = ({ children }: any) => {
                 Contagem.push([leis[i], snapshot.data()])
             })
         }
-        // console.log(Contagem)
         return Contagem;
     }
 
