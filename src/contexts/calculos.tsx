@@ -5,38 +5,6 @@ type CalculosContextProps = { //configurar as props
     children: ReactNode;
 }
 
-type CalculosContextType ={ //tipo
-    classSC: string;
-    classGST: string;
-    verClickCalc1: () => void;
-    verClickCalc2: () => void;
-    verClickCalc3: () => void;
-    verClickCalc4: () => void; 
-    verClickCalc5: () => void;
-    verClickCalc6: () => void;
-    verClickCalc7: () => void;
-    verClickCalc8: () => void;
-    verClickCalc9: () => void;
-    verClickCalc10: () => void;
-    openCalc: boolean;
-    calcEsc: string;
-    pc1Esc: string;
-    pc2Esc: string;
-    pc3Esc: string;
-    pcResult: string;
-    val1Esc: string;
-    setVal1Esc: (newState: string) => void;
-    val2Esc: string;
-    setVal2Esc: (newState: string) => void;
-    val3Esc: string;
-    setVal3Esc: (newState: string) => void;
-    result: string;
-    setResult: (newState: string) => void;
-    verificarLei: () => void;
-    verClickSair: () => void;
-    limpar: () => void;
-}
-
 const CalculosinitialValue ={  //definir o que ele ira receber
     classSC: ("show-calculo desativado"),
     classGST: ("show-calculo-gas desativado"),
@@ -71,7 +39,7 @@ const CalculosinitialValue ={  //definir o que ele ira receber
 
 var historico:any = [];
 
-export const CalculosContext = createContext<CalculosContextType>(CalculosinitialValue)
+export const CalculosContext = createContext<any>(CalculosinitialValue)
 
 export const CalculosProvider = ({ children }: CalculosContextProps) => {
     const [classSC, setClassSC] = useState(CalculosinitialValue.classSC) //classSc = valor Principal setClassSC = definir o valor principal
@@ -125,7 +93,6 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     // GET RESULT & STORAGE
 
     function newRes(e:number, res:number, tip:number){
-        console.log(e);
         if(tip === 1){
             setVal1Esc(String(res))
             setHistorico(e);

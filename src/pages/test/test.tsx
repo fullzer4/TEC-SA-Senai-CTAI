@@ -19,26 +19,26 @@ export default function Buceta(){
     const { envDadosFB, getDadosFB} = useContext(GraficoContext) 
 
 
-  //   setTimeout(() => {      
+    setTimeout(() => {      
     
-  //     var res: any = getDadosFB()
+      var res: any = getDadosFB()
       
-  //     res.then(total => {
+      res.then(total => {
           
-  //         for(let i in total){
-  //           let dd = { name: total[i][0], vezes: total[i][1].Contagem };
-  //           if(counter < 10){
-  //             hst.push(dd)
-  //             counter++;
-  //           }
-  //         }       
-  //         setDataS(hst)   
-  //         let stt = loading + "a";
-  //         setLoading(stt)
-  //     })     
+          for(let i in total){
+            let dd = { name: total[i][0], vezes: total[i][1].Contagem };
+            if(counter < 10){
+              hst.push(dd)
+              counter++;
+            }
+          }       
+          setDataS(hst)   
+          let stt = loading + "a";
+          setLoading(stt)
+      })     
       
-  //     timeOut = 5000;
-  // }, timeOut);
+      timeOut = 2000;
+  }, timeOut);
     
     console.log(dataS)
     
@@ -54,13 +54,13 @@ export default function Buceta(){
                     bottom: 0,
                 }}
                 >
-                <YAxis/>
-                <XAxis dataKey="name" />
-                <Tooltip/>
+                {/* <YAxis/> */}
+                {/* <XAxis dataKey="name" /> */}
+                {/* <Tooltip/> */}
                 <Area type="monotone" dataKey="vezes" stroke="#8884d8" fill="#8884d8" />                
                 </AreaChart>
             </ResponsiveContainer>
-          <button onClick={()=> getDadosFB()}>Dados</button>
+          {/* <button onClick={()=> getDadosFB()}>Dados</button> */}
         </div> 
     );
 }

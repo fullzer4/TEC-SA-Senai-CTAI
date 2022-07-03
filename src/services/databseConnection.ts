@@ -11,7 +11,7 @@ let firebaseConfig = {
   measurementId: "G-BT3Z6G4286"
 };
 
-if(!firebase.apps.length){
+if(!firebase.apps.length){ //deixa uma rota
   console.log(`Conectando...  Status:${firebase.apps.length}`);
   firebase.initializeApp(firebaseConfig);
   console.log(`Conectado  Status:${firebase.apps.length}`);

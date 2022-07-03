@@ -6,14 +6,17 @@ import "./index.css"
 import { CalculosProvider } from './contexts/calculos'
 import { ToastContainer } from "react-toastify"
 import { GraficoProvider } from './contexts/grafico';
+import { ServerProvider } from './contexts/server';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <CalculosProvider>
-    <GraficoProvider>
-      <ToastContainer autoClose={2000}/>
-      <Rota />
-    </GraficoProvider>
+      <ServerProvider>
+        <GraficoProvider>
+          <ToastContainer autoClose={2000}/>
+          <Rota />
+        </GraficoProvider>
+      </ServerProvider>
     </CalculosProvider>
   </React.StrictMode>
 )

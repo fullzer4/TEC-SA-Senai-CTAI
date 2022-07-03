@@ -1,23 +1,9 @@
 import { createContext, ReactNode, useState } from "react";
 import firebase from "../services/databseConnection"
 
-type GraficoContextProps = { //configurar as props
-    children: ReactNode;
-}
+export const GraficoContext = createContext<any>(()=>{})
 
-type GraficoContextType ={ //tipo
-    getDadosFB: () => void;
-    envDadosFB: (newState: number) => void
-}
-
-const GraficoinitialValue ={  //definir o que ele ira receber
-    getDadosFB: () => {},
-    envDadosFB: () => {},
-}
-
-export const GraficoContext = createContext<GraficoContextType>(GraficoinitialValue)
-
-export const GraficoProvider = ({ children }: GraficoContextProps) => {
+export const GraficoProvider = ({ children }: any) => {
     
     async function getDadosFB(){
         var Contagem:any = []
@@ -37,7 +23,7 @@ export const GraficoProvider = ({ children }: GraficoContextProps) => {
 
     async function envDadosFB(calculo:number) {
         if(calculo === 1){
-            
+            getDadosFB()
         }
     }
 
