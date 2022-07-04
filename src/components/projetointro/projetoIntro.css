@@ -1,9 +1,0 @@
-.projeto-intro{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 60vh;
-    background: #e4eff6;
-}

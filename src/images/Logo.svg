@@ -1,0 +1,12 @@
+
+export default function Logo(){
+        return(
+    <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M22.5 45L41.9855 11.25H3.01443L22.5 45Z" fill="#F0D0FF"/>
+    <ellipse cx="12.6" cy="5.80002" rx="3" ry="3" fill="#DD96FF"/>
+    <ellipse cx="32.6" cy="38.8" rx="3" ry="3" fill="#DD96FF"/>
+    <path opacity="0.74" d="M22.5003 0L41.9858 33.75L3.01473 33.75L22.5003 0Z" fill="#DBA1FF"/>
+    <path d="M22.6 15.4L24.1716 20.2369H29.2574L25.1429 23.2262L26.7145 28.0631L22.6 25.0738L18.4855 28.0631L20.0571 23.2262L15.9426 20.2369H21.0284L22.6 15.4Z" fill="#F8F4FF"/>
+    </svg>
+    )
+}

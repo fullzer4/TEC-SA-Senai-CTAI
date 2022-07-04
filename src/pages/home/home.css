@@ -1,7 +1,0 @@
-.general-out{
-    width: calc(100% - 10px);
-    max-width: calc(1000px - 10px);
-    margin: auto;
-    margin: 30px auto;
-    padding: 5px;
-}

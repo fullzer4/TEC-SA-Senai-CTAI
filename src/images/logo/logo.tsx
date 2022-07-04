@@ -1,3 +1,4 @@
+import './logo.css';
 export default function Logo(){
     return(
         <svg className="all-logo" data-aos="fade-left" width="225" height="225" viewBox="0 0 225 225" fill="none" xmlns="http://www.w3.org/2000/svg">

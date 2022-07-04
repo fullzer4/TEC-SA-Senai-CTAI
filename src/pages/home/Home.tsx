@@ -1,16 +1,17 @@
-import Header from "../../components/header/header"
-import Welcome from "../../components/welcome/welcome"
-import WelcomeBottom from "../../components/presentation/presentation"
-import "./home.css"
+import Bemvindo from '../../components/Bemvindo/bemvindo';
+import Header from '../../components/Navbar/navbar';
+import SobreTime from '../../components/SobreTime/sobreTime';
 
 export default function Home() {
     return(
       <div id="container">
-        <Header/>
-        <Welcome/>
-        <div className="general-out">
-          <WelcomeBottom/>
-        </div>        
+        <div id="content">
+          <Header/>
+          <div id="content-objects">
+            <Bemvindo/>    
+            <SobreTime/>
+          </div>
+        </div>
       </div>
     )
   }
