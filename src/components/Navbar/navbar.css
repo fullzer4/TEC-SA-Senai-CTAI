@@ -9,6 +9,14 @@
     padding: 5px;
     aspect-ratio: 1;
     border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-nav:hover{
+    background: #796a87;
 }
 .bt-active{
     background: #796a87;
