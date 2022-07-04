@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import Logo from '../../images/logo/logo'
+import Home from '../../images/home/home'
 import Calc from '../../images/calc/calc'
 import Team from '../../images/team/team'
 import Teoric from '../../images/teoric/teoric'
@@ -11,14 +12,16 @@ export default function Navbar() {
     return(
         <div id="navbar">
             <Link to="/">
-                <button className="btn-nav">
+                <button className="btn-nav logo">
                     <Logo/>
                 </button>
             </Link>
-
-
             <hr/>
-
+            <Link to="/">
+                <button className="btn-nav">
+                    <Home/>
+                </button>
+            </Link>
             <Link to="/test">
                 <button className="btn-nav">
                     <Calc/>

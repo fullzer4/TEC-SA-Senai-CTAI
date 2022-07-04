@@ -3,10 +3,13 @@
     max-width: 50px;
     background: #584d62;
 }
+.logo{
+    padding: 5px!important;
+}
 .btn-nav{
     width: calc(100% - 10px);
-    margin: 5px;
-    padding: 5px;
+    margin: 10px 5px;
+    padding: 8px;
     aspect-ratio: 1;
     border-radius: 5px;
     cursor: pointer;
