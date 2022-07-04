@@ -9,6 +9,8 @@ export const GraficoProvider = ({ children }: any) => {
 
     async function getDadosFB(){
 
+        Contagem = [];
+
         for(let i in calculos){
             await firebase.firestore().collection('Calculos')
             .doc(calculos[i])
@@ -17,13 +19,15 @@ export const GraficoProvider = ({ children }: any) => {
                 Contagem.push([calculos[i], snapshot.data()])
             })
         }
+        // console.log(Contagem)
         return Contagem;
     }
 
 
     async function envDadosFB(calculo:number) {
-        var lista = Contagem[1] //lista pricipal
+        var lista = Contagem[0] //lista pricipal
         var dados = lista[1] //dados da lista principal
+        console.log(dados)
         var setLei1 = dados.lei1 + 1
         var setLei2 = dados.lei2 + 1
         var setEficEnerg = dados.EficEnerg + 1
