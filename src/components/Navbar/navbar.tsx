@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import Logo from '../../images/logo/logo'
-import Home from '../../images/home/home'
+import Home from '../../images/home/Home'
 import Calc from '../../images/calc/calc'
 import Team from '../../images/team/team'
 import Teoric from '../../images/teoric/teoric'
@@ -22,7 +22,7 @@ export default function Navbar() {
                     <Home/>
                 </button>
             </Link>
-            <Link to="/test">
+            <Link to="/calculator">
                 <button className="btn-nav">
                     <Calc/>
                 </button>
@@ -40,13 +40,13 @@ export default function Navbar() {
                 </button>
             </Link>
 
-            <Link to="/">
+            <Link to="/experiment">
                 <button className="btn-nav">
                     <Scientist/>
                 </button>
             </Link>
 
-            <Link to="/">
+            <Link to="/test">
                 <button className="btn-nav">
                     <Graphic/>
                 </button>
