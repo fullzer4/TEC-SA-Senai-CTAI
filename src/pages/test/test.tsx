@@ -26,7 +26,7 @@ export default function Buceta(){
   setTimeout(() => {      
         var res: any = getDadosFB()
         res.then(total => {
-        // console.log(res)
+        // console.log(res) 
 
         var tt = total[0][1];
 
