@@ -3,11 +3,14 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
 }
 
 .bemvindo-conteudo{
     display: flex;
     flex-direction: column;
+    gap: 5px;
 }
 
 .bemvindo-conteudo-titulo{
@@ -29,10 +32,16 @@
     font-style: normal;
     font-weight: 300;
     color: #F2F2F2;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
     background: rgba(0, 0, 0, 0.13);
-    border-radius: 35px;
+    border-radius: 25px;
+    max-width: 150px;   
+    text-align: center;
+}
+
+.bemvindo-imagem img{
+    height: 55vh;
 }

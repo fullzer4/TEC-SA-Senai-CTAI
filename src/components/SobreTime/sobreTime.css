@@ -1,0 +1,39 @@
+#sobretime{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.sobretime-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sobretime-box-titulo{
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    color: #F2F2F2;
+}
+
+.sobretime-box-conteudo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.sobretime-box-conteudo-texto{
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 300;
+    color: #F2F2F2;
+}
+
+.sobretime-box-conteudo-imagem{
+    height: 40vmin;
+}
