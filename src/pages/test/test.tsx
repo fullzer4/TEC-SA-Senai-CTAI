@@ -31,16 +31,16 @@ export default function Buceta(){
         var tt = total[0][1];
 
         var arr: any = [
-            {neime: "Le", vezes: tt.lei1, v3: tt.lei1 + 0.5},
-            {neime: "as", vezes: tt.lei2, v3: tt.lei2 + 0.5},
-            {neime: "as", vezes: tt.EficEnerg, v3: tt.EficEnerg + 0.5},
-            {neime: "as", vezes: tt.RendMaq, v3: tt.RendMaq + 0.5},
-            {neime: "as", vezes: tt.TrabMaq, v3: tt.TrabMaq + 0.5},
-            {neime: "as", vezes: tt.EnergIntV, v3: tt.EnergIntV + 0.5},
-            {neime: "as", vezes: tt.TrabGasP, v3: tt.TrabGasP + 0.5},       
-            {neime: "as", vezes: tt.EnergIntT, v3: tt.EnergIntT + 0.5},  
-            {neime: "as", vezes: tt.VariaInt, v3: tt.VariaInt + 0.5},  
-            {neime: "as", vezes: tt.TrabGasT, v3: tt.TrabGasT + 0.5},      
+            {name: "Le", vezes: tt.lei1, v3: tt.lei1 + 0.5},
+            {name: "as", vezes: tt.lei2, v3: tt.lei2 + 0.5},
+            {name: "as", vezes: tt.EficEnerg, v3: tt.EficEnerg + 0.5},
+            {name: "as", vezes: tt.RendMaq, v3: tt.RendMaq + 0.5},
+            {name: "as", vezes: tt.TrabMaq, v3: tt.TrabMaq + 0.5},
+            {name: "as", vezes: tt.EnergIntV, v3: tt.EnergIntV + 0.5},
+            {name: "as", vezes: tt.TrabGasP, v3: tt.TrabGasP + 0.5},       
+            {name: "as", vezes: tt.EnergIntT, v3: tt.EnergIntT + 0.5},  
+            {name: "as", vezes: tt.VariaInt, v3: tt.VariaInt + 0.5},  
+            {name: "as", vezes: tt.TrabGasT, v3: tt.TrabGasT + 0.5},      
         ]
 
         //   console.log(arr)    
@@ -69,7 +69,7 @@ export default function Buceta(){
             }}
             >
             {/* <CartesianGrid stroke="#f5f5f5" /> */}
-            <XAxis dataKey="neime"/>
+            <XAxis dataKey="name"/>
             <YAxis />
             {/* <Tooltip /> */}
             <Legend />
