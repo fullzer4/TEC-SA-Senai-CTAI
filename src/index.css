@@ -15,7 +15,6 @@ html, body, #root{
     margin: 0;
     outline: none;
     text-decoration: none;
-    font-family:'Karla', sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -43,7 +42,8 @@ html, body, #root{
     gap: 10vh;
     overflow: hidden scroll;
     width: 100%;
-    padding-top: 5vh;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
     padding-left: 5vw;
     padding-right: 5vw;
 }

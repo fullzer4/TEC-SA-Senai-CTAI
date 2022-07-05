@@ -10,9 +10,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: calc(1vmin + 5px);
 }
 
 .sobretime-box-titulo{
+    font-size: calc(100% + 15px);
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 400;
@@ -24,7 +26,12 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: calc(15vmin + 10px);
+}
+
+.box-controle-texto{
+    display: flex;
+    width: 40%;
 }
 
 .sobretime-box-conteudo-texto{
@@ -32,8 +39,10 @@
     font-style: normal;
     font-weight: 300;
     color: #F2F2F2;
+    font-size: calc(100% + 6px);
+    text-align: center;
 }
 
 .sobretime-box-conteudo-imagem{
-    height: 40vmin;
+    width: 40%;
 }

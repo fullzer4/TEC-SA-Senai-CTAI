@@ -8,8 +8,8 @@ export default function Home() {
         <div id="content">
           <Header/>
           <div id="content-objects">
-            <Bemvindo/>    
-            <SobreTime/>
+            <Bemvindo/>   
+            <SobreTime/> 
           </div>
         </div>
       </div>
