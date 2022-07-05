@@ -9,6 +9,15 @@ html, body, #root{
     background: linear-gradient(90deg, #A38ED2 0%, #F9C1EB 100%);
 }
 
+::-webkit-scrollbar{
+    background-color: rgba(0, 0, 0, 0);
+    width: calc(100% + 10px);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 0, 0, 0.534);
+    border-radius: 20px;
+}
 
 *{
     padding: 0;

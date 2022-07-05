@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useState } from "react";
+import { createContext } from "react";
 import firebase from "../services/databseConnection"
 
 export const GraficoContext = createContext<any>(()=>{})

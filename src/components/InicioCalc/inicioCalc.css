@@ -1,0 +1,9 @@
+.iniciocalc{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    gap: calc(12vmin + 10px);
+    width: 100%;
+}
