@@ -5,13 +5,15 @@ import "./bemvindo.css"
 export default function Bemvindo() {
     return(
         <div id="bemvindo">
-            <div className="bemvindo-conteudo">
-                <h1 className="bemvindo-conteudo-titulo">Bem vindo(a)</h1>
-                <h2 className="bemvindo-conteudo-subtitulo">Calculadora para trabalho SA abordando os conhecimentos de Maquinas Térmicas e termodinamica</h2>
-                <Link to="/calculator" className="bemvindo-conteudo-botao">Vamos calcular</Link>
-            </div>
-            <div className="bemvindo-imagem">
-                <img src={Equipe1}></img>
+            <div className="container-out">
+                <div className="out-in">
+                    <h1 className="title-ini">Bem vindo(a)</h1>
+                    <p className="text-ini">Calculadora para trabalho SA abordando os conhecimentos de Maquinas Térmicas e termodinamica</p>
+                    <Link to="calculadora"><button className="bt-link">Teste agora</button></Link>
+                </div>
+                <div className="out-in">
+                    <img src={Equipe1} alt=""/>
+                </div>
             </div>
         </div>
     )
