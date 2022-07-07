@@ -11,9 +11,12 @@ import { MenuContext } from "../contexts/menu"
 
 export default function Rota() {
   const { mudarPagina} = useContext(MenuContext)
+
+  //corrigir
   return(
     <BrowserRouter>
       <Routes>
+        
         <Route path="/" element={<Home/>} {...mudarPagina(1)}/>
         <Route path="/calculator" element={<Calculadora/>} {...mudarPagina(2)}/>
         <Route path="/experiment" element={<Experimento/>} {...mudarPagina(3)}/>
