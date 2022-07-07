@@ -11,7 +11,65 @@ export const MenuProvider = ({ children }: any) => {
     const [graphic, setGraphic] = useState("btn-nav")
 
     function mudarPagina(pagina:any){
-        console.log(pagina)        
+        
+
+
+        if(pagina === 1){
+            setHome('btn-nav ativo')
+            setCalc('btn-nav');
+            setTeam('btn-nav');
+            setTeoric('btn-nav');
+            setScientist('btn-nav');
+            setGraphic('btn-nav');
+        } else if(pagina === 2){
+            setCalc('btn-nav ativo')
+            setHome('btn-nav');
+            setTeam('btn-nav');
+            setTeoric('btn-nav');
+            setScientist('btn-nav');
+            setGraphic('btn-nav');
+        } else if(pagina === 3){
+            setTeam('btn-nav ativo')
+            setCalc('btn-nav')
+            setHome('btn-nav');
+            setTeoric('btn-nav');
+            setScientist('btn-nav');
+            setGraphic('btn-nav');
+        } else if(pagina === 4){
+            setTeoric('btn-nav ativo')
+            setTeam('btn-nav')
+            setCalc('btn-nav')
+            setHome('btn-nav');
+            setTeoric('btn-nav');
+            setScientist('btn-nav');
+            setGraphic('btn-nav');
+        } else if(pagina === 5){
+            setScientist('btn-nav ativo')
+            setTeam('btn-nav')
+            setCalc('btn-nav')
+            setHome('btn-nav');
+            setTeoric('btn-nav');
+            setScientist('btn-nav');
+            setGraphic('btn-nav');
+        }  else if(pagina === 6){
+            setGraphic('btn-nav ativo')
+            setTeam('btn-nav')
+            setCalc('btn-nav')
+            setHome('btn-nav');
+            setTeoric('btn-nav');
+            setScientist('btn-nav');
+            setGraphic('btn-nav');
+        } else {
+            setHome('btn-nav ativo')
+            setCalc('btn-nav');
+            setTeam('btn-nav');
+            setTeoric('btn-nav');
+            setScientist('btn-nav');
+            setGraphic('btn-nav');
+        }
+
+        console.log(home, calc)
+
     }
 
 
