@@ -26,7 +26,7 @@ FONTES
 
 karla: https://fonts.google.com/specimen/Karla
 
-URL: https://prod.liveshare.vsengsaas.visualstudio.com/join?CE4B439760084BD3A115F641C6D887CC3ABD
+URL: https://prod.liveshare.vsengsaas.visualstudio.com/join?A2694362EA6EB3912DBC77416994C0CE093F
 
 !!fazer Todos os calculos e inversos do Rendimento de maquina termica
 
