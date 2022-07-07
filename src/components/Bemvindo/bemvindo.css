@@ -29,6 +29,7 @@
 img{
     width: 100%;
     max-width: 600px;
+    max-height: 400px;
 }
 .reverse{
     flex-direction: row-reverse;

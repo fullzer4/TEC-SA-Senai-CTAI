@@ -28,13 +28,13 @@ export default function Navbar() {
                 </button>
             </Link>
 
-            <Link to="/">
+            <Link to="/membros">
                 <button className="btn-nav">
                     <Team/>
                 </button>
             </Link>
 
-            <Link to="/">
+            <Link to="/teoria">
                 <button className="btn-nav">
                     <Teoric/>
                 </button>
