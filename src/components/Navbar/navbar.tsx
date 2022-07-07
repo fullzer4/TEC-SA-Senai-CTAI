@@ -1,3 +1,4 @@
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../images/logo/logo'
 import Home from '../../images/home/Home'
@@ -8,7 +9,10 @@ import Scientist from '../../images/scientist/scientist'
 import Graphic from '../../images/graphic/graphic'
 
 import './navbar.css';
+import { MenuContext } from '../../contexts/menu';
 export default function Navbar() {
+    const { home, calc, graphic, teoric, team, scientist} = useContext(MenuContext)
+
     return(
         <div id="navbar">
             <Link to="/">
@@ -18,7 +22,7 @@ export default function Navbar() {
             </Link>
             <hr/>
             <Link to="/">
-                <button className="btn-nav">
+                <button className={home}>
                     <Home/>
                 </button>
             </Link>
