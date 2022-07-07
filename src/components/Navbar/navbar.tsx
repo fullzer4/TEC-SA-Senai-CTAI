@@ -22,36 +22,36 @@ export default function Navbar() {
             </Link>
             <hr/>
             <Link to="/">
-                <button onClick={mudarPagina(1)} className={home}>
+                <button onClick={() => mudarPagina(1)} className={home}>
                     <Home/>
                 </button>
             </Link>
             <Link to="/calculator">
-                <button onClick={mudarPagina(2)} className={calc}>
+                <button onClick={() => mudarPagina(2)} className={calc}>
                     <Calc/>
                 </button>
             </Link>
 
             <Link to="/membros">
-                <button onClick={mudarPagina(3)} className={team}>
+                <button onClick={() => mudarPagina(3)} className={team}>
                     <Team/>
                 </button>
             </Link>
 
             <Link to="/teoria">
-                <button onClick={mudarPagina(4)} className={teoric}>
+                <button onClick={() => mudarPagina(4)} className={teoric}>
                     <Teoric/>
                 </button>
             </Link>
 
             <Link to="/experiment">
-                <button onClick={mudarPagina(5)} className={scientist}>
+                <button onClick={() => mudarPagina(5)} className={scientist}>
                     <Scientist/>
                 </button>
             </Link>
 
             <Link to="/test">
-                <button onClick={mudarPagina(6)} className={graphic}>
+                <button onClick={() => mudarPagina(6)} className={graphic}>
                     <Graphic/>
                 </button>
             </Link>

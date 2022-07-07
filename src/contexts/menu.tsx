@@ -40,7 +40,6 @@ export const MenuProvider = ({ children }: any) => {
             setTeam('btn-nav')
             setCalc('btn-nav')
             setHome('btn-nav');
-            setTeoric('btn-nav');
             setScientist('btn-nav');
             setGraphic('btn-nav');
         } else if(pagina === 5){
@@ -49,7 +48,6 @@ export const MenuProvider = ({ children }: any) => {
             setCalc('btn-nav')
             setHome('btn-nav');
             setTeoric('btn-nav');
-            setScientist('btn-nav');
             setGraphic('btn-nav');
         }  else if(pagina === 6){
             setGraphic('btn-nav ativo')
@@ -58,7 +56,6 @@ export const MenuProvider = ({ children }: any) => {
             setHome('btn-nav');
             setTeoric('btn-nav');
             setScientist('btn-nav');
-            setGraphic('btn-nav');
         } else {
             setHome('btn-nav ativo')
             setCalc('btn-nav');
