@@ -1,9 +1,10 @@
 .container-out{
     width: calc(100% - 60px);
-    margin: 30px;
+    margin: 30px auto;
     display: flex;
     flex-direction: row;
-    align-items: center
+    align-items: center;
+    max-width: 1500px;
 }
 .out-in{
     width: calc(100%/2 - 20px);
