@@ -14,7 +14,7 @@ PAGES
             video
             imagens
             processo de montagem
-            explicação
+            explicação 
             --partipação
     Calculadora
         Finalizar formulas
@@ -23,6 +23,8 @@ PAGES
         Refazer componente calculo intro
 
 FONTES
+
+npm install react-fast-image
 
 karla: https://fonts.google.com/specimen/Karla
 
