@@ -30,6 +30,9 @@ img{
     width: 100%;
     max-width: 600px;
 }
+.reverse{
+    flex-direction: row-reverse;
+}
 
 @media screen and (max-width: 850px){
     .container-out{

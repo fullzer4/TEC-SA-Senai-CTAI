@@ -31,16 +31,15 @@ export default function Buceta(){
         var tt = total[0][1];
 
         var arr: any = [
-            {name: "Le", vezes: tt.lei1, v3: tt.lei1 + 0.5},
-            {name: "as", vezes: tt.lei2, v3: tt.lei2 + 0.5},
-            {name: "as", vezes: tt.EficEnerg, v3: tt.EficEnerg + 0.5},
-            {name: "as", vezes: tt.RendMaq, v3: tt.RendMaq + 0.5},
-            {name: "as", vezes: tt.TrabMaq, v3: tt.TrabMaq + 0.5},
-            {name: "as", vezes: tt.EnergIntV, v3: tt.EnergIntV + 0.5},
-            {name: "as", vezes: tt.TrabGasP, v3: tt.TrabGasP + 0.5},       
-            {name: "as", vezes: tt.EnergIntT, v3: tt.EnergIntT + 0.5},  
-            {name: "as", vezes: tt.VariaInt, v3: tt.VariaInt + 0.5},  
-            {name: "as", vezes: tt.TrabGasT, v3: tt.TrabGasT + 0.5},      
+            {name: "L1", vezes: tt.lei1, v3: tt.lei1 + 0.5},
+            {name: "L2", vezes: tt.lei2, v3: tt.lei2 + 0.5},
+            {name: "L3", vezes: tt.EficEnerg, v3: tt.EficEnerg + 0.5},
+            {name: "L4", vezes: tt.RendMaq, v3: tt.RendMaq + 0.5},
+            {name: "L5", vezes: tt.TrabMaq, v3: tt.TrabMaq + 0.5},
+            {name: "L6", vezes: tt.EnergIntV, v3: tt.EnergIntV + 0.5},
+            {name: "L7", vezes: tt.TrabGasP, v3: tt.TrabGasP + 0.5},       
+            {name: "L8", vezes: tt.EnergIntT, v3: tt.EnergIntT + 0.5},  
+            {name: "L9", vezes: tt.VariaInt, v3: tt.VariaInt + 0.5}
         ]
 
         //   console.log(arr)    
@@ -73,10 +72,9 @@ export default function Buceta(){
             <YAxis />
             {/* <Tooltip /> */}
             <Legend />
-            <Area type="monotone" dataKey="v3" fill="#8884d8" stroke="#8884d8" />
-
-            <Bar dataKey="vezes" barSize={20} fill="#413ea0" />
-            <Line type="monotone" dataKey="v3" stroke="#ff7300" />
+            <Area type="monotone" dataKey="vezes" fill="#3f3d56a3" strokeWidth={8} stroke="#e861ff" />
+            <Bar dataKey="vezes" overflow="hidden" barSize={30} fill="#3F3D56" />
+            <Line type="monotone" dataKey="vezes" stroke="#e861ff" />
             </ComposedChart>
         </ResponsiveContainer>
          <button onClick={()=> envDadosFB(1)}>Dados</button>

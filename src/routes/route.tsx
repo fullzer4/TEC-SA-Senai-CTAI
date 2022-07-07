@@ -8,7 +8,7 @@ export default function Rota() {
   return(
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home/>}/> sexo quico bonito, que cu gostoso, quico bonito, que cu maravil
+        <Route path="/" element={<Home/>}/> 
         <Route path="/calculator" element={<Calculadora/>}/>
         <Route path="/experiment" element={<Experimento/>}/>
         <Route path="/test" element={<Test/>}/>
