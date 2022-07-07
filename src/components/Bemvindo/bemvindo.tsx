@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import Equipe1 from "../../images/HomeEquipe1.svg"
 import Equipe2 from "../../images/TeamEquipe1.svg"
 import Equipe3 from "../../images/Study1.svg"
-// import Graphic from "../../images/graphic/graphic"
 import "./bemvindo.css"
 
 export default function Bemvindo() {
