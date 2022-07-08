@@ -12,6 +12,8 @@ export const MenuProvider = ({ children }: any) => {
 
     function mudarPagina(pagina:any){
         
+
+
         if(pagina === 1){
             setHome('btn-nav ativo')
             setCalc('btn-nav');
@@ -62,9 +64,6 @@ export const MenuProvider = ({ children }: any) => {
             setScientist('btn-nav');
             setGraphic('btn-nav');
         }
-
-        console.log(home, calc)
-
     }
 
 
