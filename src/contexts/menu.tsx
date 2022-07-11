@@ -10,63 +10,24 @@ export const MenuProvider = ({ children }: any) => {
     const [scientist, setScientist] = useState("btn-nav")
     const [graphic, setGraphic] = useState("btn-nav")
 
-    function mudarPagina(pagina:any){
-        
-        
 
-        if(pagina === 1){
-            setHome('btn-nav ativo')
-            setCalc('btn-nav');
-            setTeam('btn-nav');
-            setTeoric('btn-nav');
-            setScientist('btn-nav');
-            setGraphic('btn-nav');
-        } else if(pagina === 2){
-            setCalc('btn-nav ativo')
-            setHome('btn-nav');
-            setTeam('btn-nav');
-            setTeoric('btn-nav');
-            setScientist('btn-nav');
-            setGraphic('btn-nav');
-        } else if(pagina === 3){
-            setTeam('btn-nav ativo')
-            setCalc('btn-nav')
-            setHome('btn-nav');
-            setTeoric('btn-nav');
-            setScientist('btn-nav');
-            setGraphic('btn-nav');
-        } else if(pagina === 4){
-            setTeoric('btn-nav ativo')
-            setTeam('btn-nav')
-            setCalc('btn-nav')
-            setHome('btn-nav');
-            setScientist('btn-nav');
-            setGraphic('btn-nav');
-        } else if(pagina === 5){
-            setScientist('btn-nav ativo')
-            setTeam('btn-nav')
-            setCalc('btn-nav')
-            setHome('btn-nav');
-            setTeoric('btn-nav');
-            setGraphic('btn-nav');
-        }  else if(pagina === 6){
-            setGraphic('btn-nav ativo')
-            setTeam('btn-nav')
-            setCalc('btn-nav')
-            setHome('btn-nav');
-            setTeoric('btn-nav');
-            setScientist('btn-nav');
-        } else {
-            setHome('btn-nav ativo')
-            setCalc('btn-nav');
-            setTeam('btn-nav');
-            setTeoric('btn-nav');
-            setScientist('btn-nav');
-            setGraphic('btn-nav');
-        }
+    function cleanClass(){
+        setHome('btn-nav')
+        setCalc('btn-nav');
+        setTeam('btn-nav');
+        setTeoric('btn-nav');
+        setScientist('btn-nav');
+        setGraphic('btn-nav');
+    }
 
-        console.log(home, calc)
-
+    function mudarPagina(pagina:any){ 
+        if(pagina === 1){cleanClass(), setHome('btn-nav ativo')} 
+        else if(pagina === 2){cleanClass(), setCalc('btn-nav ativo')} 
+        else if(pagina === 3){cleanClass(), setTeam('btn-nav ativo')}
+        else if(pagina === 4){cleanClass(), setTeoric('btn-nav ativo')}
+        else if(pagina === 5){cleanClass(), setScientist('btn-nav ativo')}
+        else if(pagina === 6){cleanClass(), setGraphic('btn-nav ativo')}
+        else {cleanClass(), setHome('btn-nav ativo')}
     }
 
 
