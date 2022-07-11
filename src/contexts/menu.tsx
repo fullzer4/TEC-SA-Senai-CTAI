@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 export const MenuContext = createContext<any>(()=>{})
 
 export const MenuProvider = ({ children }: any) => {
-    const [home, setHome] = useState("btn-nav")
+    const [home, setHome] = useState("btn-nav ativo")
     const [calc, setCalc] = useState("btn-nav")
     const [team, setTeam] = useState("btn-nav")
     const [teoric, setTeoric] = useState("btn-nav")
@@ -12,7 +12,7 @@ export const MenuProvider = ({ children }: any) => {
 
     function mudarPagina(pagina:any){
         
-
+        
 
         if(pagina === 1){
             setHome('btn-nav ativo')
