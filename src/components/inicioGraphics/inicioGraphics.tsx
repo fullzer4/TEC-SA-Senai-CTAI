@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Equipe1 from "../../images/CalcEquipe1.svg"
-import "./inicioCalc.css"
+import "./inicioGraphics.css"
 
 export default function inicioGraphics() {
     return(

@@ -50,7 +50,7 @@ export default function Navbar() {
                 </button>
             </Link>
 
-            <Link to="/test">
+            <Link to="/graphics">
                 <button onClick={() => mudarPagina(6)} className={graphic}>
                     <Graphic/>
                 </button>

@@ -1,7 +1,9 @@
 import React, {Component, useContext, PureComponent} from 'react';
+import InicioGraphics from '../../components/inicioGraphics/inicioGraphics';
+import Header from '../../components/Navbar/navbar';
 import { GraficoContext } from '../../contexts/grafico';
 import { useState } from 'react';
-import './test.css'
+import './graphics.css'
 import {
     ComposedChart,
     Line,
@@ -14,7 +16,6 @@ import {
     Legend,
     ResponsiveContainer,
   } from 'recharts';
-import InicioGraphics from '../../components/inicioGraphics/inicioGraphics';
 
 let timeOut = 0;
 
@@ -55,8 +56,11 @@ export default function graphics(){
     console.log(dataS)
     
     return (
-        <div>
-            <InicioGraphics/>
+        <div id="container">
+            <div id="content">
+                <Header/>
+                <div id="content-objects">
+                    <InicioGraphics/>
             <div className="cont-graph">
                 <ResponsiveContainer width="100%" height="100%">
                 <ComposedChart
@@ -91,6 +95,9 @@ export default function graphics(){
             <button onClick={()=> envDadosFB(9)}>Dados</button>    
             <button onClick={()=> envDadosFB(10)}>Dados</button>
             </div> 
+                </div>
+            </div>
         </div>
+        
     );
 }
