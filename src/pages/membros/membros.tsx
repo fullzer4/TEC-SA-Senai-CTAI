@@ -1,4 +1,5 @@
 import Header from '../../components/Navbar/navbar';
+import InicioTeam from '../../components/InicioTeam/inicioteam';
 
 export default function Membros() {
     return(
@@ -6,7 +7,7 @@ export default function Membros() {
             <div id="content">
                 <Header/>
                 <div id="content-objects">
-                    
+                    <InicioTeam/>
                 </div>
             </div>
         </div>
