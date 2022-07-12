@@ -1,5 +1,6 @@
 .cont-graph{
     width: 100%;
-    /* max-width: 800px; */
+    max-width: 800px;
     aspect-ratio: 1.5;
+    max-height: 350px;
 }
