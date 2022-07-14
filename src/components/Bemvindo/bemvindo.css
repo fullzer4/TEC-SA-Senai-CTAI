@@ -44,3 +44,23 @@ img{
         margin: 50px;
     }
 }
+
+@media screen and (max-width: 500px){
+    .container-out{
+        align-items: flex-start;
+        margin: 0;
+        width: 100%;
+    }
+    .out-in{
+        width: 100%;
+        margin: 10px 0;
+    }
+    .title-ini{
+        font-size: 25px;
+        margin: 20px 10px;
+    }
+    .text-ini{
+        font-size: 15px;
+        margin: 20px 10px;
+    }
+}

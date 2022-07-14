@@ -1,0 +1,7 @@
+@media screen and (max-width: 500px){
+    .container-center{
+        align-items: flex-start;
+        margin: 0;
+        width: 100%;
+    }
+}

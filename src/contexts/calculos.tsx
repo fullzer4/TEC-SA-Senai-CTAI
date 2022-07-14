@@ -78,7 +78,6 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     function setHistorico(e:number){
         historico.push(e)
         console.log(historico);
-        
     }
 
     // TOAST MESSAGES
