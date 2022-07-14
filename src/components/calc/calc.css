@@ -1,0 +1,107 @@
+.calc-out{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: left;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 30px auto;
+}
+.box-calc-in{
+    width: calc(100%/3 - 60px);
+    background: white;
+    margin: 30px;
+    border-radius: 5px;
+    background: #3c23413b;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.bt-calc-in{
+    width: calc(100% - 20px);
+    padding: 10px;
+    color: white;
+    background: #3c23413b;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s;
+}
+.bt-calc-in:hover{
+    background: #3c234159;
+}
+.title-box-in{
+    font-size: 18px;
+    text-align: center;
+    margin: 10px;
+}
+hr {
+    width: calc(60%);
+    margin: auto;
+    border-color: white;
+}
+.form-title-in{
+    font-size: 16px;
+    margin: 10px;
+    text-align: center;
+}
+.form-box-in{
+    margin: 10px;
+    text-align: center;
+}
+
+
+/* CLAC */
+
+.cont-calc{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000000b5;
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.desativado{
+    display: none;
+}
+.cont-calc-in{
+    width: calc(100% - 30px);
+    min-height: 200px;
+    padding: 5px;
+    max-width: 600px;
+    border-radius: 5px;
+    background: #1c171f6b;
+    position: relative;
+    overflow: hidden scroll;
+}
+.close-calc{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    background: #0000006b;
+    border-radius: 50%;
+    width: 30px;
+    aspect-ratio: 1;
+    cursor: pointer;
+    font-size: 13px;
+}
+.func-out-calcs{
+    width: 100%;
+    display: flex;
+}
+.title-calc{
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+}
+.uiashd{
+    margin: 5px;
+    
+}

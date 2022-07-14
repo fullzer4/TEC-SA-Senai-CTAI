@@ -1,4 +1,5 @@
 import InicioCalc from '../../components/InicioCalc/inicioCalc';
+import Calc from '../../components/calc/calc';
 import Header from '../../components/Navbar/navbar';
 export default function Calculadora() {
 
@@ -8,6 +9,7 @@ export default function Calculadora() {
                 <Header/>
                 <div id="content-objects">
                     <InicioCalc/>
+                    <Calc/>
                 </div>
             </div>
         </div>

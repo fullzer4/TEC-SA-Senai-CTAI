@@ -6,8 +6,7 @@ type CalculosContextProps = { //configurar as props
 }
 
 const CalculosinitialValue ={  //definir o que ele ira receber
-    classSC: ("show-calculo desativado"),
-    classGST: ("show-calculo-gas desativado"),
+    classSC: ("cont-calc desativado"),
     verClickCalc1: () => {},
     verClickCalc2: () => {},
     verClickCalc3: () => {},
@@ -17,19 +16,15 @@ const CalculosinitialValue ={  //definir o que ele ira receber
     verClickCalc7: () => {},
     verClickCalc8: () => {},
     verClickCalc9: () => {},
-    verClickCalc10: () => {},
     openCalc: false,
     calcEsc: (""),
     pc1Esc: (""),
     pc2Esc: (""),
-    pc3Esc: (""),
     pcResult: (""),
     val1Esc: (""),
     setVal1Esc: () => {},
     val2Esc: (""),
     setVal2Esc: () => {},
-    val3Esc: (""),
-    setVal3Esc: () => {},
     result: (""),
     setResult: () => {},
     verificarLei: () => {},
@@ -43,15 +38,12 @@ export const CalculosContext = createContext<any>(CalculosinitialValue)
 
 export const CalculosProvider = ({ children }: CalculosContextProps) => {
     const [classSC, setClassSC] = useState(CalculosinitialValue.classSC) //classSc = valor Principal setClassSC = definir o valor principal
-    const [classGST, setClassGST] = useState(CalculosinitialValue.classGST)
     const [openCalc, setOpenCalc] = useState(CalculosinitialValue.openCalc)
     const [calcEsc, setCalcEsc] = useState(CalculosinitialValue.calcEsc)
     const [pc1Esc, setPc1Esc] = useState(CalculosinitialValue.pc1Esc)
     const [pc2Esc, setPc2Esc] = useState(CalculosinitialValue.pc2Esc)
-    const [pc3Esc, setPc3Esc] = useState(CalculosinitialValue.pc3Esc)
     const [val1Esc, setVal1Esc] = useState(CalculosinitialValue.val1Esc)
     const [val2Esc, setVal2Esc] = useState(CalculosinitialValue.val2Esc)
-    const [val3Esc, setVal3Esc] = useState(CalculosinitialValue.val3Esc)
     const [pcResult, setPcResult] = useState(CalculosinitialValue.pcResult)
     const [result, setResult] = useState(CalculosinitialValue.result)
     const [selectLei1, setSelectLei1] = useState(false)
@@ -66,11 +58,9 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     const [selectTC, setSelectTC] = useState(false)
     var var1Tam = val1Esc.length
     var var2Tam = val2Esc.length
-    var var3Tam = val3Esc.length
     var resultadoTam = result.length
     var var1 = parseInt(val1Esc)
     var var2 = parseInt(val2Esc)
-    var var3 = parseInt(val3Esc)
     var resultadoBack = parseInt(result)
     const R = 8.31 //constante dos gases perfeitos
     
@@ -109,17 +99,13 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
 
     function changeTxt(i1:number, i2?:any, i3?:any, i4?:any, i5?:any, i6?:any){
         if(i1 === 0){
-            setClassSC("show-calculo")
-        } else {
-            setClassGST("show-calculo-gas")
+            setClassSC("cont-calc")
         }
         
         setCalcEsc(i2)
         setPc1Esc(i3)
         setPc2Esc(i4)
         setPcResult(i5)
-        // extras
-        setPc3Esc(i6)
 
         setOpenCalc(true)
     }
@@ -460,15 +446,12 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
 
     function defClear(){
         setCalcEsc("")
-        setClassSC("show-calculo desativado")
-        setClassGST("show-calculo-gas desativado")
+        setClassSC("cont-calc desativado")
         setPc1Esc("")
         setPc2Esc("")
-        setPc3Esc("")
         setPcResult("")
         setVal1Esc("")
         setVal2Esc("")
-        setVal3Esc("")
         setResult("")
 
         setSelectLei1(false)
@@ -552,13 +535,6 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             return true;
         }   
     }
-    function verClickCalc10(){
-        if(!openCalc){
-            changeTxt(1,"Trabalho de um Gás Sob Temperatura Constante","n (jaule)","T (jaule)", "V2 (jaule)","V1 (jaule)");
-            setSelectTC(true)
-            return true;
-        }      
-    }
     function verClickSair(){
         defClear();
         return
@@ -573,7 +549,6 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     return(
         <CalculosContext.Provider value={{
             classSC,
-            classGST,
             verClickCalc1,
             verClickCalc2,
             verClickCalc3,
@@ -583,19 +558,15 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             verClickCalc7,
             verClickCalc8,
             verClickCalc9,
-            verClickCalc10,
             openCalc,
             calcEsc,
             pc1Esc,
             pc2Esc,
-            pc3Esc,
             pcResult,
             val1Esc,
             setVal1Esc,
             val2Esc,
             setVal2Esc,
-            val3Esc,
-            setVal3Esc,
             result,
             verificarLei,
             setResult,
