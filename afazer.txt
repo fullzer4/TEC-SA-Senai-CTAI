@@ -28,7 +28,7 @@ npm install react-fast-image
 
 karla: https://fonts.google.com/specimen/Karla
 
-URL: https://prod.liveshare.vsengsaas.visualstudio.com/join?5FE32CD05044F73953836D1E469259D8FDF9
+URL: https://prod.liveshare.vsengsaas.visualstudio.com/join?D86A58219CF773FB9F3540615460418AD01F
 
 !!fazer Todos os calculos e inversos do Rendimento de maquina termica
 

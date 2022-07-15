@@ -61,8 +61,12 @@ export default function graphics(){
                 <Header/>
                 <div id="content-objects">
                     <InicioGraphics/>
+
+            <div className="graph-title">Gráfico</div>
             <div className="cont-graph">
-                <ResponsiveContainer width="100%" height="100%">
+            
+
+                <ResponsiveContainer>
                 <ComposedChart
                 width={500}
                 height={400}
@@ -78,7 +82,6 @@ export default function graphics(){
                 <XAxis dataKey="name"/>
                 <YAxis />
                 {/* <Tooltip /> */}
-                <Legend />
                 <Area type="monotone" dataKey="vezes" fill="#3f3d56a3" strokeWidth={8} stroke="#e861ff" />
                 <Bar dataKey="vezes" overflow="hidden" barSize={30} fill="#3F3D56" />
                 <Line type="monotone" dataKey="vezes" stroke="#e861ff" />

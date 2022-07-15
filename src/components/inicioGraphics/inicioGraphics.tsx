@@ -8,7 +8,7 @@ export default function inicioGraphics() {
             <div className="out-in">
                 <h1 className="title-ini">Dados do Site</h1>
                 <p className="text-ini">Aqui mostramos todos os dados que coletamos da pagina de calculos.</p>
-                <Link to="/test"><button className="bt-link">Ir para calculos</button></Link>
+                <Link to="/calculator"><button className="bt-link">Ir para calculos</button></Link>
             </div>
             <div className="out-in">
                 <img src={Equipe1} alt=""/>

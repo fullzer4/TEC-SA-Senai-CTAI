@@ -11,7 +11,11 @@ export default function ContCalc() {
                 <button className="close-calc" onClick={() => verClickSair()}>X</button>
                 <h1 className="title-calc">{calcEsc}</h1>
                 <div className="func-out-calcs">
-                    <div className="inps-out uiashd"></div>
+                    <div className="inps-out uiashd">
+                        <input className="inp-cont-calc"/>
+                        <input className="inp-cont-calc"/>
+                        <input className="inp-cont-calc"/>
+                    </div>
                     <div className="hst-out uiashd"></div>
                 </div>
             </div>

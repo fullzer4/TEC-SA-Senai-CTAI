@@ -1,0 +1,13 @@
+.cont-graph{
+    background: #00000029;
+    border-radius: 0 0 10px 10px;    
+}
+.graph-title{
+    text-align: center;
+    color: white;
+    font-size: 21px;
+    background: #00000029;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    max-width: calc(800px - 40px);
+}

@@ -11,7 +11,7 @@ export default function Bemvindo() {
                 <div className="out-in">
                     <h1 className="title-ini">Bem vindo(a)</h1>
                     <p className="text-ini">Calculadora para trabalho SA abordando os conhecimentos de Maquinas Térmicas e termodinamica</p>
-                    <Link to="calculadora"><button className="bt-link">Teste agora</button></Link>
+                    <Link to="calculator"><button className="bt-link">Teste agora</button></Link>
                 </div>
                 <div className="out-in">
                     <img src={Equipe1} alt=""/>
