@@ -12,9 +12,9 @@ export default function ContCalc() {
                 <h1 className="title-calc">{calcEsc}</h1>
                 <div className="func-out-calcs">
                     <div className="inps-out uiashd">
-                        <input className="inp-cont-calc"/>
-                        <input className="inp-cont-calc"/>
-                        <input className="inp-cont-calc"/>
+                        <input className="inp-cont-calc" placeholder={pc1Esc}/>
+                        <input className="inp-cont-calc" placeholder={pc2Esc}/>
+                        <input className="inp-cont-calc" placeholder={pcResult} value={result}/>
                     </div>
                     <div className="hst-out uiashd"></div>
                 </div>

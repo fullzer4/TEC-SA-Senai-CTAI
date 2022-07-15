@@ -73,7 +73,6 @@ hr {
 }
 .cont-calc-in{
     width: calc(100% - 30px);
-    min-height: 200px;
     padding: 5px;
     max-width: 600px;
     border-radius: 5px;
@@ -109,4 +108,13 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: calc(100%/2)
+}
+.inp-cont-calc{
+    padding: 10px 15px;
+    font-size: 16px;
+    background: #00000057;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0;
 }
