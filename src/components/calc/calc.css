@@ -118,3 +118,10 @@ hr {
     border-radius: 5px;
     margin: 10px 0;
 }
+
+.calc-botoes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
