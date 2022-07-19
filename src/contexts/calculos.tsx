@@ -214,7 +214,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                     msgToast(0)
                     return
                 }
-                resultadoBack = ((var1 / var2 - 1) * 100)
+                resultadoBack = (var1 / var2 - 1)
                 var teste:any = [resultadoBack, var1, var2];
                 newRes(teste, resultadoBack, 3);
                 return
@@ -246,100 +246,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                     return
                 }
                 resultadoBack = (var1 - var2)
-                var teste:any = [resultadoBack, var1, var2];
-                newRes(teste, resultadoBack, 3);
-                return
-            }
-            if(resultadoTam > 0){
-                var2 = (var1 - resultadoBack)
-                setVal2Esc(String(var2))
-                return
-            }
-        }if(var2Tam > 0){
-            if(resultadoTam > 0){
-                var1 = (resultadoBack + var2)
-                setVal1Esc(String(var1))
-                return
-            }
-        }else{
-            msgToast(1)
-            return
-        }
-    }
-
-    // ENERGIA INTERNA VOLUME
-
-    function EV(){
-        if(var1Tam > 0){
-            if(var2Tam > 0){
-                if(resultadoTam > 0){
-                    msgToast(0)
-                    return
-                }
-                resultadoBack = (var1 - var2)
-                var teste:any = [resultadoBack, var1, var2];
-                newRes(teste, resultadoBack, 3);
-                return
-            }
-            if(resultadoTam > 0){
-                var2 = (var1 - resultadoBack)
-                setVal2Esc(String(var2))
-                return
-            }
-        }if(var2Tam > 0){
-            if(resultadoTam > 0){
-                var1 = (resultadoBack + var2)
-                setVal1Esc(String(var1))
-                return
-            }
-        }else{
-            msgToast(1)
-            return
-        }
-    }
-
-    // CALC GAS SOB PRESSAO CONSTANTE
-
-    function TG(){
-        if(var1Tam > 0){
-            if(var2Tam > 0){
-                if(resultadoTam > 0){
-                    msgToast(0)
-                    return
-                }
-                resultadoBack = (var1 - var2)
-                var teste:any = [resultadoBack, var1, var2];
-                newRes(teste, resultadoBack, 3);
-                return
-            }
-            if(resultadoTam > 0){
-                var2 = (var1 - resultadoBack)
-                setVal2Esc(String(var2))
-                return
-            }
-        }if(var2Tam > 0){
-            if(resultadoTam > 0){
-                var1 = (resultadoBack + var2)
-                setVal1Esc(String(var1))
-                return
-            }
-        }else{
-            msgToast(1)
-            return
-        }
-    }
-
-    // CALC ENERGIA INTERNA E TEMPERATURA
-
-    function EI(){
-        if(var1Tam > 0){
-            if(var2Tam > 0){
-                if(resultadoTam > 0){
-                    msgToast(0)
-                    return
-                }
-                resultadoBack = (var1 - var2)
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 1];
                 newRes(teste, resultadoBack, 3);
                 return
             }
@@ -362,6 +269,93 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         }
     }
 
+    // ENERGIA INTERNA VOLUME
+
+    function EV(){
+        if(var1Tam > 0){
+            if(var2Tam > 0){
+                if(resultadoTam > 0){
+                    msgToast(0)
+                    return
+                }
+                resultadoBack = (var1 / var2 - 1)
+                var teste:any = [resultadoBack, var1, var2];
+                newRes(teste, resultadoBack, 3);
+                return
+            }
+            if(resultadoTam > 0){
+                msgToast(2) //fazer
+                return
+            }
+        }if(var2Tam > 0){
+            if(resultadoTam > 0){
+                msgToast(2) //fazer
+                return
+            }
+        }else{
+            msgToast(1)
+            return
+        }
+    }
+
+    // CALC GAS SOB PRESSAO CONSTANTE
+
+    function TG(){
+        if(var1Tam > 0){
+            if(var2Tam > 0){
+                if(resultadoTam > 0){
+                    msgToast(0)
+                    return
+                }
+                resultadoBack = (var1 / var2 - 1)
+                var teste:any = [resultadoBack, var1, var2];
+                newRes(teste, resultadoBack, 3);
+                return
+            }
+            if(resultadoTam > 0){
+                msgToast(2) //fazer
+                return
+            }
+        }if(var2Tam > 0){
+            if(resultadoTam > 0){
+                msgToast(2) //fazer
+                return
+            }
+        }else{
+            msgToast(1)
+            return
+        }
+    }
+
+    // CALC ENERGIA INTERNA E TEMPERATURA
+
+    function EI(){
+        if(var1Tam > 0){
+            if(var2Tam > 0){
+                if(resultadoTam > 0){
+                    msgToast(0)
+                    return
+                }
+                resultadoBack = (var1 / var2 - 1)
+                var teste:any = [resultadoBack, var1, var2];
+                newRes(teste, resultadoBack, 3);
+                return
+            }
+            if(resultadoTam > 0){
+                msgToast(2) //fazer
+                return
+            }
+        }if(var2Tam > 0){
+            if(resultadoTam > 0){
+                msgToast(2) //fazer
+                return
+            }
+        }else{
+            msgToast(1)
+            return
+        }
+    }
+
     // CALC VARIACAO ENERGIA INTERNA
 
     function VE(){
@@ -371,51 +365,18 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                     msgToast(0)
                     return
                 }
-                resultadoBack = (var1 - var2)
+                resultadoBack = (var1 / var2 - 1)
                 var teste:any = [resultadoBack, var1, var2];
                 newRes(teste, resultadoBack, 3);
                 return
             }
             if(resultadoTam > 0){
-                var2 = (var1 - resultadoBack)
-                setVal2Esc(String(var2))
+                msgToast(2) //fazer
                 return
             }
         }if(var2Tam > 0){
             if(resultadoTam > 0){
-                var1 = (resultadoBack + var2)
-                setVal1Esc(String(var1))
-                return
-            }
-        }else{
-            msgToast(1)
-            return
-        }
-    }
-
-    // CALC GAS SOB TEMPERATURA CONSTANTE
-
-    function TC(){
-        if(var1Tam > 0){
-            if(var2Tam > 0){
-                if(resultadoTam > 0){
-                    msgToast(0)
-                    return
-                }
-                resultadoBack = (var1 - var2)
-                var teste:any = [resultadoBack, var1, var2];
-                newRes(teste, resultadoBack, 3);
-                return
-            }
-            if(resultadoTam > 0){
-                var2 = (var1 - resultadoBack)
-                setVal2Esc(String(var2))
-                return
-            }
-        }if(var2Tam > 0){
-            if(resultadoTam > 0){
-                var1 = (resultadoBack + var2)
-                setVal1Esc(String(var1))
+                msgToast(2) //fazer
                 return
             }
         }else{
@@ -429,16 +390,15 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     // VERIFICAR LEI ABERTA
 
     function verificarLei(){
-        if (selectLei1){lei1()}
-        if (selectLei2){lei2()}
-        if (selectEE){EE()}
-        if (selectRM){RM()}
-        if (selectTM){TM()}
-        if (selectEV){EV()}
-        if (selectTG){TG()}
-        if (selectEI){EI()}
-        if (selectVE){VE()}
-        if (selectTC){TC()}
+        if (selectLei1){lei1()} //1
+        if (selectLei2){lei2()} //2
+        if (selectEE){EE()} //3
+        if (selectRM){RM()} //4
+        if (selectTM){TM()} //5
+        if (selectEV){EV()} //6
+        if (selectTG){TG()} //7
+        if (selectEI){EI()} //8
+        if (selectVE){VE()} //9
         return
     }
 
@@ -470,7 +430,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
 
     function verClickCalc1(){
         if(!openCalc){
-            changeTxt(0,"1 Lei Termodinamica","Q (jaule)","Q (jaule)","T (jaule)","ΔU (jaule)");
+            changeTxt(0,"1 Lei Termodinamica","Q (jaule)","T (jaule)","ΔU (jaule)");
             setSelectLei1(true)
             return true;
         }      
@@ -478,7 +438,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
 
     function verClickCalc2(){
         if(!openCalc){
-            changeTxt(0,"2 Lei Termodinamica","Q (jaule)","Q (jaule)","T (jaule)","ΔU (jaule)");
+            changeTxt(0,"2 Lei Termodinamica","Q (jaule)","T (jaule)","ΔU (jaule)");
             setSelectLei2(true)
             return true;
         } 
@@ -509,7 +469,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     }
     function verClickCalc6(){
         if(!openCalc){
-            changeTxt(0,"Energia Interna Volume","V (jaule)","p (jaule)","U (jaule)");
+            changeTxt(0,"Energia Interna Volume","p (jaule)","V (jaule)","U (jaule)");
             setSelectEV(true)
             return true;
         }     
@@ -523,7 +483,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     }
     function verClickCalc8(){
         if(!openCalc){
-            changeTxt(0,"Energia Interna Temperatura","n (jaule)","R (jaule)","T (jaule)");
+            changeTxt(0,"Energia Interna Temperatura","n (jaule)","T (jaule)","U (jaule)");
             setSelectEI(true)
             return true;
         }       
