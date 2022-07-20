@@ -278,7 +278,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                     msgToast(0)
                     return
                 }
-                resultadoBack = (var1 / var2 - 1)
+                resultadoBack = (3/2) * (var1 * var2)
                 var teste:any = [resultadoBack, var1, var2];
                 newRes(teste, resultadoBack, 3);
                 return
@@ -307,18 +307,20 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                     msgToast(0)
                     return
                 }
-                resultadoBack = (var1 / var2 - 1)
+                resultadoBack = (var1 * var2)
                 var teste:any = [resultadoBack, var1, var2];
                 newRes(teste, resultadoBack, 3);
                 return
             }
             if(resultadoTam > 0){
-                msgToast(2) //fazer
+                var2 = (resultadoBack / var1)
+                setVal2Esc(String(var2))
                 return
             }
         }if(var2Tam > 0){
             if(resultadoTam > 0){
-                msgToast(2) //fazer
+                var1 = (resultadoBack / var2)
+                setVal1Esc(String(var1))
                 return
             }
         }else{
@@ -336,7 +338,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                     msgToast(0)
                     return
                 }
-                resultadoBack = (var1 / var2 - 1)
+                resultadoBack = (3/2) * (var1 * var2)
                 var teste:any = [resultadoBack, var1, var2];
                 newRes(teste, resultadoBack, 3);
                 return
@@ -365,7 +367,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                     msgToast(0)
                     return
                 }
-                resultadoBack = (var1 / var2 - 1)
+                resultadoBack = (3/2) * (var1 * var2)
                 var teste:any = [resultadoBack, var1, var2];
                 newRes(teste, resultadoBack, 3);
                 return
