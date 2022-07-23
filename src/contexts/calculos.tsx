@@ -338,7 +338,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                     msgToast(0)
                     return
                 }
-                resultadoBack = (3/2) * (var1 * var2)
+                resultadoBack = (3/2) * (var1 * R *var2)
                 var teste:any = [resultadoBack, var1, var2];
                 newRes(teste, resultadoBack, 3);
                 return
@@ -367,7 +367,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                     msgToast(0)
                     return
                 }
-                resultadoBack = (3/2) * (var1 * var2)
+                resultadoBack = (3/2) * (var1 * R *var2)
                 var teste:any = [resultadoBack, var1, var2];
                 newRes(teste, resultadoBack, 3);
                 return
