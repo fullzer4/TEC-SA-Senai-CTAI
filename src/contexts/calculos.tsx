@@ -220,7 +220,9 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                 return
             }
             if(resultadoTam > 0){
-                msgToast(2) //fazer
+                var2 = ((resultadoBack + 1) / var1)
+                var teste:any = [resultadoBack, var1, var2];
+                newRes(teste, var2, 2);
                 return
             }
         }if(var2Tam > 0){
