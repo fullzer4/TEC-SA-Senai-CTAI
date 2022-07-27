@@ -220,7 +220,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                 return
             }
             if(resultadoTam > 0){
-                var2 = ((resultadoBack + 1) / var1)
+                var2 = (var1 / (resultadoBack + 1))
                 var teste:any = [resultadoBack, var1, var2];
                 newRes(teste, var2, 2);
                 return
@@ -288,12 +288,16 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                 return
             }
             if(resultadoTam > 0){
-                msgToast(2) //fazer
+                var2 = ((3/2) * var1) / resultadoBack
+                var teste:any = [resultadoBack, var1, var2];
+                newRes(teste, var2, 2);
                 return
             }
         }if(var2Tam > 0){
             if(resultadoTam > 0){
-                msgToast(2) //fazer
+                var1 = ((3/2) * resultadoBack) / var2
+                var teste:any = [resultadoBack, var1, var2];
+                newRes(teste, var1, 1);
                 return
             }
         }else{
