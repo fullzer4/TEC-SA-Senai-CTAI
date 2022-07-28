@@ -55,7 +55,6 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     const [selectTG, setSelectTG] = useState(false)
     const [selectEI, setSelectEI] = useState(false)
     const [selectVE, setSelectVE] = useState(false)
-    const [selectTC, setSelectTC] = useState(false)
     var var1Tam = val1Esc.length
     var var2Tam = val2Esc.length
     var resultadoTam = result.length
@@ -425,7 +424,6 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         setSelectTG(false)
         setSelectEI(false)
         setSelectVE(false)
-        setSelectTC(false)
 
         setOpenCalc(false)
     }
