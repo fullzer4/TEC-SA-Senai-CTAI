@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import Equipe1 from "../../images/experiment.svg"
+import videoBarco from "../../images/barcofuncionando.mp4"
+import "./experiment.css"
 
 export default function Experiment() {
     return(
@@ -12,6 +14,15 @@ export default function Experiment() {
                 </div>
                 <div className="out-in">
                     <img src={Equipe1} alt=""/>
+                </div>
+            </div>
+            <div className="container-out">
+                <div className="out-in">
+                    <h1 className="title-ini">Um pouco mais</h1>
+                    <p className="text-ini">Para realizar esse experimento utilizamos canudo, caixa de suco, latinho de redbull, vela, colaquente e superbonder. Nesse experimento a Vela esquenta a latinha e a pressão gerada dentro da latinha sai pelo canudo que esta na agua assim fazendo o barco andar.</p>
+                </div>
+                <div className="out-in">
+                    <video autoPlay loop muted className="videoBarco"><source src={videoBarco} type="video/mp4"></source></video>
                 </div>
             </div>
         </div>
