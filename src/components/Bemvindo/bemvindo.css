@@ -52,15 +52,21 @@ img{
         width: 100%;
     }
     .out-in{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         margin: 10px 0;
     }
     .title-ini{
         font-size: 25px;
         margin: 20px 10px;
+        text-align: center;
     }
     .text-ini{
         font-size: 15px;
         margin: 20px 10px;
+        text-align: center;
     }
 }
