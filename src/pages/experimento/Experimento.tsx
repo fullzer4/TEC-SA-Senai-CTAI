@@ -1,3 +1,4 @@
+import Experiment from '../../components/experiment/experiment';
 import Header from '../../components/Navbar/navbar';
 
 export default function Experimento() {
@@ -6,7 +7,7 @@ export default function Experimento() {
             <div id="content">
                 <Header/>
                 <div id="content-objects">
-                
+                    <Experiment/>
                 </div>
             </div>
         </div>
