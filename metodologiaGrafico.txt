@@ -1,5 +1,0 @@
-Usar MongoDB
-node
-Socket.io
-express
-Chart.js
