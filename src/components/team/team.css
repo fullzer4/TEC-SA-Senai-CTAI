@@ -1,0 +1,58 @@
+.team-out{
+    margin: 50px auto;
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.member{
+    width: calc(100% / 3 - 20px);
+    aspect-ratio: 0.75;
+    background: #00000050;
+    margin: 10px;
+    border-radius: 10px;
+}
+.member-name{
+    font-size: 20px;
+    text-align: center;
+    margin: 10px 5px;
+}
+.line{
+    width: 80%;
+    height: 2px;
+    background: #bcbcbc50;
+    margin: auto;
+}
+.member-img-out{
+    margin: 20px auto;
+    width: calc(100% - 10px);
+    max-width: 100px;
+    aspect-ratio: 1;
+    border: 2px solid #b066ff;
+    border-radius: 50%;
+    background-image: url('https://i.pinimg.com/originals/87/0c/ac/870cac7aecec860a908d6663dfa3e56f.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* mudar background img url  */
+
+.user1{}
+.user2{}
+.user3{}
+.user4{}
+.user5{}
+.user6{}
+
+.member-contri{
+    margin: 20px 10px;
+}
+.sgoibd{
+    margin: 15px 0;
+    font-size: 16px;
+}
+.min{
+    margin: 20px 5px;
+    text-align: center;
+    font-size: 15px;
+}

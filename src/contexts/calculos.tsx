@@ -1,5 +1,7 @@
-import { createContext, ReactNode, useState } from "react";
+import { createContext, ReactNode, useState, useContext } from "react";
 import { toast } from 'react-toastify';
+import { GraficoContext } from "./grafico"
+
 
 type CalculosContextProps = { //configurar as props
     children: ReactNode;
@@ -46,6 +48,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     const [val2Esc, setVal2Esc] = useState(CalculosinitialValue.val2Esc)
     const [pcResult, setPcResult] = useState(CalculosinitialValue.pcResult)
     const [result, setResult] = useState(CalculosinitialValue.result)
+    const [sendbd, setSendbd] = useState(0);
     const [selectLei1, setSelectLei1] = useState(false)
     const [selectLei2, setSelectLei2] = useState(false)
     const [selectEE, setSelectEE] = useState(false)
@@ -62,7 +65,6 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     var var2 = parseInt(val2Esc)
     var resultadoBack = parseInt(result)
     const R = 8.31 //constante dos gases perfeitos
-    
 
     function setHistorico(e:number){
         historico.push(e)
@@ -437,6 +439,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     }
 
     function verClickCalc1(){
+        setSendbd(1);
         if(!openCalc){
             changeTxt(0,"1 Lei Termodinamica","Q (jaule)","T (jaule)","ΔU (jaule)");
             setSelectLei1(true)
@@ -445,6 +448,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     }
 
     function verClickCalc2(){
+        setSendbd(2);
         if(!openCalc){
             changeTxt(0,"2 Lei Termodinamica","Q (jaule)","T (jaule)","ΔU (jaule)");
             setSelectLei2(true)
@@ -453,6 +457,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     }
 
     function verClickCalc3(){
+        setSendbd(3);
         if(!openCalc){
             changeTxt(0,"Eficiencia Energetica","T (jaule)","Q1 (jaule)","E (jaule)");
             setSelectEE(true)
@@ -461,6 +466,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     }
 
     function verClickCalc4(){
+        setSendbd(4);
         if(!openCalc){
             changeTxt(0,"Rendimento Maquina Termica","Qa (jaule)","Qr (jaule)","N (jaule)");
             setSelectRM(true)
@@ -469,6 +475,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     }
 
     function verClickCalc5(){
+        setSendbd(5);
         if(!openCalc){
             changeTxt(0,"Trabalho Maquina Termica","Qa (jaule)","Qr (jaule)","T (jaule)");
             setSelectTM(true)
@@ -476,6 +483,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         }         
     }
     function verClickCalc6(){
+        setSendbd(6);
         if(!openCalc){
             changeTxt(0,"Energia Interna Volume","p (jaule)","V (jaule)","U (jaule)");
             setSelectEV(true)
@@ -483,6 +491,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         }     
     }
     function verClickCalc7(){
+        setSendbd(7);
         if(!openCalc){
             changeTxt(0,"Trabalho de um Gás Sob Pressão Constante","p (jaule)","ΔV (jaule)","T (jaule)");
             setSelectTG(true)
@@ -490,6 +499,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         }       
     }
     function verClickCalc8(){
+        setSendbd(8);
         if(!openCalc){
             changeTxt(0,"Energia Interna Temperatura","n (jaule)","T (jaule)","U (jaule)");
             setSelectEI(true)
@@ -497,6 +507,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         }       
     }
     function verClickCalc9(){
+        setSendbd(9);
         if(!openCalc){
             changeTxt(0,"Variação de Energia Interna","n (jaule)","ΔT (jaule)","ΔU (jaule)");
             setSelectVE(true)
@@ -536,10 +547,12 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             val2Esc,
             setVal2Esc,
             result,
+            sendbd,
             verificarLei,
             setResult,
             verClickSair,
-            limpar
+            limpar,
+            historico
             }}> 
             {children}
         </CalculosContext.Provider>

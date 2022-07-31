@@ -8,7 +8,7 @@ export default function inicioteoria() {
             <div className="out-in">
                 <h1 className="title-ini">Teorias/Estudo</h1>
                 <p className="text-ini">Todos os estudos daqui foram utilizados para realizar os calculos das nossas calculadoras </p>
-                <Link to="/test"><button className="bt-link">Ir para calculos</button></Link>
+                <Link to="/calculator"><button className="bt-link">Ir para calculos</button></Link>
             </div>
             <div className="out-in">
                 <img src={Equipe1} alt=""/>

@@ -1,5 +1,7 @@
 import Header from '../../components/Navbar/navbar';
 import InicioTeam from '../../components/InicioTeam/inicioteam';
+import Team from '../../components/team/team';
+
 
 export default function Membros() {
     return(
@@ -8,6 +10,7 @@ export default function Membros() {
                 <Header/>
                 <div id="content-objects">
                     <InicioTeam/>
+                    <Team/>
                 </div>
             </div>
         </div>

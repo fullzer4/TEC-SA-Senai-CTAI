@@ -1,10 +1,10 @@
 import { useContext } from "react"
 import { CalculosContext} from "../../contexts/calculos"
+import HistoricoUser from "../historicoUser/historicoUser"
 import "./calc.css"
 
-
 export default function ContCalc() {
-    const { classSC, verClickSair, calcEsc, pc1Esc, pc2Esc, pcResult, val1Esc, setVal1Esc, val2Esc, setVal2Esc, result, setResult, limpar, verificarLei} = useContext(CalculosContext)
+    const { classSC, verClickSair, calcEsc, pc1Esc, pc2Esc, pcResult, val1Esc, setVal1Esc, val2Esc, setVal2Esc, result, setResult, limpar, verificarLei, sendbd} = useContext(CalculosContext)
     return(
         <div className={ classSC }>
             <div className="cont-calc-in">
@@ -17,12 +17,12 @@ export default function ContCalc() {
                         <input type="number" className="inp-cont-calc" placeholder={pcResult} value={result} onChange={(e)=> setResult(e.target.value)}/>
                     </div>
                     <div className="hst-out uiashd">
-
+                        <HistoricoUser/>
                     </div>
                 </div>
                 <div className="calc-botoes">
                     <button onClick={()=> limpar()}>Limpar</button>
-                    <button onClick={()=> verificarLei()}>Calcular</button>
+                    <button onClick={()=> verificarLei(sendbd)}>Calcular</button>
                 </div>
             </div>
         </div>

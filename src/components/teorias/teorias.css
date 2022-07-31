@@ -1,3 +1,17 @@
-.reverse2{
-    text-align: right;
+.out-in2 {
+    width: calc(100%/2 - 20px);
+    margin: 10px;
+    background: #3c23413b;
+    border-radius: 10px;
+    padding: 5px;
+    border-radius: 10px;
+}
+.container-out2 {
+    width: calc(100% - 60px);
+    margin: 30px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    max-width: 1500px;
+    align-items: stretch;
 }

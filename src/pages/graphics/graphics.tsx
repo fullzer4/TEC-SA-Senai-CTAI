@@ -87,16 +87,6 @@ export default function graphics(){
                 <Line type="monotone" dataKey="vezes" stroke="#e861ff" />
                 </ComposedChart>
             </ResponsiveContainer>
-            <button onClick={()=> envDadosFB(1)}>Dados</button>
-            <button onClick={()=> envDadosFB(2)}>Dados</button>
-            <button onClick={()=> envDadosFB(3)}>Dados</button>
-            <button onClick={()=> envDadosFB(4)}>Dados</button>
-            <button onClick={()=> envDadosFB(5)}>Dados</button>
-            <button onClick={()=> envDadosFB(6)}>Dados</button>
-            <button onClick={()=> envDadosFB(7)}>Dados</button>
-            <button onClick={()=> envDadosFB(8)}>Dados</button>
-            <button onClick={()=> envDadosFB(9)}>Dados</button>    
-            <button onClick={()=> envDadosFB(10)}>Dados</button>
             </div> 
                 </div>
             </div>
