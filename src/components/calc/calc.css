@@ -125,3 +125,15 @@ hr {
     justify-content: center;
     width: 100%;
 }
+
+@media screen and (max-width: 780px){
+    .box-calc-in{
+        width: calc(100%/2 - 60px);
+    }
+}
+
+@media screen and (max-width: 585px){
+    .box-calc-in{
+        width: calc(100% - 60px);
+    }
+}
