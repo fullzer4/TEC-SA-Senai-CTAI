@@ -37,11 +37,20 @@
 
 /* mudar background img url  */
 
-.user1{}
-.user2{}
-.user3{}
+.user1{
+    background-image: url("../../images/Anselmo.jpg");
+}
+.user2{
+    background-image: url("../../images/Pelizzaro.jpg");
+}
+.user3{
+    background-image: url("../../images/Bruno.jpg");
+}
 .user4{}
-.user5{}
+
+.user5{
+    background-image: url("../../images/ArthurRocha.jpg");
+}
 .user6{}
 
 .member-contri{
