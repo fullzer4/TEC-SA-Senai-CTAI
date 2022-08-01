@@ -56,3 +56,15 @@
     text-align: center;
     font-size: 15px;
 }
+
+@media screen and (max-width: 815px){
+    .member{
+        width: calc(100%/2 - 20px);
+    }
+}
+
+@media screen and (max-width: 565px){
+    .member{
+        width: calc(100% - 20px);
+    }
+}
