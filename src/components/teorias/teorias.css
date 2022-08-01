@@ -15,3 +15,12 @@
     max-width: 1500px;
     align-items: stretch;
 }
+
+@media screen and (max-width: 850px){
+    .out-in2{
+        width: calc(100% - 20px);
+    }
+    .container-out2{
+        flex-direction: column;
+    }
+}
