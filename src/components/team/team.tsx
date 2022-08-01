@@ -10,9 +10,8 @@ export default function Team() {
                     <div className="member-img-out user1"></div>
                     <p className="min">Estudante de TI</p>
                     <div className="member-contri">
-                        <li className="sgoibd">Teste de ciontribuição</li>
-                        <li className="sgoibd">Teste de ciontribuição</li>
-                        <li className="sgoibd">Teste de ciontribuição</li>
+                        <li className="sgoibd">Design</li>
+                        <li className="sgoibd">Experimento</li>
                     </div>
                 </div>
                 <div className="member">
@@ -21,9 +20,8 @@ export default function Team() {
                     <div className="member-img-out user2"></div>
                     <p className="min">FullStack developer</p>
                     <div className="member-contri">
-                        <li className="sgoibd">Teste de ciontribuição</li>
-                        <li className="sgoibd">Teste de ciontribuição</li>
-                        <li className="sgoibd">Teste de ciontribuição</li>
+                        <li className="sgoibd">Desenvolvimento</li>
+                        <li className="sgoibd">Design</li>
                     </div>
                 </div>
                 <div className="member">
@@ -32,9 +30,8 @@ export default function Team() {
                     <div className="member-img-out user3"></div>
                     <p className="min">FullStack developer</p>
                     <div className="member-contri">
-                        <li className="sgoibd">Teste de ciontribuição</li>
-                        <li className="sgoibd">Teste de ciontribuição</li>
-                        <li className="sgoibd">Teste de ciontribuição</li>
+                        <li className="sgoibd">Desenvolvimento</li>
+                        <li className="sgoibd">Design</li>
                     </div>
                 </div>
                 <div className="member">
@@ -43,9 +40,8 @@ export default function Team() {
                     <div className="member-img-out user4"></div>
                     <p className="min">Estudante de TI</p>
                     <div className="member-contri">
-                        <li className="sgoibd">Teste de ciontribuição</li>
-                        <li className="sgoibd">Teste de ciontribuição</li>
-                        <li className="sgoibd">Teste de ciontribuição</li>
+                        <li className="sgoibd">Design</li>
+                        <li className="sgoibd">Experimento</li>
                     </div>
                 </div>
                 <div className="member">
@@ -54,9 +50,8 @@ export default function Team() {
                     <div className="member-img-out user5"></div>
                     <p className="min">Estudante de TI</p>
                     <div className="member-contri">
-                        <li className="sgoibd">Teste de ciontribuição</li>
-                        <li className="sgoibd">Teste de ciontribuição</li>
-                        <li className="sgoibd">Teste de ciontribuição</li>
+                        <li className="sgoibd">Design</li>
+                        <li className="sgoibd">Experimento</li>
                     </div>
                 </div>
                 <div className="member">
@@ -65,9 +60,7 @@ export default function Team() {
                     <div className="member-img-out user6"></div>
                     <p className="min">Estudante de TI</p>
                     <div className="member-contri">
-                        <li className="sgoibd">Teste de ciontribuição</li>
-                        <li className="sgoibd">Teste de ciontribuição</li>
-                        <li className="sgoibd">Teste de ciontribuição</li>
+                
                     </div>
                 </div>
             </div>
