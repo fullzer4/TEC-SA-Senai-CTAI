@@ -43,55 +43,46 @@ export const GraficoProvider = ({ children }: any) => {
             await firebase.firestore().collection("Calculos").doc("leis").update({
                 lei1: setLei1
             })
-            console.log(`verificacao`)
         }
         if(calculo === 2){
             await firebase.firestore().collection("Calculos").doc("leis").update({
                 lei2: setLei2
             })
-            console.log(`verificacao`)
         }
         if(calculo === 3){
             await firebase.firestore().collection("Calculos").doc("leis").update({
                 EficEnerg: setEficEnerg
             })
-            console.log(`verificacao`)
         }
         if(calculo === 4){
             await firebase.firestore().collection("Calculos").doc("leis").update({
                 RendMaq: setRendMaq
             })
-            console.log(`verificacao`)
         }
         if(calculo === 5){
             await firebase.firestore().collection("Calculos").doc("leis").update({
                 TrabMaq: setTrabMaq
             })
-            console.log(`verificacao`)
         }
         if(calculo === 6){
             await firebase.firestore().collection("Calculos").doc("leis").update({
                 EnergIntV: setEnergIntV
             })
-            console.log(`verificacao`)
         }
         if(calculo === 7){
             await firebase.firestore().collection("Calculos").doc("leis").update({
                 TrabGasP: setTrabGasP
             })
-            console.log(`verificacao`)
         }
         if(calculo === 8){
             await firebase.firestore().collection("Calculos").doc("leis").update({
                 EnergIntT: setEnergIntT
             })
-            console.log(`verificacao`)
         }
         if(calculo === 9){
             await firebase.firestore().collection("Calculos").doc("leis").update({
                 VariaInt: setVariaInt
             })
-            console.log(`verificacao`)
         }
     }
     
