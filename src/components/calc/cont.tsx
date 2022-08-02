@@ -26,8 +26,8 @@ export default function ContCalc() {
                     </div>
                 </div>
                 <div className="calc-botoes">
-                    <button onClick={()=> limpar()}>Limpar</button>
-                    <button onClick={()=> verificarLei(sendbd)}>Calcular</button>
+                    <button onClick={()=> limpar()} className="calc-botoes-style">Limpar</button>
+                    <button onClick={()=> verificarLei(sendbd)} className="calc-botoes-style">Calcular</button>
                 </div>
             </div>
         </div>
