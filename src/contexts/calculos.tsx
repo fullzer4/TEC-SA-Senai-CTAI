@@ -1,6 +1,6 @@
 import { createContext, ReactNode, useState, useContext } from "react";
 import { toast } from 'react-toastify';
-import { GraficoContext } from "./grafico"
+
 
 
 type CalculosContextProps = { //configurar as props
@@ -68,7 +68,6 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
 
     function setHistorico(e:number){
         historico.push(e)
-        console.log(historico);
     }
 
     // TOAST MESSAGES
@@ -127,14 +126,14 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             }
             if(resultadoTam > 0){
                 var2 = (var1 - resultadoBack)
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 1];
                 newRes(teste, var2, 2);
                 return
             }
         }if(var2Tam > 0){
             if(resultadoTam > 0){
                 var1 = (resultadoBack + var2)
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 1];
                 newRes(teste, var1, 1);
                 return
             }
@@ -154,19 +153,21 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                     return
                 }
                 resultadoBack = (var1 + var2)
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 2];
                 newRes(teste, resultadoBack, 3);
                 return
             }
             if(resultadoTam > 0){
                 var2 = (resultadoBack - var1)
-                setVal2Esc(String(var2))
+                var teste:any = [resultadoBack, var1, var2, 2];
+                newRes(teste, var2, 2);
                 return
             }
         }if(var2Tam > 0){
             if(resultadoTam > 0){
                 var1 = (resultadoBack - var2)
-                setVal1Esc(String(var1))
+                var teste:any = [resultadoBack, var1, var2, 2];
+                newRes(teste, var1, 1);
                 return
             }
         }else{
@@ -185,19 +186,21 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                     return
                 }
                 resultadoBack = (var1 / var2)
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 3];
                 newRes(teste, resultadoBack, 3);
                 return
             }
             if(resultadoTam > 0){
                 var2 = (var1 / resultadoBack)
-                setVal2Esc(String(var2))
+                var teste:any = [resultadoBack, var1, var2, 3];
+                newRes(var2, resultadoBack, 2);
                 return
             }
         }if(var2Tam > 0){
             if(resultadoTam > 0){
                 var1 = (resultadoBack * var2)
-                setVal1Esc(String(var1))
+                var teste:any = [resultadoBack, var1, var2, 3];
+                newRes(var1, resultadoBack, 1);
                 return
             }
         }else{
@@ -216,20 +219,20 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                     return
                 }
                 resultadoBack = (var1 / var2 - 1)
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 4];
                 newRes(teste, resultadoBack, 3);
                 return
             }
             if(resultadoTam > 0){
                 var2 = (var1 / (resultadoBack + 1))
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 4];
                 newRes(teste, var2, 2);
                 return
             }
         }if(var2Tam > 0){
             if(resultadoTam > 0){
                 var1 = ((resultadoBack + 1) * var2)
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 4];
                 newRes(teste, var1, 1);
                 return
             }
@@ -251,20 +254,20 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                     return
                 }
                 resultadoBack = (var1 - var2)
-                var teste:any = [resultadoBack, var1, var2, 1];
+                var teste:any = [resultadoBack, var1, var2, 5];
                 newRes(teste, resultadoBack, 3);
                 return
             }
             if(resultadoTam > 0){
                 var2 = (var1 - resultadoBack)
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 5];
                 newRes(teste, var2, 2);
                 return
             }
         }if(var2Tam > 0){
             if(resultadoTam > 0){
                 var1 = (resultadoBack + var2)
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 5];
                 newRes(teste, var1, 1);
                 return
             }
@@ -284,20 +287,20 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                     return
                 }
                 resultadoBack = (3/2) * (var1 * var2)
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 6];
                 newRes(teste, resultadoBack, 3);
                 return
             }
             if(resultadoTam > 0){
                 var2 = ((3/2) * var1) / resultadoBack
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 6];
                 newRes(teste, var2, 2);
                 return
             }
         }if(var2Tam > 0){
             if(resultadoTam > 0){
                 var1 = ((3/2) * resultadoBack) / var2
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 6];
                 newRes(teste, var1, 1);
                 return
             }
@@ -317,19 +320,21 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                     return
                 }
                 resultadoBack = (var1 * var2)
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 7];
                 newRes(teste, resultadoBack, 3);
                 return
             }
             if(resultadoTam > 0){
                 var2 = (resultadoBack / var1)
-                setVal2Esc(String(var2))
+                var teste:any = [resultadoBack, var1, var2, 7];
+                newRes(teste, var2, 2);
                 return
             }
         }if(var2Tam > 0){
             if(resultadoTam > 0){
                 var1 = (resultadoBack / var2)
-                setVal1Esc(String(var1))
+                var teste:any = [resultadoBack, var1, var2, 7];
+                newRes(teste, var1, 1);
                 return
             }
         }else{
@@ -348,7 +353,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                     return
                 }
                 resultadoBack = (3/2) * (var1 * R *var2)
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 8];
                 newRes(teste, resultadoBack, 3);
                 return
             }
@@ -377,7 +382,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                     return
                 }
                 resultadoBack = (3/2) * (var1 * R *var2)
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 9];
                 newRes(teste, resultadoBack, 3);
                 return
             }
@@ -395,8 +400,6 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             return
         }
     }
-
-    // finalizados para baixo :)
 
     // VERIFICAR LEI ABERTA
 

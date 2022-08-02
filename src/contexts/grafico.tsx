@@ -1,7 +1,7 @@
 import { createContext } from "react";
 import firebase from "../services/databseConnection"
 
-export const GraficoContext = createContext<any>(()=>{})
+export const GraficoContext = createContext<any>((number)=>{})
 
 export const GraficoProvider = ({ children }: any) => {
     var Contagem:any = []
@@ -25,6 +25,7 @@ export const GraficoProvider = ({ children }: any) => {
 
 
     async function envDadosFB(calculo:number) {
+        await getDadosFB()
         var lista = Contagem[0] //lista pricipal
         var dados = lista[1] //dados da lista principal
         console.log(dados)
@@ -37,7 +38,6 @@ export const GraficoProvider = ({ children }: any) => {
         var setTrabGasP = dados.TrabGasP + 1
         var setEnergIntT = dados.EnergIntT + 1
         var setVariaInt = dados.VariaInt + 1
-        var setTrabGasT = dados.TrabGasT + 1
 
         if(calculo === 1){
             await firebase.firestore().collection("Calculos").doc("leis").update({
@@ -82,11 +82,6 @@ export const GraficoProvider = ({ children }: any) => {
         if(calculo === 9){
             await firebase.firestore().collection("Calculos").doc("leis").update({
                 VariaInt: setVariaInt
-            })
-        }
-        if(calculo === 10){
-            await firebase.firestore().collection("Calculos").doc("leis").update({
-                TrabGasT: setTrabGasT
             })
         }
     }

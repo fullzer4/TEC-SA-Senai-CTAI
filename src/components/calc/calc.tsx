@@ -9,7 +9,6 @@ export default function Bemvindo() {
     const { verClickCalc1, verClickCalc2, verClickCalc3, verClickCalc4, verClickCalc5, verClickCalc6, verClickCalc7, verClickCalc8, verClickCalc9 } = useContext(CalculosContext)
     const { envDadosFB } = useContext(GraficoContext)
 
-
     function rodar(number:number){
         if(number === 1){verClickCalc1(),envDadosFB(1)}
         if(number === 2){verClickCalc2(),envDadosFB(2)}

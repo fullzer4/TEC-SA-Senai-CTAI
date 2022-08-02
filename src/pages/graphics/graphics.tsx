@@ -4,6 +4,8 @@ import Header from '../../components/Navbar/navbar';
 import { GraficoContext } from '../../contexts/grafico';
 import { useState } from 'react';
 import './graphics.css'
+import AOS from "aos"
+
 import {
     ComposedChart,
     Line,
@@ -20,6 +22,9 @@ import {
 let timeOut = 0;
 
 export default function graphics(){
+    AOS.init({
+        delay: 150,
+      })
     const [dataS, setDataS] = useState([]);
     const [loading, setLoading] = useState("")
 
@@ -59,7 +64,7 @@ export default function graphics(){
         <div id="container">
             <div id="content">
                 <Header/>
-                <div id="content-objects">
+                <div id="content-objects" data-aos="fade-in">
                     <InicioGraphics/>
 
             <div className="graph-title">Gráfico</div>

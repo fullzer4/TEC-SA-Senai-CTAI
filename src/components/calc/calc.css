@@ -124,6 +124,34 @@ hr {
     align-items: center;
     justify-content: center;
     width: 100%;
+    gap: 18px;
+}
+.hst-out{
+    background: #00000057;
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(100% - 40px);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.img-hist{
+    height: 15px;
+    width: 15px;
+}
+.titulo-hist{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 6px;
+}
+.calc-botoes-style{
+    background: #00000057;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 30%;
+    border-radius: 5px;
 }
 
 @media screen and (max-width: 780px){
