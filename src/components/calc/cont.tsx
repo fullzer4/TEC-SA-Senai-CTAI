@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { CalculosContext} from "../../contexts/calculos"
 import HistoricoUser from "../historicoUser/historicoUser"
-import valido from "../historicoUser/historicoUser"
+import Hist from "../../images/Historic.svg"
 import "./calc.css"
 
 export default function ContCalc() {
@@ -18,7 +18,10 @@ export default function ContCalc() {
                         <input type="number" className="inp-cont-calc" placeholder={pcResult} value={result} onChange={(e)=> setResult(e.target.value)}/>
                     </div>
                     <div className="hst-out uiashd">
-                        <p>Historico</p>
+                        <div className="titulo-hist">
+                            <img src={Hist} className="img-hist"/>
+                            <p>Historico</p>
+                        </div>
                         <HistoricoUser/>
                     </div>
                 </div>
