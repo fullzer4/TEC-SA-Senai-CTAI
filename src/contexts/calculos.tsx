@@ -154,7 +154,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                     return
                 }
                 resultadoBack = (var1 + var2)
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 2];
                 newRes(teste, resultadoBack, 3);
                 return
             }
@@ -185,7 +185,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                     return
                 }
                 resultadoBack = (var1 / var2)
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 3];
                 newRes(teste, resultadoBack, 3);
                 return
             }
@@ -216,7 +216,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                     return
                 }
                 resultadoBack = (var1 / var2 - 1)
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 4];
                 newRes(teste, resultadoBack, 3);
                 return
             }
@@ -251,7 +251,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                     return
                 }
                 resultadoBack = (var1 - var2)
-                var teste:any = [resultadoBack, var1, var2, 1];
+                var teste:any = [resultadoBack, var1, var2, 5];
                 newRes(teste, resultadoBack, 3);
                 return
             }
@@ -284,7 +284,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                     return
                 }
                 resultadoBack = (3/2) * (var1 * var2)
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 6];
                 newRes(teste, resultadoBack, 3);
                 return
             }
@@ -317,7 +317,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                     return
                 }
                 resultadoBack = (var1 * var2)
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 7];
                 newRes(teste, resultadoBack, 3);
                 return
             }
@@ -348,7 +348,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                     return
                 }
                 resultadoBack = (3/2) * (var1 * R *var2)
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 8];
                 newRes(teste, resultadoBack, 3);
                 return
             }
@@ -377,7 +377,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
                     return
                 }
                 resultadoBack = (3/2) * (var1 * R *var2)
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 9];
                 newRes(teste, resultadoBack, 3);
                 return
             }
