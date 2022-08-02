@@ -1,0 +1,11 @@
+#historicouser{
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 120px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6d6c6c;  
+    }
