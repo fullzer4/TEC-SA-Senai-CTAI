@@ -396,8 +396,6 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         }
     }
 
-    // finalizados para baixo :)
-
     // VERIFICAR LEI ABERTA
 
     function verificarLei(){
@@ -525,6 +523,14 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         return
     }
 
+    function historicoUserTeste(){
+        return(
+            <div>
+                <h1>foi</h1>
+            </div>
+        )
+    }
+
     return(
         <CalculosContext.Provider value={{
             classSC,
@@ -552,7 +558,8 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             setResult,
             verClickSair,
             limpar,
-            historico
+            historico,
+            historicoUserTeste
             }}> 
             {children}
         </CalculosContext.Provider>

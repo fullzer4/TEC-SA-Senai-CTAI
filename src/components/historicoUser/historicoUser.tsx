@@ -5,15 +5,11 @@ export default function HistoricoUser() {
 
     const {historico} = useContext(CalculosContext)
 
+    let [ hsitoricoDesmont ] = historico
+    let [ resultado, variavel1, variavel2, conta] = hsitoricoDesmont
+
     return(
         <div id="historicouser">
-           <ul>
-            {historico.map((itens)=>{
-                return(
-                    <li key={itens}>{itens}</li>
-                )
-            })}
-           </ul>
         </div>
     )
   }
