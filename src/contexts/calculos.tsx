@@ -1,6 +1,6 @@
 import { createContext, ReactNode, useState, useContext } from "react";
 import { toast } from 'react-toastify';
-import { GraficoContext } from "./grafico"
+
 
 
 type CalculosContextProps = { //configurar as props
@@ -58,6 +58,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     const [selectTG, setSelectTG] = useState(false)
     const [selectEI, setSelectEI] = useState(false)
     const [selectVE, setSelectVE] = useState(false)
+    const [calculoUser, setCalculoUser] = useState(0)
     var var1Tam = val1Esc.length
     var var2Tam = val2Esc.length
     var resultadoTam = result.length
@@ -160,13 +161,15 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             }
             if(resultadoTam > 0){
                 var2 = (resultadoBack - var1)
-                setVal2Esc(String(var2))
+                var teste:any = [resultadoBack, var1, var2, 2];
+                newRes(teste, var2, 2);
                 return
             }
         }if(var2Tam > 0){
             if(resultadoTam > 0){
                 var1 = (resultadoBack - var2)
-                setVal1Esc(String(var1))
+                var teste:any = [resultadoBack, var1, var2, 2];
+                newRes(teste, var1, 1);
                 return
             }
         }else{
@@ -191,13 +194,15 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             }
             if(resultadoTam > 0){
                 var2 = (var1 / resultadoBack)
-                setVal2Esc(String(var2))
+                var teste:any = [resultadoBack, var1, var2, 3];
+                newRes(var2, resultadoBack, 2);
                 return
             }
         }if(var2Tam > 0){
             if(resultadoTam > 0){
                 var1 = (resultadoBack * var2)
-                setVal1Esc(String(var1))
+                var teste:any = [resultadoBack, var1, var2, 3];
+                newRes(var1, resultadoBack, 1);
                 return
             }
         }else{
@@ -222,14 +227,14 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             }
             if(resultadoTam > 0){
                 var2 = (var1 / (resultadoBack + 1))
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 4];
                 newRes(teste, var2, 2);
                 return
             }
         }if(var2Tam > 0){
             if(resultadoTam > 0){
                 var1 = ((resultadoBack + 1) * var2)
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 4];
                 newRes(teste, var1, 1);
                 return
             }
@@ -559,7 +564,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             verClickSair,
             limpar,
             historico,
-            historicoUserTeste
+            calculoUser
             }}> 
             {children}
         </CalculosContext.Provider>
