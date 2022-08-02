@@ -19,6 +19,7 @@ export const GraficoProvider = ({ children }: any) => {
                 Contagem.push([calculos[i], snapshot.data()])
             })
         }
+        // console.log(Contagem)
         return Contagem;
     }
 
@@ -26,6 +27,7 @@ export const GraficoProvider = ({ children }: any) => {
     async function envDadosFB(calculo:number) {
         var lista = Contagem[0] //lista pricipal
         var dados = lista[1] //dados da lista principal
+        console.log(dados)
         var setLei1 = dados.lei1 + 1
         var setLei2 = dados.lei2 + 1
         var setEficEnerg = dados.EficEnerg + 1
@@ -41,6 +43,7 @@ export const GraficoProvider = ({ children }: any) => {
             await firebase.firestore().collection("Calculos").doc("leis").update({
                 lei1: setLei1
             })
+            console.log(`verificacao ${setLei1}`)
         }
         if(calculo === 2){
             await firebase.firestore().collection("Calculos").doc("leis").update({

@@ -5,31 +5,7 @@ import Hist from "../../images/Historic.svg"
 import "./calc.css"
 
 export default function ContCalc() {
-    const {envDadosFB, classSC, verClickSair, calcEsc, pc1Esc, pc2Esc, pcResult, val1Esc, setVal1Esc, val2Esc, setVal2Esc, result, setResult, limpar, verificarLei, sendbd} = useContext(CalculosContext)
-    function rodar(number:number){
-        if(number === 1){verificarLei(sendbd),envDadosFB(1)}
-        if(number === 2){verificarLei(sendbd),envDadosFB(2)}
-        if(number === 3){verificarLei(sendbd),envDadosFB(3)}
-        if(number === 4){verificarLei(sendbd),envDadosFB(4)}
-        if(number === 5){verificarLei(sendbd),envDadosFB(5)}
-        if(number === 6){verificarLei(sendbd),envDadosFB(6)}
-        if(number === 7){verificarLei(sendbd),envDadosFB(7)}
-        if(number === 8){verificarLei(sendbd),envDadosFB(8)}
-        if(number === 9){verificarLei(sendbd),envDadosFB(9)}
-    }
-
-    var calculoHEHE = 0
-
-    if(calcEsc === "1 Lei Termodinamica"){calculoHEHE = 1}
-    if(calcEsc === "2 Lei Termodinamica"){calculoHEHE = 2}
-    if(calcEsc === "Eficiencia Energetica"){calculoHEHE = 3}
-    if(calcEsc === "Rendimento Maquina Termica"){calculoHEHE = 4}
-    if(calcEsc === "Trabalho Maquina Termica"){calculoHEHE = 5}
-    if(calcEsc === "Energia Interna Volume"){calculoHEHE = 6}
-    if(calcEsc === "Trabalho de um Gás Sob Pressão Constante"){calculoHEHE = 7}
-    if(calcEsc === "Energia Interna Temperatura"){calculoHEHE = 8}
-    if(calcEsc === "Variação de Energia Interna"){calculoHEHE = 9}
-
+    const { classSC, verClickSair, calcEsc, pc1Esc, pc2Esc, pcResult, val1Esc, setVal1Esc, val2Esc, setVal2Esc, result, setResult, limpar, verificarLei, sendbd} = useContext(CalculosContext)
     return(
         <div className={ classSC }>
             <div className="cont-calc-in">
@@ -50,8 +26,8 @@ export default function ContCalc() {
                     </div>
                 </div>
                 <div className="calc-botoes">
-                    <button onClick={()=> limpar()} className="calc-botoes">Limpar</button>
-                    <button onClick={()=> rodar(calculoHEHE)} className="calc-botoes">Calcular</button>
+                    <button onClick={()=> limpar()}>Limpar</button>
+                    <button onClick={()=> verificarLei(sendbd)}>Calcular</button>
                 </div>
             </div>
         </div>

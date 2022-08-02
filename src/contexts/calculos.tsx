@@ -528,14 +528,6 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
         return
     }
 
-    function historicoUserTeste(){
-        return(
-            <div>
-                <h1>foi</h1>
-            </div>
-        )
-    }
-
     return(
         <CalculosContext.Provider value={{
             classSC,
