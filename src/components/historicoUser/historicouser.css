@@ -4,6 +4,7 @@
     overflow: scroll;
     overflow-x: hidden;
     height: 120px;
+    gap: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
