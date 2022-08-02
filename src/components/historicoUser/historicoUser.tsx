@@ -25,13 +25,13 @@ export default function HistoricoUser() {
                 if(itens[3] === 3){zerarSinais(), sinal = "/", conta = " EficEnerg "}
                 if(itens[3] === 4){zerarSinais(), sinalContaInicio = "1 - " ,sinal = "/", conta = " RendMaq "}
                 if(itens[3] === 5){zerarSinais(), sinal = "-", conta = " TrabMaq "}
-                if(itens[3] === 6){zerarSinais(), sinal = "* ", conta = " EnergIntV "}
+                if(itens[3] === 6){zerarSinais(), sinalContaInicio = "3 / 2 * " ,sinal = "* ", conta = " EnergIntV "}
                 if(itens[3] === 7){zerarSinais(), sinal = "*", conta = " TrabGasP "}
-                if(itens[3] === 8){zerarSinais(), sinal = "*", conta = " EnergIntT "}
-                if(itens[3] === 9){zerarSinais(), sinal = "*", conta = " VariaEnergInt "}
+                if(itens[3] === 8){zerarSinais(), sinalContaInicio = "3 / 2 * " ,sinal = "*", sinalContaFinal = "R *", conta = " EnergIntT "}
+                if(itens[3] === 9){zerarSinais(), sinalContaInicio = "3 / 2 * " ,sinal = "*", sinalContaFinal = "R *", conta = " VariaEnergInt "}
                 console.log(itens[3])
                 return(
-                    <p key={itens.id}>{sinalContaInicio} {itens[1]} {sinal} {itens[2]} {sinalContaFinal}= {itens[0]} ({conta})</p>
+                    <p key={itens.id}>{sinalContaInicio} {itens[1]} {sinal} {sinalContaFinal} {itens[2]} = {itens[0]} ({conta})</p>
                 )
             })}
         </div>
