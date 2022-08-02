@@ -24,11 +24,11 @@ export default function HistoricoUser() {
                 if(itens[3] === 2){zerarSinais(), sinal = "-", conta = " 2 Lei "}
                 if(itens[3] === 3){zerarSinais(), sinal = "/", conta = " EficEnerg "}
                 if(itens[3] === 4){zerarSinais(), sinal = "/", conta = " RendMaq "}
-                if(itens[3] === 5){zerarSinais(), sinal = "-", conta = " Trabalho Maquina Termica "}
-                if(itens[3] === 6){zerarSinais(), sinal = "* ", conta = " Energia Interna Volume "}
-                if(itens[3] === 7){zerarSinais(), sinal = "*", conta = " Trabalho de um Gás Sob Pressão Constante "}
-                if(itens[3] === 8){zerarSinais(), sinal = "*", conta = " Energia Interna Temperatura "}
-                if(itens[3] === 9){zerarSinais(), sinal = "*", conta = " Variação de Energia Interna "}
+                if(itens[3] === 5){zerarSinais(), sinal = "-", conta = " TrabMaq "}
+                if(itens[3] === 6){zerarSinais(), sinal = "* ", conta = " EnergIntV "}
+                if(itens[3] === 7){zerarSinais(), sinal = "*", conta = " TrabGasP "}
+                if(itens[3] === 8){zerarSinais(), sinal = "*", conta = " EnergIntT "}
+                if(itens[3] === 9){zerarSinais(), sinal = "*", conta = " VariaEnergInt "}
                 console.log(itens[3])
                 return(
                     <p key={itens.id}>{sinalContaInicio} {itens[1]} {sinal} {itens[2]} {sinalContaFinal}= {itens[0]} ({conta})</p>
