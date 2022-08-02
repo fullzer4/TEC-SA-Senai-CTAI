@@ -46,12 +46,16 @@
 .user3{
     background-image: url("../../images/Bruno.jpg");
 }
-.user4{}
+.user4{
+    background-image: url("../../images/Alexis.jpg");
+}
 
 .user5{
     background-image: url("../../images/ArthurRocha.jpg");
 }
-.user6{}
+.user6{
+    
+}
 
 .member-contri{
     margin: 20px 10px;
