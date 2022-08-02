@@ -127,14 +127,14 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             }
             if(resultadoTam > 0){
                 var2 = (var1 - resultadoBack)
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 1];
                 newRes(teste, var2, 2);
                 return
             }
         }if(var2Tam > 0){
             if(resultadoTam > 0){
                 var1 = (resultadoBack + var2)
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 1];
                 newRes(teste, var1, 1);
                 return
             }
