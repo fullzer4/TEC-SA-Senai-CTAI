@@ -1,7 +1,7 @@
 import {useContext} from "react"
 import {CalculosContext} from "../../contexts/calculos"
 
-export default function HistoricoUser() {
+export default function HistoricoUser(valido) {
 
     const {historico} = useContext(CalculosContext)
     var sinal = ""
@@ -20,6 +20,7 @@ export default function HistoricoUser() {
     return(
         <div id="historicouser">
             {historico.map((itens)=>{
+                valido = true
                 if(itens[3] === 1){zerarSinais(), sinal = "+", conta = " 1 Lei "}
                 if(itens[3] === 2){zerarSinais(), sinal = "-", conta = " 2 Lei "}
                 if(itens[3] === 3){zerarSinais(), sinal = "/", conta = " EficEnerg "}

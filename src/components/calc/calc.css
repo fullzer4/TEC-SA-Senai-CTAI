@@ -125,6 +125,12 @@ hr {
     justify-content: center;
     width: 100%;
 }
+.hst-out{
+    background: #00000057;
+    border-radius: 5px;
+    padding: 10px;
+
+}
 
 @media screen and (max-width: 780px){
     .box-calc-in{
