@@ -17,15 +17,18 @@ export default function ContCalc() {
         if(number === 8){verificarLei(sendbd),envDadosFB(8)}
         if(number === 9){verificarLei(sendbd),envDadosFB(9)}
     }
-    if(calcEsc === "1 Lei Termodinamica"){const calculoHEHE = 1}
-    if(calcEsc === "2 Lei Termodinamica"){const calculoHEHE = 2}
-    if(calcEsc === "Eficiencia Energetica"){const calculoHEHE = 3}
-    if(calcEsc === "Rendimento Maquina Termica"){const calculoHEHE = 4}
-    if(calcEsc === "Trabalho Maquina Termica"){const calculoHEHE = 5}
-    if(calcEsc === "Energia Interna Volume"){const calculoHEHE = 6}
-    if(calcEsc === "Trabalho de um Gás Sob Pressão Constante"){const calculoHEHE = 7}
-    if(calcEsc === "Energia Interna Temperatura"){const calculoHEHE = 8}
-    if(calcEsc === "Variação de Energia Interna"){const calculoHEHE = 9}
+
+    var calculoHEHE = 0
+
+    if(calcEsc === "1 Lei Termodinamica"){calculoHEHE = 1}
+    if(calcEsc === "2 Lei Termodinamica"){calculoHEHE = 2}
+    if(calcEsc === "Eficiencia Energetica"){calculoHEHE = 3}
+    if(calcEsc === "Rendimento Maquina Termica"){calculoHEHE = 4}
+    if(calcEsc === "Trabalho Maquina Termica"){calculoHEHE = 5}
+    if(calcEsc === "Energia Interna Volume"){calculoHEHE = 6}
+    if(calcEsc === "Trabalho de um Gás Sob Pressão Constante"){calculoHEHE = 7}
+    if(calcEsc === "Energia Interna Temperatura"){calculoHEHE = 8}
+    if(calcEsc === "Variação de Energia Interna"){calculoHEHE = 9}
 
     return(
         <div className={ classSC }>
@@ -48,7 +51,7 @@ export default function ContCalc() {
                 </div>
                 <div className="calc-botoes">
                     <button onClick={()=> limpar()} className="calc-botoes">Limpar</button>
-                    <button onClick={()=> verificarLei(sendbd)} className="calc-botoes">Calcular</button>
+                    <button onClick={()=> rodar(calculoHEHE)} className="calc-botoes">Calcular</button>
                 </div>
             </div>
         </div>
