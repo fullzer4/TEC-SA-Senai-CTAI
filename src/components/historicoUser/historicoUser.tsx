@@ -3,7 +3,7 @@ import {CalculosContext} from "../../contexts/calculos"
 
 export default function HistoricoUser() {
 
-    const {historico, calculoUser} = useContext(CalculosContext)
+    const {historico} = useContext(CalculosContext)
     var sinal = ""
     var sinalContaInicio = ""
     var sinalContaFinal = "" 
