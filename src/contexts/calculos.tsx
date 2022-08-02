@@ -262,14 +262,14 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             }
             if(resultadoTam > 0){
                 var2 = (var1 - resultadoBack)
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 5];
                 newRes(teste, var2, 2);
                 return
             }
         }if(var2Tam > 0){
             if(resultadoTam > 0){
                 var1 = (resultadoBack + var2)
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 5];
                 newRes(teste, var1, 1);
                 return
             }
@@ -295,14 +295,14 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             }
             if(resultadoTam > 0){
                 var2 = ((3/2) * var1) / resultadoBack
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 6];
                 newRes(teste, var2, 2);
                 return
             }
         }if(var2Tam > 0){
             if(resultadoTam > 0){
                 var1 = ((3/2) * resultadoBack) / var2
-                var teste:any = [resultadoBack, var1, var2];
+                var teste:any = [resultadoBack, var1, var2, 6];
                 newRes(teste, var1, 1);
                 return
             }
@@ -328,13 +328,15 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             }
             if(resultadoTam > 0){
                 var2 = (resultadoBack / var1)
-                setVal2Esc(String(var2))
+                var teste:any = [resultadoBack, var1, var2, 7];
+                newRes(teste, var2, 2);
                 return
             }
         }if(var2Tam > 0){
             if(resultadoTam > 0){
                 var1 = (resultadoBack / var2)
-                setVal1Esc(String(var1))
+                var teste:any = [resultadoBack, var1, var2, 7];
+                newRes(teste, var1, 1);
                 return
             }
         }else{
