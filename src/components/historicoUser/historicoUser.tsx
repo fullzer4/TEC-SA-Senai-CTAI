@@ -23,7 +23,7 @@ export default function HistoricoUser() {
                 if(itens[3] === 1){zerarSinais(), sinal = "+", conta = " 1 Lei "}
                 if(itens[3] === 2){zerarSinais(), sinal = "-", conta = " 2 Lei "}
                 if(itens[3] === 3){zerarSinais(), sinal = "/", conta = " EficEnerg "}
-                if(itens[3] === 4){zerarSinais(), sinal = "/", conta = " RendMaq "}
+                if(itens[3] === 4){zerarSinais(), sinalContaInicio = "1 - " ,sinal = "/", conta = " RendMaq "}
                 if(itens[3] === 5){zerarSinais(), sinal = "-", conta = " TrabMaq "}
                 if(itens[3] === 6){zerarSinais(), sinal = "* ", conta = " EnergIntV "}
                 if(itens[3] === 7){zerarSinais(), sinal = "*", conta = " TrabGasP "}

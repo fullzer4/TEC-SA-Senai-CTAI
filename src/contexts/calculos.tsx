@@ -58,7 +58,6 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     const [selectTG, setSelectTG] = useState(false)
     const [selectEI, setSelectEI] = useState(false)
     const [selectVE, setSelectVE] = useState(false)
-    const [calculoUser, setCalculoUser] = useState(0)
     var var1Tam = val1Esc.length
     var var2Tam = val2Esc.length
     var resultadoTam = result.length
@@ -565,8 +564,7 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
             setResult,
             verClickSair,
             limpar,
-            historico,
-            calculoUser
+            historico
             }}> 
             {children}
         </CalculosContext.Provider>
