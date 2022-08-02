@@ -30,7 +30,7 @@ export default function Bemvindo() {
                     <hr/>
                     <h3 className="form-title-in">Fórmula</h3>
                     <p className="form-box-in">Q - T = ΔU</p>
-                    <button className="bt-calc-in" onClick={() => envDadosFB(1)}>Abrir</button>
+                    <button className="bt-calc-in" onClick={() => rodar(1)}>Abrir</button>
                 </div>
                 <div className="box-calc-in">
                     <h2 className="title-box-in">2 Lei Termodinamica</h2>

@@ -1,7 +1,7 @@
 import { createContext } from "react";
 import firebase from "../services/databseConnection"
 
-export const GraficoContext = createContext<any>(()=>{})
+export const GraficoContext = createContext<any>((number)=>{})
 
 export const GraficoProvider = ({ children }: any) => {
     var Contagem:any = []
@@ -25,6 +25,7 @@ export const GraficoProvider = ({ children }: any) => {
 
 
     async function envDadosFB(calculo:number) {
+        await getDadosFB()
         var lista = Contagem[0] //lista pricipal
         var dados = lista[1] //dados da lista principal
         console.log(dados)
@@ -37,58 +38,60 @@ export const GraficoProvider = ({ children }: any) => {
         var setTrabGasP = dados.TrabGasP + 1
         var setEnergIntT = dados.EnergIntT + 1
         var setVariaInt = dados.VariaInt + 1
-        var setTrabGasT = dados.TrabGasT + 1
 
         if(calculo === 1){
             await firebase.firestore().collection("Calculos").doc("leis").update({
                 lei1: setLei1
             })
-            console.log(`verificacao ${setLei1}`)
+            console.log(`verificacao`)
         }
         if(calculo === 2){
             await firebase.firestore().collection("Calculos").doc("leis").update({
                 lei2: setLei2
             })
+            console.log(`verificacao`)
         }
         if(calculo === 3){
             await firebase.firestore().collection("Calculos").doc("leis").update({
                 EficEnerg: setEficEnerg
             })
+            console.log(`verificacao`)
         }
         if(calculo === 4){
             await firebase.firestore().collection("Calculos").doc("leis").update({
                 RendMaq: setRendMaq
             })
+            console.log(`verificacao`)
         }
         if(calculo === 5){
             await firebase.firestore().collection("Calculos").doc("leis").update({
                 TrabMaq: setTrabMaq
             })
+            console.log(`verificacao`)
         }
         if(calculo === 6){
             await firebase.firestore().collection("Calculos").doc("leis").update({
                 EnergIntV: setEnergIntV
             })
+            console.log(`verificacao`)
         }
         if(calculo === 7){
             await firebase.firestore().collection("Calculos").doc("leis").update({
                 TrabGasP: setTrabGasP
             })
+            console.log(`verificacao`)
         }
         if(calculo === 8){
             await firebase.firestore().collection("Calculos").doc("leis").update({
                 EnergIntT: setEnergIntT
             })
+            console.log(`verificacao`)
         }
         if(calculo === 9){
             await firebase.firestore().collection("Calculos").doc("leis").update({
                 VariaInt: setVariaInt
             })
-        }
-        if(calculo === 10){
-            await firebase.firestore().collection("Calculos").doc("leis").update({
-                TrabGasT: setTrabGasT
-            })
+            console.log(`verificacao`)
         }
     }
     
