@@ -73,9 +73,9 @@ export const CalculosProvider = ({ children }: CalculosContextProps) => {
     // TOAST MESSAGES
 
     function msgToast(e:number){
-        if(e === 0){toast.error("todos os campos preenchidos")}
-        if(e === 1){toast.error("verifique se os campos estão corretos e preenchidos")}
-        if(e === 2){toast.error("calculo nao possivel ainda")}
+        if(e === 0){toast.dark("todos os campos preenchidos")}
+        if(e === 1){toast.dark("verifique se os campos estão corretos e preenchidos")}
+        if(e === 2){toast.dark("calculo nao possivel ainda")}
         return;
     }
 

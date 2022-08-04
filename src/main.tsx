@@ -1,4 +1,4 @@
-import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.min.css';
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Rota from './routes/route'
