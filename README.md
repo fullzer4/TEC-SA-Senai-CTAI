@@ -1,27 +1,12 @@
 # TEC-SA-Senai-CTAI
 
-projeto feito em grupo na escola S (Sesi/Senai).
+<img src="./pagina.PNG">
 
-### `npm install`
+<h2>projeto feito em grupo na escola S (Sesi/Senai).</h2>
 
-Para instalar as dependências
-
-### `npm run dev`
-
-Para rodar o projeto na maquina.
-
-<h2>Build Tool</h2>
-
-A build Tool que usamos foi o ViteJs, para criar o projeto só rodar o comando:
-
-### `npm create vite@latest my-react-app --template react-ts`
-
-<h2>Bibliotecas / Frameworks</h2>
-
-- React, ver: 18.0.0
-- React-dom, ver: 18.0.0
-- React-router-dom, ver: ^6.3.0
-- React-toastify, ver: ^9.0.5
-- AOS, ver: ^3.0.0-beta.6
-- Typescript, ver: ^4.6.3
-- Vite, ver: ^2.9.12
+Grupo: <p/>
+-Gabriel Pelizzaro <a href="https://github.com/fullzer4">Github Profile</a><p/>
+-Anselmo Henrique <a href="https://github.com/Anselmo5">Github Profile</a><p/>
+-Bruno Wotzke <a href="https://github.com/BrunoRW">Github Profile</a><p/>
+-Alexis Reales <a href="https://github.com/AlexisReales">Github Profile</a><p/>
+-Arthur Rocha <a href="https://github.com/Arthur668">Github Profile</a><p/>
