@@ -2,7 +2,7 @@
 
 <img src="./pagina.PNG">
 
-<h2>projeto feito em grupo na escola S (Sesi/Senai).</h2>
+<h2>Projeto feito em grupo na escola S (Sesi/Senai).</h2>
 
 Grupo: <p/>
 -Gabriel Pelizzaro <a href="https://github.com/fullzer4">Github Profile</a><p/>
